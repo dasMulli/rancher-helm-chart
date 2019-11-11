@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  mm-pandaconfigurator-webapp:
+  - apiVersion: v2
+    appVersion: AdamDemo
+    created: "2019-11-11T11:02:40.5347715+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 679ba641e8f67399b30b159608fb3e5c1ec19a27ed5edd06e3e553901262a74e
+    icon: file://panda.png
+    name: mm-pandaconfigurator-webapp
+    type: application
+    urls:
+    - https://github.com/vandenbergen/rancher-catalog/mm-pandaconfigurator-webapp-0.1.0.tgz
+    version: 0.1.0
+generated: "2019-11-11T11:02:40.5327469+01:00"
