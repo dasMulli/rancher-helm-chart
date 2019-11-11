@@ -3,9 +3,10 @@ entries:
   mm-panda-api:
   - apiVersion: v2
     appVersion: develop
-    created: "2019-11-11T15:04:13.3751583+01:00"
+    created: "2019-11-11T15:20:15.3066998+01:00"
     description: A Helm chart for Kubernetes
-    digest: 8e2ee4e2ee103b8553fde9b2f66e85ad2573a4b3da961a8365375265d45df40f
+    digest: eba39a6cf9b98f89b57d5f308037bec78b482138391fe7fcdf12b3092a81f95b
+    icon: file://panda.png
     name: mm-panda-api
     type: application
     urls:
@@ -14,7 +15,7 @@ entries:
   mm-pandaconfigurator-webapp:
   - apiVersion: v2
     appVersion: AdamDemo
-    created: "2019-11-11T15:04:13.3831548+01:00"
+    created: "2019-11-11T15:20:15.3136996+01:00"
     description: A Helm chart for Kubernetes
     digest: 13c6c5773dfa25cc5c2a9fa9158814222968d7434b2c948ad600494e8bb2f736
     icon: file://panda.png
@@ -23,4 +24,4 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/mm-pandaconfigurator-webapp-0.1.0.tgz
     version: 0.1.0
-generated: "2019-11-11T15:04:13.367156+01:00"
+generated: "2019-11-11T15:20:15.2986987+01:00"
