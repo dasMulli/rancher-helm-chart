@@ -3,9 +3,9 @@ entries:
   mm-panda-api:
   - apiVersion: v2
     appVersion: develop
-    created: "2019-11-11T12:41:25.788199+01:00"
+    created: "2019-11-11T15:04:13.3751583+01:00"
     description: A Helm chart for Kubernetes
-    digest: b3fa3b3b0e0d72cda35a66c17bcde2ba28dae8009add722eb6bbe4171ed0aa2a
+    digest: 8e2ee4e2ee103b8553fde9b2f66e85ad2573a4b3da961a8365375265d45df40f
     name: mm-panda-api
     type: application
     urls:
@@ -14,35 +14,13 @@ entries:
   mm-pandaconfigurator-webapp:
   - apiVersion: v2
     appVersion: AdamDemo
-    created: "2019-11-11T12:41:25.7982309+01:00"
+    created: "2019-11-11T15:04:13.3831548+01:00"
     description: A Helm chart for Kubernetes
-    digest: 679ba641e8f67399b30b159608fb3e5c1ec19a27ed5edd06e3e553901262a74e
+    digest: 13c6c5773dfa25cc5c2a9fa9158814222968d7434b2c948ad600494e8bb2f736
     icon: file://panda.png
     name: mm-pandaconfigurator-webapp
     type: application
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/mm-pandaconfigurator-webapp-0.1.0.tgz
     version: 0.1.0
-  panda:
-  - apiVersion: v2
-    appVersion: AdamDemo
-    created: "2019-11-11T12:41:25.8101986+01:00"
-    dependencies:
-    - name: mariadb
-      repository: https://kubernetes-charts.storage.googleapis.com
-      version: 7.0.1
-    - name: mm-pandaconfigurator-webapp
-      repository: https://vandenbergen.github.io/rancher-catalog/
-      version: 0.1.0
-    - name: mm-panda-api
-      repository: https://vandenbergen.github.io/rancher-catalog/
-      version: 0.1.0
-    description: A Helm chart for Kubernetes
-    digest: a8ed0330131324639e91ea08fd7d7a321a4676b9e88a261ff94e683b270ae128
-    icon: file://panda.png
-    name: panda
-    type: application
-    urls:
-    - https://vandenbergen.github.io/rancher-catalog/panda-0.1.0.tgz
-    version: 0.1.0
-generated: "2019-11-11T12:41:25.7871986+01:00"
+generated: "2019-11-11T15:04:13.367156+01:00"
