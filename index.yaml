@@ -9,7 +9,7 @@ entries:
     name: mm-panda-api
     type: application
     urls:
-    - https://vandenbergen.github.io/rancher-catalog/mm-panda-api-0.1.0.tgz
+    - https://vandenbergen.github.io/rancher-helm-chart/mm-panda-api-0.1.0.tgz
     version: 0.1.0
   mm-pandaconfigurator-webapp:
   - apiVersion: v2
@@ -21,7 +21,7 @@ entries:
     name: mm-pandaconfigurator-webapp
     type: application
     urls:
-    - https://vandenbergen.github.io/rancher-catalog/mm-pandaconfigurator-webapp-0.1.0.tgz
+    - https://vandenbergen.github.io/rancher-helm-chart/mm-pandaconfigurator-webapp-0.1.0.tgz
     version: 0.1.0
   panda:
   - apiVersion: v2
