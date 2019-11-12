@@ -3,7 +3,7 @@ entries:
   mm-panda-api:
   - apiVersion: v2
     appVersion: develop
-    created: "2019-11-11T15:20:15.3066998+01:00"
+    created: "2019-11-12T15:12:00.8354179+01:00"
     description: A Helm chart for Kubernetes
     digest: eba39a6cf9b98f89b57d5f308037bec78b482138391fe7fcdf12b3092a81f95b
     icon: file://panda.png
@@ -12,10 +12,21 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/mm-panda-api-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v2
+    appVersion: develop
+    created: "2019-11-12T15:12:00.8723728+01:00"
+    description: A Helm chart for Kubernetes
+    digest: eba39a6cf9b98f89b57d5f308037bec78b482138391fe7fcdf12b3092a81f95b
+    icon: file://panda.png
+    name: mm-panda-api
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/charts/mm-panda-api-0.1.0.tgz
+    version: 0.1.0
   mm-pandaconfigurator-webapp:
   - apiVersion: v2
     appVersion: AdamDemo
-    created: "2019-11-11T15:20:15.3136996+01:00"
+    created: "2019-11-12T15:12:00.8433714+01:00"
     description: A Helm chart for Kubernetes
     digest: 13c6c5773dfa25cc5c2a9fa9158814222968d7434b2c948ad600494e8bb2f736
     icon: file://panda.png
@@ -24,4 +35,26 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/mm-pandaconfigurator-webapp-0.1.0.tgz
     version: 0.1.0
-generated: "2019-11-11T15:20:15.2986987+01:00"
+  - apiVersion: v2
+    appVersion: AdamDemo
+    created: "2019-11-12T15:12:00.8853734+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 13c6c5773dfa25cc5c2a9fa9158814222968d7434b2c948ad600494e8bb2f736
+    icon: file://panda.png
+    name: mm-pandaconfigurator-webapp
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/charts/mm-pandaconfigurator-webapp-0.1.0.tgz
+    version: 0.1.0
+  testa:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2019-11-12T15:12:00.8533729+01:00"
+    description: A Helm chart for Kubernetes
+    digest: fcf302a614f8aa6186cc64ede0d272f823b996e53027668d473d72646d0a6533
+    name: testa
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/testa-0.1.0.tgz
+    version: 0.1.0
+generated: "2019-11-12T15:12:00.8203706+01:00"
