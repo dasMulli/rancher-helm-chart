@@ -5,8 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: nexus.syn-group.com/synit.portal.authenticator.application
-  tag: develop
+  repository: nexus.syn-group.com/synit.portal.authenticator.application:develop
   pullPolicy: IfNotPresent
   pullSecrets:
     - syngroup

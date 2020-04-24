@@ -5,8 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: nexus.syn-group.com/synit.portal.webapp
-  tag: develop
+  repository: nexus.syn-group.com/synit.portal.webapp:develop
   pullPolicy: IfNotPresent
   pullSecrets:
     - syngroup
