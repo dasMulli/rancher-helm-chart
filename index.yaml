@@ -67,4 +67,34 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/portal-api-0.1.0.tgz
     version: 0.1.0
+  portal-webapp:
+  - apiVersion: v2
+    appVersion: develop
+    created: "2019-11-12T15:12:00.8354179+01:00"
+    description: A Helm chart for Kubernetes
+    name: portal-webapp
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/portal-webapp-0.1.0.tgz
+    version: 0.1.0
+  portal-authenticator:
+  - apiVersion: v2
+    appVersion: develop
+    created: "2019-11-12T15:12:00.8354179+01:00"
+    description: A Helm chart for Kubernetes
+    name: portal-authenticator
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/portal-authenticator-0.1.0.tgz
+    version: 0.1.0
+  portal:
+  - apiVersion: v2
+    appVersion: develop
+    created: "2019-11-12T15:12:00.8354179+01:00"
+    description: A Helm chart for Kubernetes
+    name: portal
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/portal-0.1.0.tgz
+    version: 0.1.0
 generated: "2019-11-12T15:12:00.8203706+01:00"
