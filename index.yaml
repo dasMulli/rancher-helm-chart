@@ -57,4 +57,14 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/testa-0.1.0.tgz
     version: 0.1.0
+  portal-api:
+  - apiVersion: v2
+    appVersion: develop
+    created: "2019-11-12T15:12:00.8354179+01:00"
+    description: A Helm chart for Kubernetes
+    name: portal-api
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/portal-api-0.1.0.tgz
+    version: 0.1.0
 generated: "2019-11-12T15:12:00.8203706+01:00"
