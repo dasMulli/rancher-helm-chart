@@ -5,15 +5,18 @@ metadata:
   namespace: portal
   labels:
     {{- include "portal.labels" . | nindent 4 }}
+    portal/component: portal-api
 spec:
   replicas: 1
   selector:
     matchLabels:
       {{- include "portal.labels" . | nindent 4 }}
+      portal/component: portal-api
   template:
     metadata:
       labels:
         {{- include "portal.labels" . | nindent 4 }}
+        portal/component: portal-api
     spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
