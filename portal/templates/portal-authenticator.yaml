@@ -28,7 +28,7 @@ spec:
         - name: {{ .Chart.Name }}-portal-authenticator
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "nexus.syn-group.com/synit.portal.authenticator:develop"
+          image: "nexus.syn-group.com/synit.portal.authenticator.application:develop"
           env:
           - name: ASPNETCORE_ENVIRONMENT
             value: Production
