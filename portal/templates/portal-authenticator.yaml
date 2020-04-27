@@ -1,3 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "portal.fullname" . }}-portal-authenticator-service
+  labels:
+    {{- include "portal.labels" . | nindent 4 }}
+    portal/component: portal-authenticator
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    {{- include "portal.selectorLabels" . | nindent 4 }}
+    portal/component: portal-authenticator
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:

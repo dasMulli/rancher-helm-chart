@@ -2,16 +2,16 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}-portal-webapp
+  name: {{ $fullName }}-portal-api
   labels:
     {{- include "portal.labels" . | nindent 4 }}
-    portal/component: portal-webapp
+    portal/component: portal-api
 spec:
   rules:
-    - host: portal.kubi.syngroup.loc
+    - host: portal-api.kubi.syngroup.loc
       http:
         paths:
           - path: /
             backend:
-              serviceName: {{ $fullName }}-portal-webapp-service
-              servicePort: 8080
+              serviceName: {{ $fullName }}-portal-api-service
+              servicePort: 80
