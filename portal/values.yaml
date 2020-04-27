@@ -73,17 +73,17 @@ affinity: {}
 portal:
   baseUrl: 'portal.kubi.syngroup.loc'
   ldap: 
-      enable: false
-      host: '',
-      username: '',
-      password: '',
-      baseDN: '',
-      userNameAttribute: '',
-      firstNameAttribute: '',
-      lastNameAttribute: '',
-      emailAttribute: '',
-      port: 636,
-      secureSocketLayer: true
+    enable: false
+    host: ''
+    username: ''
+    password: ''
+    baseDN: ''
+    userNameAttribute: ''
+    firstNameAttribute: ''
+    lastNameAttribute: ''
+    emailAttribute: ''
+    port: 636
+    secureSocketLayer: true
   
 mariadb:
   rootUser:
