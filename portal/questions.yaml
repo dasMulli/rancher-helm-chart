@@ -1,0 +1,22 @@
+categories:
+- Repository
+questions:
+- variable: image.repositoryBase
+  default: nexus.syn-group.com
+  label: Image Repository Base
+  description: "Specify repository base for images (e.g. custom repository). Relative path will be appended."
+  type: string
+- variable: image.imagePullSecrets[0].name
+  required: false
+  label: Image Pull Secret
+  descriptioN: "Specify pull secret for repository base"
+  type: string
+
+# Portal
+- variable: portal.baseUrl
+  group: "Redis Persistence"
+  default: 'portal.kubi.syngroup.loc'
+  required: true
+  label: "Base Url"
+  description: "Base Url"
+  type: string

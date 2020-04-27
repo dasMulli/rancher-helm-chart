@@ -71,4 +71,4 @@ tolerations: []
 affinity: {}
 
 portal:
-  baseUrl: 'portal.kubi.syngroup.loc'
+  baseUrl: 'http://portal.kubi.syngroup.loc'
