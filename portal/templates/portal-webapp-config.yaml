@@ -5,11 +5,11 @@ metadata:
   labels:
     {{- include "portal.labels" . | nindent 4 }}
 data:
-  appConfig.json: "{\n    \"portalBackend\": \"{{ .Values.portal.apiBackendUrl }}\",\n
-    \   \"authenticatorConfig\": {\n      \"issuer\": \"http://portal-authenticator.zoo.muk.mmk.mmdom.net\",\n
+  appConfig.json: "{\n    \"portalBackend\": \"{{ .Values.portal.baseUrl }}/backend\",\n
+    \   \"authenticatorConfig\": {\n      \"issuer\": \"{{ .Values.portal.baseUrl }}/authenticator\",\n
     \     \"clientId\": \"portal\", \n      \"responseType\": \"code\",\n      \"redirectUri\":
-    \"http://portal.zoo.muk.mmk.mmdom.net/main\",\n      \"postLogoutRedirectUri\":\"http://portal.zoo.muk.mmk.mmdom.net/main\",\n
-    \     \"silentRefreshRedirectUri\": \"http://portal.zoo.muk.mmk.mmdom.net/assets/silent-refresh.hmtl\",\n
+    \"{{ .Values.portal.baseUrl }}/main\",\n      \"postLogoutRedirectUri\":\"{{ .Values.portal.baseUrl }}/main\",\n
+    \     \"silentRefreshRedirectUri\": \"{{ .Values.portal.baseUrl }}/assets/silent-refresh.hmtl\",\n
     \     \"scope\": \"openid profile roles\",\n      \"useSilentRefresh\": true,
     \n      \"silentRefreshTimeout\": 50000, \n      \"timeoutFactor\": 0.25, \n      \"sessionChecksEnabled\":
     true,\n      \"showDebugInformation\": true, \n      \"clearHashAfterLogin\":

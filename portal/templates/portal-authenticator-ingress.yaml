@@ -8,7 +8,7 @@ metadata:
     portal/component: portal-authenticator
 spec:
   rules:
-    - host: portal-authenticator.kubi.syngroup.loc
+    - host: {{ .Values.portal.baseUrl }}/authenticator
       http:
         paths:
           - path: /

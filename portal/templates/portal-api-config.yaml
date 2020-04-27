@@ -32,7 +32,7 @@ data:
         "Password": "fGX2RuJfvc"
       },
       "Authorization": {
-        "Host": "https://localhost:5003"
+        "Host": "{{ .Values.portal.baseUrl }}/authenticator"
       },
       "Menu": {
         "GroupMenuItems": [
