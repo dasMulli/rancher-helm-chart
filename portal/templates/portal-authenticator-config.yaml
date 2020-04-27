@@ -26,10 +26,10 @@ data:
       },
       "Database": {
         "Name": "authenticator",
-        "Host": "authenticator-database",
+        "Host": "portal-mariadb",
         "Port": 3306,
-        "User": "authenticator_user",
-        "Password": "authenticator_pass"
+        "User": "root",
+        "Password": "{{ .Values.mariadb.rootUser.password }}"
       },
       "Identity": {
         "DefaultUserName": "root",

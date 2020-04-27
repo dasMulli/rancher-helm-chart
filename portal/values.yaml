@@ -72,3 +72,11 @@ affinity: {}
 
 portal:
   baseUrl: 'portal.kubi.syngroup.loc'
+  
+mariadb:
+  rootUser:
+    password: "Root#123"
+  db:
+    user: "portal_user"
+    password: "portal_password"
+    name: portal
