@@ -69,3 +69,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+portal:
+  apiBackendUrl: 'http://release-syn-01/portal/backend'

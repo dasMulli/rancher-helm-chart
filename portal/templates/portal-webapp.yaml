@@ -52,6 +52,15 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - mountPath: /usr/share/nginx/html/assets/appConfig.json
+              name: portal-webapp-config
+              subPath: appConfig.json
+      volumes:
+      - configMap:
+          name: portal-webapp-config
+          optional: false
+        name: portal-webapp-config
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

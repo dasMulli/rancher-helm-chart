@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "portal.fullname" . }}-webapp-conf
+  labels:
+    {{- include "portal.labels" . | nindent 4 }}
+data:
+  appConfig.json: "{\n    \"portalBackend\": \"{{ .Values.portal.apiBackendUrl }}\",\n
+    \   \"authenticatorConfig\": {\n      \"issuer\": \"http://portal-authenticator.zoo.muk.mmk.mmdom.net\",\n
+    \     \"clientId\": \"portal\", \n      \"responseType\": \"code\",\n      \"redirectUri\":
+    \"http://portal.zoo.muk.mmk.mmdom.net/main\",\n      \"postLogoutRedirectUri\":\"http://portal.zoo.muk.mmk.mmdom.net/main\",\n
+    \     \"silentRefreshRedirectUri\": \"http://portal.zoo.muk.mmk.mmdom.net/assets/silent-refresh.hmtl\",\n
+    \     \"scope\": \"openid profile roles\",\n      \"useSilentRefresh\": true,
+    \n      \"silentRefreshTimeout\": 50000, \n      \"timeoutFactor\": 0.25, \n      \"sessionChecksEnabled\":
+    true,\n      \"showDebugInformation\": true, \n      \"clearHashAfterLogin\":
+    false, \n      \"nonceStateSeparator\" : \"semicolon\" \n    },\n    \"locales\":
+    [\n      {\n        \"short\":\"en\",\n        \"long\":\"English\", \n        \"fallback\":
+    true\n      },\n      {\n        \"short\":\"de\",\n        \"long\":\"Deutsch\"\n
+    \     },\n      {\n        \"short\":\"it\",\n        \"long\":\"Italiano\"\n
+    \     }\n    ]\n}"

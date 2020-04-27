@@ -1,0 +1,92 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "portal.fullname" . }}-authenticator-conf
+  labels:
+    {{- include "portal.labels" . | nindent 4 }}
+data:
+  appsettings.Production.json: |-
+    {
+      "Serilog": {
+        "MinimumLevel": "Information",
+        "WriteTo": [
+          {
+            "Name": "Console",
+            "Args": { "outputTemplate": "[{Timestamp:HH:mm:ss.fff}] {Level:u3} - {Message}{NewLine}{Exception}" }
+          },
+          {
+            "Name": "RollingFile",
+            "Args": {
+              "pathFormat": "Logs\\log-{Date}.log",
+              "outputTemplate": "[{Timestamp:dd/MM/yy HH:mm:ss.fff z}] {Level:u3} {Message}{NewLine}{Exception}"
+            }
+          }
+        ],
+        "Enrich": [ "FromLogContext" ]
+      },
+      "Database": {
+        "Name": "authenticator",
+        "Host": "authenticator-database",
+        "Port": 3306,
+        "User": "authenticator_user",
+        "Password": "authenticator_pass"
+      },
+      "Identity": {
+        "DefaultUserName": "root",
+        "DefaultPassword": "Root#123",
+        "JwtIssuer": "http://portal-authenticator.zoo.muk.mmk.mmdom.net",
+        "Roles": [
+          "User",
+          "Admin",
+          "Manager"
+        ],
+        "Clients": [
+          {
+            "ClientId": "portal",
+            "ClientName": "portalMenu",
+            "AllowedGrantTypes": [ "authorization_code" ],
+            "RedirectUris": [
+              "http://portal.zoo.muk.mmk.mmdom.net/assets/silent-refresh.html",
+              "http://portal.zoo.muk.mmk.mmdom.net/main"
+            ],
+            "PostLogoutRedirectUris": [
+              "http://portal.zoo.muk.mmk.mmdom.net/main"
+            ],
+            "AllowedScopes": [
+              "openid",
+              "profile",
+              "roles"
+            ],
+            "RequirePkce": true,
+            "RequireConsent": false,
+            "RequireClientSecret": false
+          }
+        ]
+      },
+      "AuthenticatorConfiguration": [
+        {
+          "Order": 1,
+          "Enabled": true,
+          "Type": 0
+        },
+        {
+          "Order": 2,
+          "Enabled": true,
+          "Type": 1
+        }
+      ],
+      "LdapConfigurations": [
+        {
+          "Host": "",
+          "Username": "",
+          "Password": "",
+          "BaseDN": "",
+          "UserNameAttribute": "",
+          "FirstNameAttribute": "",
+          "LastNameAttribute": "",
+          "EmailAttribute": "",
+          "Port": 636,
+          "SecureSocketLayer": true
+        }
+      ]
+    }

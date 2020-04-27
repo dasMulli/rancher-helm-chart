@@ -55,6 +55,15 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - mountPath: /app/appsettings.Production.json
+              name: portal-authenticator-config
+              subPath: appsettings.Production.json
+      volumes:
+      - configMap:
+          name: portal-authenticator-config
+          optional: false
+        name: portal-authenticator-config
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

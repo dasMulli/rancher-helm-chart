@@ -61,7 +61,6 @@ spec:
               subPath: appsettings.Production.json
       volumes:
       - configMap:
-          defaultMode: 256
           name: portal-api-config
           optional: false
         name: portal-api-config
