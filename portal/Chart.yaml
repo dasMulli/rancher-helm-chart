@@ -24,12 +24,3 @@ dependencies:
 - name: mariadb
   version: 7.0.1
   repository: https://kubernetes-charts.storage.googleapis.com
-- name: portal-api
-  version: 0.1.0
-  repository: https://vandenbergen.github.io/rancher-helm-chart/
-- name: portal-webapp
-  version: 0.1.0
-  repository: https://vandenbergen.github.io/rancher-helm-chart/
-- name: portal-authenticator
-  version: 0.1.0
-  repository: https://vandenbergen.github.io/rancher-helm-chart/
