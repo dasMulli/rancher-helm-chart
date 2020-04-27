@@ -10,14 +10,18 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      {{- include "portal.labels" . | nindent 4 }}
+      {{- include "portal.selectorLabels" . | nindent 6 }}
       portal/component: portal-api
   template:
     metadata:
       labels:
-        {{- include "portal.labels" . | nindent 4 }}
+        {{- include "portal.selectorLabels" . | nindent 8 }}
         portal/component: portal-api
     spec:
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
