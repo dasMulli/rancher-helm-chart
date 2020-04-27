@@ -1,11 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: portal-api
+  name: {{ include "chronos.fullname" . }}-portal-api
   namespace: portal
+  labels:
+    {{- include "chronos.labels" . | nindent 4 }}
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      {{- include "chronos.labels" . | nindent 4 }}
   template:
+    metadata:
+      labels:
+        {{- include "chronos.labels" . | nindent 4 }}
     spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:

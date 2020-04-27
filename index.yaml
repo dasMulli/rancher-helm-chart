@@ -3,7 +3,7 @@ entries:
   mm-panda-api:
   - apiVersion: v2
     appVersion: develop
-    created: "2020-04-27T12:00:16.3865558+02:00"
+    created: "2020-04-27T12:10:29.6797619+02:00"
     description: A Helm chart for Kubernetes
     digest: eba39a6cf9b98f89b57d5f308037bec78b482138391fe7fcdf12b3092a81f95b
     icon: file://panda.png
@@ -14,7 +14,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: develop
-    created: "2020-04-27T12:00:16.4945537+02:00"
+    created: "2020-04-27T12:10:29.7797242+02:00"
     description: A Helm chart for Kubernetes
     digest: eba39a6cf9b98f89b57d5f308037bec78b482138391fe7fcdf12b3092a81f95b
     icon: file://panda.png
@@ -26,7 +26,7 @@ entries:
   mm-pandaconfigurator-webapp:
   - apiVersion: v2
     appVersion: AdamDemo
-    created: "2020-04-27T12:00:16.3925533+02:00"
+    created: "2020-04-27T12:10:29.6847527+02:00"
     description: A Helm chart for Kubernetes
     digest: 13c6c5773dfa25cc5c2a9fa9158814222968d7434b2c948ad600494e8bb2f736
     icon: file://panda.png
@@ -37,7 +37,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: AdamDemo
-    created: "2020-04-27T12:00:16.4995819+02:00"
+    created: "2020-04-27T12:10:29.7837238+02:00"
     description: A Helm chart for Kubernetes
     digest: 13c6c5773dfa25cc5c2a9fa9158814222968d7434b2c948ad600494e8bb2f736
     icon: file://panda.png
@@ -49,7 +49,21 @@ entries:
   portal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-27T12:00:16.4845535+02:00"
+    created: "2020-04-27T12:10:29.770725+02:00"
+    dependencies:
+    - name: mariadb
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 7.0.1
+    description: A Helm chart for Kubernetes
+    digest: 48c3637009aa30c4f851ad49d4a592a0cb2fad6f5776308b7d64b2b2a005352a
+    name: portal
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/portal-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-04-27T12:10:29.7677229+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -63,7 +77,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-27T12:00:16.482554+02:00"
+    created: "2020-04-27T12:10:29.7657237+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -78,7 +92,7 @@ entries:
   portal-api:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-27T12:00:16.4865751+02:00"
+    created: "2020-04-27T12:10:29.770725+02:00"
     description: A Helm chart for Kubernetes
     digest: 4ae285687a831ed8b6ac5de663c42777078a6d8dd941495fcceab99c8fa41ed4
     name: portal-api
@@ -89,7 +103,7 @@ entries:
   portal-authenticator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-27T12:00:16.4875537+02:00"
+    created: "2020-04-27T12:10:29.771725+02:00"
     description: A Helm chart for Kubernetes
     digest: 143e507d3eccda0c614ff38bd19848b2c6c384f416b22878f4904c65767493bd
     name: portal-authenticator
@@ -100,7 +114,7 @@ entries:
   portal-webapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-27T12:00:16.4885575+02:00"
+    created: "2020-04-27T12:10:29.7747244+02:00"
     description: A Helm chart for Kubernetes
     digest: de23389dd194bb76ac42ea1d892803cc7ac078750655eff7fddb0ec848d4d605
     name: portal-webapp
@@ -111,7 +125,7 @@ entries:
   testa:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-27T12:00:16.489554+02:00"
+    created: "2020-04-27T12:10:29.7747244+02:00"
     description: A Helm chart for Kubernetes
     digest: fcf302a614f8aa6186cc64ede0d272f823b996e53027668d473d72646d0a6533
     name: testa
@@ -119,4 +133,4 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/testa-0.1.0.tgz
     version: 0.1.0
-generated: "2020-04-27T12:00:16.3805544+02:00"
+generated: "2020-04-27T12:10:29.6747241+02:00"
