@@ -15,7 +15,7 @@ questions:
 # Portal
 - variable: portal.baseUrl
   group: "Redis Persistence"
-  default: 'http://portal.kubi.syngroup.loc'
+  default: 'portal.kubi.syngroup.loc'
   required: true
   label: "Base Url"
   description: "Base Url"
