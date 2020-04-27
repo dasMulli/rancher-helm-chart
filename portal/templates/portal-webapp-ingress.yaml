@@ -13,5 +13,5 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: {{ $fullName }}-portal-webapp
+              serviceName: {{ $fullName }}-portal-webapp-service
               servicePort: 8080
