@@ -17,7 +17,7 @@ spec:
         - name: {{ .Chart.Name }}-portal-api
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "nexus.mmk.mmdom.net/cit-dev/mes/portal/synit.portal.api:latest"
+          image: "nexus.syn-group.com/synit.portal.api:develop"
           env:
           - name: ASPNETCORE_ENVIRONMENT
             value: Production
