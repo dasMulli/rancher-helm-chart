@@ -20,6 +20,76 @@ questions:
   description: "Base Url"
   type: string
   
+#Ldap
+- variable: portal.ldap.enable
+  default: false
+  description: "Enable Ldap Authentication"
+  type: boolean
+  label: "Enable Ldap Authentication"
+  required: true
+  show_subquestion_if: true
+  subquestions:
+    - variable: portal.ldap.host
+      default: ''
+      required: false
+      label: "Ldap Hostname"
+      description: "Ldap Hostname"
+      type: string
+    - variable: portal.ldap.username
+      default: ''
+      required: false
+      label: "Ldap Username"
+      description: "Ldap Username"
+      type: string
+    - variable: portal.ldap.password
+      default: ''
+      required: false
+      label: "Ldap Password"
+      description: "Ldap Password"
+      type: string
+    - variable: portal.ldap.baseDN
+      default: ''
+      required: false
+      label: "Ldap BaseDN"
+      description: "Ldap BaseDN"
+      type: string
+    - variable: portal.ldap.userNameAttribute
+      default: ''
+      required: false
+      label: "Ldap UserNameAttribute"
+      description: "Ldap UserNameAttribute"
+      type: string
+    - variable: portal.ldap.firstNameAttribute
+      default: ''
+      required: false
+      label: "Ldap FirstNameAttribute"
+      description: "Ldap FirstNameAttribute"
+      type: string
+    - variable: portal.ldap.lastNameAttribute
+      default: ''
+      required: false
+      label: "Ldap LastNameAttribute"
+      description: "Ldap LastNameAttribute"
+      type: string
+    - variable: portal.ldap.emailAttribute
+      default: ''
+      required: false
+      label: "Ldap EmailAttribute"
+      description: "Ldap EmailAttribute"
+      type: string
+    - variable: portal.ldap.port
+      default: '636'
+      required: false
+      label: "Ldap Port"
+      description: "Ldap Port"
+      type: int
+    - variable: portal.ldap.secureSocketLayer
+      default: true
+      required: false
+      label: "Ldap SecureSocketLayer"
+      description: "Ldap SecureSocketLayer"
+      type: boolean
+  
 #MariaDb
 - variable: mariadb.rootUser.password
   default: 'root'

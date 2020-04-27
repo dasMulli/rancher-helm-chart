@@ -71,22 +71,22 @@ data:
         },
         {
           "Order": 2,
-          "Enabled": true,
+          "Enabled": {{ .Values.portal.ldap.enable }},
           "Type": 1
         }
       ],
       "LdapConfigurations": [
         {
-          "Host": "",
-          "Username": "",
-          "Password": "",
-          "BaseDN": "",
-          "UserNameAttribute": "",
-          "FirstNameAttribute": "",
-          "LastNameAttribute": "",
-          "EmailAttribute": "",
-          "Port": 636,
-          "SecureSocketLayer": true
+          "Host": "{{ .Values.portal.ldap.host }}",
+          "Username": "{{ .Values.portal.ldap.username }}",
+          "Password": "{{ .Values.portal.ldap.password }}",
+          "BaseDN": "{{ .Values.portal.ldap.baseDN }}",
+          "UserNameAttribute": "{{ .Values.portal.ldap.userNameAttribute }}",
+          "FirstNameAttribute": "{{ .Values.portal.ldap.firstNameAttribute }}",
+          "LastNameAttribute": "{{ .Values.portal.ldap.lastNameAttribute }}",
+          "EmailAttribute": "{{ .Values.portal.ldap.emailAttribute }}",
+          "Port": {{ .Values.portal.ldap.port }},
+          "SecureSocketLayer": {{ .Values.portal.ldap.secureSocketLayer }}
         }
       ]
     }
