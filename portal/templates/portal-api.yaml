@@ -57,13 +57,13 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - mountPath: /app/appsettings.Production.json
-              name: portal-api-config
+              name: portal-api-conf
               subPath: appsettings.Production.json
       volumes:
       - configMap:
-          name: portal-api-config
+          name: portal-api-conf
           optional: false
-        name: portal-api-config
+        name: portal-api-conf
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
