@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "portal.fullname" . }}-api-conf
+  labels:
+    {{- include "portal.labels" . | nindent 4 }}
+data:
+  appsettings.Production.json: |-
+    {
+      "Serilog": {
+        "MinimumLevel": "Information",
+        "WriteTo": [
+          {
+            "Name": "Console",
+            "Args": { "outputTemplate": "[{Timestamp:HH:mm:ss.fff}] {Level:u3} - {Message}{NewLine}{Exception}" }
+          },
+          {
+            "Name": "RollingFile",
+            "Args": {
+              "pathFormat": "Logs\\log-{Date}.log",
+              "outputTemplate": "[{Timestamp:dd/MM/yy HH:mm:ss.fff z}] {Level:u3} {Message}{NewLine}{Exception}"
+            }
+          }
+        ],
+        "Enrich": [ "FromLogContext" ]
+      },
+      "Database": {
+        "Name": "portal",
+        "Host": "portal-mariadb-master",
+        "Port": 3306,
+        "User": "root",
+        "Password": "fGX2RuJfvc"
+      },
+      "Authorization": {
+        "Host": "https://localhost:5003"
+      },
+      "Menu": {
+        "GroupMenuItems": [
+          {
+            "Id": 1,
+            "Title": "Main Keep"
+          },
+          {
+            "Id": 2,
+            "Title": "Group1",
+            "GroupMenuItemId": 1,
+            "Tooltip": "I am a tooltip!"
+          }
+        ],
+        "AppMenuItems": [
+          {
+            "Id": 3,
+            "Title": "App1",
+            "Url": "http://www.example.com",
+            "GroupMenuItemId": 2,
+            "Tooltip": "and on apps!"
+          }
+        ]
+      }
+    }

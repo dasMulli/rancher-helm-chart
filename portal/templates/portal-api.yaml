@@ -55,6 +55,16 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - mountPath: /app/appsettings.Production.json
+              name: portal-api-config
+              subPath: appsettings.Production.json
+      volumes:
+      - configMap:
+          defaultMode: 256
+          name: portal-api-config
+          optional: false
+        name: portal-api-config
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
