@@ -1,0 +1,17 @@
+{{- $fullName := include "portal.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}-portal-webapp
+  labels:
+    {{- include "portal.labels" . | nindent 4 }}
+    portal/component: portal-webapp
+spec:
+  rules:
+    - host: portal.zoo.mmk.mmdom.net
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: {{ $fullName }}-portal-webapp
+              servicePort: 8080
