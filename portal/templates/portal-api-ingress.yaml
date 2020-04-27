@@ -8,10 +8,10 @@ metadata:
     portal/component: portal-api
 spec:
   rules:
-    - host: {{ .Values.portal.baseUrl }}/backend
+    - host: {{ .Values.portal.baseUrl }}
       http:
         paths:
-          - path: /
+          - path: /backend/
             backend:
               serviceName: {{ $fullName }}-portal-api-service
               servicePort: 80

@@ -8,10 +8,10 @@ metadata:
     portal/component: portal-authenticator
 spec:
   rules:
-    - host: {{ .Values.portal.baseUrl }}/authenticator
+    - host: {{ .Values.portal.baseUrl }}
       http:
         paths:
-          - path: /
+          - path: /authenticator/
             backend:
               serviceName: {{ $fullName }}-portal-authenticator-service
               servicePort: 80
