@@ -89,6 +89,12 @@ questions:
       label: "Ldap SecureSocketLayer"
       description: "Ldap SecureSocketLayer"
       type: boolean
+    - variable: portal.ldap.domain
+      default: 'mm'
+      required: false
+      label: "Ldap Domain"
+      description: "Ldap Domain"
+      type: string
   
 #MariaDb
 - variable: mariadb.rootUser.password

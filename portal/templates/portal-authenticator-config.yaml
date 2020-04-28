@@ -86,7 +86,8 @@ data:
           "LastNameAttribute": "{{ .Values.portal.ldap.lastNameAttribute }}",
           "EmailAttribute": "{{ .Values.portal.ldap.emailAttribute }}",
           "Port": {{ .Values.portal.ldap.port }},
-          "SecureSocketLayer": {{ .Values.portal.ldap.secureSocketLayer }}
+          "SecureSocketLayer": {{ .Values.portal.ldap.secureSocketLayer }},
+          "Domain": "{{ .Values.portal.ldap.domain }}"
         }
       ]
     }
