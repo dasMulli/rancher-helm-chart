@@ -1,0 +1,81 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "panda.fullname" . }}-panda-service-service
+  labels:
+    {{- include "panda.labels" . | nindent 4 }}
+    panda/component: panda-service
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    {{- include "panda.selectorLabels" . | nindent 4 }}
+    panda/component: panda-service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "panda.fullname" . }}-panda-service
+  namespace: panda
+  labels:
+    {{- include "panda.labels" . | nindent 4 }}
+    panda/component: panda-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "panda.selectorLabels" . | nindent 6 }}
+      panda/component: panda-service
+  template:
+    metadata:
+      labels:
+        {{- include "panda.selectorLabels" . | nindent 8 }}
+        panda/component: panda-service
+    spec:
+      imagePullSecrets:
+        - name: {{ .Values.image.pullSecretName }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - env:
+          - name: ExternalQueueType
+            value: InMemory
+          - name: Influx__Database
+            value: panda
+          - name: Influx__Password
+            value: {{ .Values.influxdb.adminUser.pwd }}
+          - name: Influx__Url
+            value: http://panda-influx
+          - name: Influx__Username
+            value: {{ .Values.influxdb.adminUser.name }}
+          - name: MariaDbConnectionString
+            value: Server=panda-mariadb;Database=panda;Uid=root;Pwd={{ .Values.mariadb.rootUser.password }};
+        - name: {{ .Chart.Name }}-panda-service
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repositoryBase }}/cit-dev/mes/panda/mm.panda.service:latest"
+          imagePullPolicy: Always
+          env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: Production
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

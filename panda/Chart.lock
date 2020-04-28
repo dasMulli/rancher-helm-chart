@@ -1,0 +1,9 @@
+dependencies:
+- name: mariadb
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 7.0.1
+- name: influxdb
+  repository: https://charts.bitnami.com/bitnami
+  version: 0.3.7
+digest: sha256:16e45f1a0627cd9d657e87d0a26ac34ec631c625d246f20ec8654e6c7f57f50d
+generated: "2020-04-28T19:17:36.0791725+02:00"
