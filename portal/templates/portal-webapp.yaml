@@ -54,13 +54,13 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - mountPath: /usr/share/nginx/html/assets/appConfig.json
-              name: portal-webapp-conf
+              name: {{ .Chart.Name }}-portal-webapp-conf
               subPath: appConfig.json
       volumes:
       - configMap:
-          name: portal-webapp-conf
+          name: {{ .Chart.Name }}-portal-webapp-conf
           optional: false
-        name: portal-webapp-conf
+        name: {{ .Chart.Name }}-portal-webapp-conf
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

@@ -57,13 +57,13 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - mountPath: /app/appsettings.Production.json
-              name: portal-authenticator-conf
+              name: {{ .Chart.Name }}-portal-authenticator-conf
               subPath: appsettings.Production.json
       volumes:
       - configMap:
-          name: portal-authenticator-conf
+          name: {{ .Chart.Name }}-portal-authenticator-conf
           optional: false
-        name: portal-authenticator-conf
+        name: {{ .Chart.Name }}-portal-authenticator-conf
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
