@@ -44,6 +44,7 @@ spec:
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repositoryBase }}/cit-dev/mes/portal/synit.portal.authenticator.application:test"
+          imagePullPolicy: Always
           env:
           - name: ASPNETCORE_ENVIRONMENT
             value: Production
