@@ -3,7 +3,7 @@ entries:
   mm-panda-api:
   - apiVersion: v2
     appVersion: develop
-    created: "2020-04-28T17:55:32.0724167+02:00"
+    created: "2020-04-28T18:00:14.7521699+02:00"
     description: A Helm chart for Kubernetes
     digest: eba39a6cf9b98f89b57d5f308037bec78b482138391fe7fcdf12b3092a81f95b
     icon: file://panda.png
@@ -14,7 +14,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: develop
-    created: "2020-04-28T17:55:32.2694164+02:00"
+    created: "2020-04-28T18:00:14.944145+02:00"
     description: A Helm chart for Kubernetes
     digest: eba39a6cf9b98f89b57d5f308037bec78b482138391fe7fcdf12b3092a81f95b
     icon: file://panda.png
@@ -26,7 +26,7 @@ entries:
   mm-pandaconfigurator-webapp:
   - apiVersion: v2
     appVersion: AdamDemo
-    created: "2020-04-28T17:55:32.0774157+02:00"
+    created: "2020-04-28T18:00:14.7571484+02:00"
     description: A Helm chart for Kubernetes
     digest: 13c6c5773dfa25cc5c2a9fa9158814222968d7434b2c948ad600494e8bb2f736
     icon: file://panda.png
@@ -37,7 +37,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: AdamDemo
-    created: "2020-04-28T17:55:32.2744177+02:00"
+    created: "2020-04-28T18:00:14.9481839+02:00"
     description: A Helm chart for Kubernetes
     digest: 13c6c5773dfa25cc5c2a9fa9158814222968d7434b2c948ad600494e8bb2f736
     icon: file://panda.png
@@ -49,7 +49,22 @@ entries:
   portal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2484456+02:00"
+    created: "2020-04-28T18:00:14.9251451+02:00"
+    dependencies:
+    - name: mariadb
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 7.0.1
+    description: A Helm chart for Kubernetes
+    digest: 0550cebb21828d955bc0f48f68a4a64471608b5c2b7f86ab8ee177915c4cf103
+    icon: https://www.mm-packaging.com/typo3conf/ext/bb_boilerplate/Resources/Public/Images/logo-packaging.svg
+    name: portal
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/portal-0.1.42.tgz
+    version: 0.1.42
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-04-28T18:00:14.9231477+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -64,7 +79,7 @@ entries:
     version: 0.1.41
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2454225+02:00"
+    created: "2020-04-28T18:00:14.9211508+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -79,7 +94,7 @@ entries:
     version: 0.1.40
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.239416+02:00"
+    created: "2020-04-28T18:00:14.9161496+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -94,7 +109,7 @@ entries:
     version: 0.1.39
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2364168+02:00"
+    created: "2020-04-28T18:00:14.9141483+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -109,7 +124,7 @@ entries:
     version: 0.1.38
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2344433+02:00"
+    created: "2020-04-28T18:00:14.9111466+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -124,7 +139,7 @@ entries:
     version: 0.1.37
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2324415+02:00"
+    created: "2020-04-28T18:00:14.9081441+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -139,7 +154,7 @@ entries:
     version: 0.1.36
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2304198+02:00"
+    created: "2020-04-28T18:00:14.9061458+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -154,7 +169,7 @@ entries:
     version: 0.1.35
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2264202+02:00"
+    created: "2020-04-28T18:00:14.9041451+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -169,7 +184,7 @@ entries:
     version: 0.1.34
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2234207+02:00"
+    created: "2020-04-28T18:00:14.9021459+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -184,7 +199,7 @@ entries:
     version: 0.1.33
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.221416+02:00"
+    created: "2020-04-28T18:00:14.8991454+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -199,7 +214,7 @@ entries:
     version: 0.1.32
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2194154+02:00"
+    created: "2020-04-28T18:00:14.897144+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -214,7 +229,7 @@ entries:
     version: 0.1.31
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2164497+02:00"
+    created: "2020-04-28T18:00:14.8951471+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -229,7 +244,7 @@ entries:
     version: 0.1.30
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2114155+02:00"
+    created: "2020-04-28T18:00:14.8901448+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -244,7 +259,7 @@ entries:
     version: 0.1.29
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2094152+02:00"
+    created: "2020-04-28T18:00:14.8881496+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -258,7 +273,7 @@ entries:
     version: 0.1.28
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2064199+02:00"
+    created: "2020-04-28T18:00:14.8861495+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -272,7 +287,7 @@ entries:
     version: 0.1.27
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2044524+02:00"
+    created: "2020-04-28T18:00:14.8831705+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -286,7 +301,7 @@ entries:
     version: 0.1.26
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2024501+02:00"
+    created: "2020-04-28T18:00:14.8811455+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -300,7 +315,7 @@ entries:
     version: 0.1.25
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1994154+02:00"
+    created: "2020-04-28T18:00:14.8791463+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -314,7 +329,7 @@ entries:
     version: 0.1.24
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1974531+02:00"
+    created: "2020-04-28T18:00:14.8771767+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -328,7 +343,7 @@ entries:
     version: 0.1.23
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1954511+02:00"
+    created: "2020-04-28T18:00:14.8751471+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -342,7 +357,7 @@ entries:
     version: 0.1.22
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.19342+02:00"
+    created: "2020-04-28T18:00:14.8721444+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -356,7 +371,7 @@ entries:
     version: 0.1.21
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1904194+02:00"
+    created: "2020-04-28T18:00:14.8701446+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -370,7 +385,7 @@ entries:
     version: 0.1.20
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1864511+02:00"
+    created: "2020-04-28T18:00:14.866149+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -384,7 +399,7 @@ entries:
     version: 0.1.19
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1834151+02:00"
+    created: "2020-04-28T18:00:14.8621444+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -398,7 +413,7 @@ entries:
     version: 0.1.18
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1814189+02:00"
+    created: "2020-04-28T18:00:14.860168+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -412,7 +427,7 @@ entries:
     version: 0.1.17
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1794151+02:00"
+    created: "2020-04-28T18:00:14.8571667+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -426,7 +441,7 @@ entries:
     version: 0.1.16
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1764157+02:00"
+    created: "2020-04-28T18:00:14.8551734+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -440,7 +455,7 @@ entries:
     version: 0.1.15
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1744146+02:00"
+    created: "2020-04-28T18:00:14.8521814+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -454,7 +469,7 @@ entries:
     version: 0.1.14
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1724155+02:00"
+    created: "2020-04-28T18:00:14.8501444+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -468,7 +483,7 @@ entries:
     version: 0.1.13
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1704152+02:00"
+    created: "2020-04-28T18:00:14.8481444+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -482,7 +497,7 @@ entries:
     version: 0.1.12
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1674149+02:00"
+    created: "2020-04-28T18:00:14.846144+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -496,7 +511,7 @@ entries:
     version: 0.1.11
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1654164+02:00"
+    created: "2020-04-28T18:00:14.8441447+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -510,7 +525,7 @@ entries:
     version: 0.1.10
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2624193+02:00"
+    created: "2020-04-28T18:00:14.9371449+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -524,7 +539,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2594169+02:00"
+    created: "2020-04-28T18:00:14.935146+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -538,7 +553,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2574157+02:00"
+    created: "2020-04-28T18:00:14.9331466+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -552,7 +567,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2554169+02:00"
+    created: "2020-04-28T18:00:14.9301503+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -566,7 +581,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.25242+02:00"
+    created: "2020-04-28T18:00:14.9281491+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -580,7 +595,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2424169+02:00"
+    created: "2020-04-28T18:00:14.9181498+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -594,7 +609,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2134154+02:00"
+    created: "2020-04-28T18:00:14.8931479+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -608,7 +623,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1884152+02:00"
+    created: "2020-04-28T18:00:14.8681451+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -622,7 +637,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.1634159+02:00"
+    created: "2020-04-28T18:00:14.8411487+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -636,7 +651,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.161417+02:00"
+    created: "2020-04-28T18:00:14.8391462+02:00"
     dependencies:
     - name: mariadb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -651,7 +666,7 @@ entries:
   portal-api:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2634186+02:00"
+    created: "2020-04-28T18:00:14.9371449+02:00"
     description: A Helm chart for Kubernetes
     digest: 4ae285687a831ed8b6ac5de663c42777078a6d8dd941495fcceab99c8fa41ed4
     name: portal-api
@@ -662,7 +677,7 @@ entries:
   portal-authenticator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2634186+02:00"
+    created: "2020-04-28T18:00:14.9381453+02:00"
     description: A Helm chart for Kubernetes
     digest: 143e507d3eccda0c614ff38bd19848b2c6c384f416b22878f4904c65767493bd
     name: portal-authenticator
@@ -673,7 +688,7 @@ entries:
   portal-webapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2644176+02:00"
+    created: "2020-04-28T18:00:14.9381453+02:00"
     description: A Helm chart for Kubernetes
     digest: de23389dd194bb76ac42ea1d892803cc7ac078750655eff7fddb0ec848d4d605
     name: portal-webapp
@@ -684,7 +699,7 @@ entries:
   testa:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-04-28T17:55:32.2654184+02:00"
+    created: "2020-04-28T18:00:14.9391467+02:00"
     description: A Helm chart for Kubernetes
     digest: fcf302a614f8aa6186cc64ede0d272f823b996e53027668d473d72646d0a6533
     name: testa
@@ -692,4 +707,4 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/testa-0.1.0.tgz
     version: 0.1.0
-generated: "2020-04-28T17:55:32.067416+02:00"
+generated: "2020-04-28T18:00:14.7481738+02:00"

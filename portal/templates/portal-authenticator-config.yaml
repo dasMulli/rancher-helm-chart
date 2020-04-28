@@ -78,7 +78,7 @@ data:
       "LdapConfigurations": [
         {
           "Host": "{{ .Values.portal.ldap.host }}",
-          "Username": "{{ .Values.portal.ldap.username }}",
+          "Username": "{{ .Values.portal.ldap.domain }}\\{{ .Values.portal.ldap.username }}",
           "Password": "{{ .Values.portal.ldap.password }}",
           "BaseDN": "{{ .Values.portal.ldap.baseDN }}",
           "UserNameAttribute": "{{ .Values.portal.ldap.userNameAttribute }}",
