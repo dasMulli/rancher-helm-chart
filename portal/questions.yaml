@@ -2,7 +2,7 @@ categories:
 - Repository
 questions:
 - variable: image.repositoryBase
-  default: nexus.syn-group.com
+  default: nexus.mmk.mmdom.net
   label: Image Repository Base
   description: "Specify repository base for images (e.g. custom repository). Relative path will be appended."
   type: string
@@ -30,7 +30,7 @@ questions:
   show_subquestion_if: true
   subquestions:
     - variable: portal.ldap.host
-      default: ''
+      default: 'ldap-hw.mmk.mmdom.net'
       required: false
       label: "Ldap Hostname"
       description: "Ldap Hostname"
@@ -48,31 +48,31 @@ questions:
       description: "Ldap Password"
       type: string
     - variable: portal.ldap.baseDN
-      default: ''
+      default: 'DC=mmdom,DC=net'
       required: false
       label: "Ldap BaseDN"
       description: "Ldap BaseDN"
       type: string
     - variable: portal.ldap.userNameAttribute
-      default: ''
+      default: 'sAMAccountName'
       required: false
       label: "Ldap UserNameAttribute"
       description: "Ldap UserNameAttribute"
       type: string
     - variable: portal.ldap.firstNameAttribute
-      default: ''
+      default: 'sn'
       required: false
       label: "Ldap FirstNameAttribute"
       description: "Ldap FirstNameAttribute"
       type: string
     - variable: portal.ldap.lastNameAttribute
-      default: ''
+      default: 'givenName'
       required: false
       label: "Ldap LastNameAttribute"
       description: "Ldap LastNameAttribute"
       type: string
     - variable: portal.ldap.emailAttribute
-      default: ''
+      default: 'mail'
       required: false
       label: "Ldap EmailAttribute"
       description: "Ldap EmailAttribute"

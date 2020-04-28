@@ -43,7 +43,7 @@ spec:
         - name: {{ .Chart.Name }}-portal-webapp
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repositoryBase }}/synit.portal.webapp:test"
+          image: "{{ .Values.image.repositoryBase }}/cit-dev/mes/portal/synit.portal.webapp:test"
           ports:
             - name: http
               containerPort: 80

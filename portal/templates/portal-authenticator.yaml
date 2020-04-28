@@ -43,7 +43,7 @@ spec:
         - name: {{ .Chart.Name }}-portal-authenticator
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repositoryBase }}/synit.portal.authenticator.application:test"
+          image: "{{ .Values.image.repositoryBase }}/cit-dev/mes/portal/synit.portal.authenticator.application:test"
           env:
           - name: ASPNETCORE_ENVIRONMENT
             value: Production

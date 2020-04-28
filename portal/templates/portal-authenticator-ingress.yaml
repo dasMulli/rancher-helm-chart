@@ -11,7 +11,7 @@ spec:
     - host: {{ .Values.portal.baseUrl }}
       http:
         paths:
-          - path: /authenticator/
+          - path: /authenticator
             backend:
               serviceName: {{ $fullName }}-portal-authenticator-service
               servicePort: 80

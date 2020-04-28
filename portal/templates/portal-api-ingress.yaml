@@ -11,7 +11,7 @@ spec:
     - host: {{ .Values.portal.baseUrl }}
       http:
         paths:
-          - path: /backend/
+          - path: /api
             backend:
               serviceName: {{ $fullName }}-portal-api-service
               servicePort: 80
