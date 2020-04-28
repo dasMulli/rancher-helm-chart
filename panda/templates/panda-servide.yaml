@@ -45,27 +45,27 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repositoryBase }}/cit-dev/mes/panda/mm.panda.service:latest"
           imagePullPolicy: Always
+          env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: Production
+          - name: ExternalQueueType
+            value: InMemory
+          - name: Influx__Database
+            value: panda
+          - name: Influx__Password
+            value: {{ .Values.influxdb.adminUser.pwd }}
+          - name: Influx__Url
+            value: http://panda-influx
+          - name: Influx__Username
+            value: {{ .Values.influxdb.adminUser.name }}
+          - name: MariaDbConnectionString
+            value: Server=panda-mariadb;Database=panda;Uid=root;Pwd={{ .Values.mariadb.rootUser.password }};
           ports:
             - name: http
               containerPort: 80
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          - env:
-            - name: ExternalQueueType
-              value: InMemory
-            - name: Influx__Database
-              value: panda
-            - name: Influx__Password
-              value: {{ .Values.influxdb.adminUser.pwd }}
-            - name: Influx__Url
-              value: http://panda-influx
-            - name: Influx__Username
-              value: {{ .Values.influxdb.adminUser.name }}
-            - name: MariaDbConnectionString
-              value: Server=panda-mariadb;Database=panda;Uid=root;Pwd={{ .Values.mariadb.rootUser.password }};
-            - name: ASPNETCORE_ENVIRONMENT
-              value: Production
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
