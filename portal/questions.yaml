@@ -95,6 +95,18 @@ questions:
       label: "Ldap Domain"
       description: "Ldap Domain"
       type: string
+    - variable: portal.ldap.memberOf
+      default: 'memberOf'
+      required: false
+      label: "Ldap MemberOf"
+      description: "Ldap MemberOf"
+      type: string
+    - variable: portal.ldap.groupFilter
+      default: '(cn=G_$*)'
+      required: false
+      label: "Ldap Group Filter"
+      description: "Ldap Group Filter"
+      type: string
   
 #MariaDb
 - variable: mariadb.rootUser.password

@@ -82,8 +82,10 @@ portal:
     lastNameAttribute: ''
     emailAttribute: ''
     port: 636
-    secureSocketLayer: true,
+    secureSocketLayer: true
     domain: 'mm'
+    memberOf: 'memberOf'
+    groupFilter: '(cn=G_$*)'
   
 mariadb:
   rootUser:
