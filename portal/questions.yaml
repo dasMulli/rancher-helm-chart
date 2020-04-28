@@ -102,7 +102,7 @@ questions:
       description: "Ldap MemberOf"
       type: string
     - variable: portal.ldap.groupFilter
-      default: '(cn=MUK_$*)'
+      default: '(cn=*_MES_*)'
       required: false
       label: "Ldap Group Filter"
       description: "Ldap Group Filter"
