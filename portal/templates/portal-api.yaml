@@ -35,7 +35,7 @@ spec:
         {{- include "portal.selectorLabels" . | nindent 8 }}
         portal/component: portal-api
     spec:
-    {{- with .Values.imagePullSecrets }}
+    {{- with .Values.image.pullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
     {{- end }}
@@ -64,7 +64,6 @@ spec:
           name: {{ .Chart.Name }}-api-conf
           optional: false
         name: {{ .Chart.Name }}-api-conf
-      {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
