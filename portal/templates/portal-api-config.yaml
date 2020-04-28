@@ -32,7 +32,8 @@ data:
         "Password": "{{ .Values.mariadb.rootUser.password }}"
       },
       "Authorization": {
-        "Host": "http://{{ .Values.portal.baseUrl }}/authenticator"
+        "Host": "http://{{ .Chart.Name }}-portal-authenticator-service",
+        "Issuer": "http://{{ .Values.portal.baseUrl }}/authenticator"
       },
       "Menu": {
         "GroupMenuItems": [

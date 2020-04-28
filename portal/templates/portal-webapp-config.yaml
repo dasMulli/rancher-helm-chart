@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "portal.labels" . | nindent 4 }}
 data:
-  appConfig.json: "{\n    \"portalBackend\": \"http://{{ .Values.portal.baseUrl }}/api\",\n
+  appConfig.json: "{\n    \"portalBackend\": \"http://{{ .Values.portal.baseUrl }}\",\n
     \   \"authenticatorConfig\": {\n      \"issuer\": \"http://{{ .Values.portal.baseUrl }}/authenticator\",\n
     \     \"clientId\": \"portal\", \n      \"responseType\": \"code\",\n      \"redirectUri\":
     \"http://{{ .Values.portal.baseUrl }}/main\",\n      \"postLogoutRedirectUri\":\"http://{{ .Values.portal.baseUrl }}/main\",\n
