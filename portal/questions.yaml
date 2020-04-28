@@ -6,10 +6,10 @@ questions:
   label: Image Repository Base
   description: "Specify repository base for images (e.g. custom repository). Relative path will be appended."
   type: string
-- variable: image.imagePullSecrets[0].name
+- variable: image.pullSecretName
   required: false
-  label: Image Pull Secret
-  descriptioN: "Specify pull secret for repository base"
+  label: Image Pull Secret Name
+  descriptioN: "Specify pull secret name for repository base"
   type: string
 
 # Portal

@@ -8,8 +8,7 @@ image:
   repositoryBase: nexus.syn-group.com
   tag: develop
   pullPolicy: IfNotPresent
-  pullSecrets:
-    - syngroup
+  pullSecretName: syngroup
 
 imagePullSecrets: []
 nameOverride: ""

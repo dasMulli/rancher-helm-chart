@@ -35,9 +35,8 @@ spec:
         {{- include "portal.selectorLabels" . | nindent 8 }}
         portal/component: portal-api
     spec:
-    {{- with .Values.image.pullSecrets }}
       imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
+        - name: {{ .Values.image.pullSecretName }}
     {{- end }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
