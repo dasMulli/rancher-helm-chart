@@ -19,7 +19,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "panda.fullname" . }}-panda-service
-  namespace: panda
   labels:
     {{- include "panda.labels" . | nindent 4 }}
     panda/component: panda-service
