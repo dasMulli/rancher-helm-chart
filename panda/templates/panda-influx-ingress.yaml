@@ -2,7 +2,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}-panda-înfluxdb
+  name: {{ $fullName }}-panda-influxdb
   labels:
     {{- include "panda.labels" . | nindent 4 }}
     panda/component: panda-influxdb
