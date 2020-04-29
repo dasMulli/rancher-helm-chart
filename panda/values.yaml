@@ -81,7 +81,7 @@ mariadb:
     name: panda
 
 influxdb:
-  authEnabled: false
+  authEnabled: true
   adminUser:
     name: admin
     pwd: admin

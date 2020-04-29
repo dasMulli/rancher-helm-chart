@@ -1,0 +1,17 @@
+{{- $fullName := include "panda.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}-panda-webapp
+  labels:
+    {{- include "panda.labels" . | nindent 4 }}
+    panda/component: panda-webapp
+spec:
+  rules:
+    - host: {{ .Values.panda.baseUrl }}
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: {{ $fullName }}-panda-webapp-service
+              servicePort: 8080

@@ -1,0 +1,67 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "panda.fullname" . }}-panda-webapp-service
+  labels:
+    {{- include "panda.labels" . | nindent 4 }}
+    panda/component: panda-webapp
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    {{- include "panda.selectorLabels" . | nindent 4 }}
+    panda/component: panda-webapp
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "panda.fullname" . }}-panda-webapp
+  labels:
+    {{- include "panda.labels" . | nindent 4 }}
+    panda/component: panda-webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "panda.selectorLabels" . | nindent 6 }}
+      panda/component: panda-webapp
+  template:
+    metadata:
+      labels:
+        {{- include "panda.selectorLabels" . | nindent 8 }}
+        panda/component: panda-webapp
+    spec:
+      imagePullSecrets:
+        - name: {{ .Values.image.pullSecretName }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}-panda-webapp
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repositoryBase }}/cit-dev/mes/panda/mm.panda.webapp:latest"
+          imagePullPolicy: Always
+          env:
+          - name: API_URL
+            value: http://{{ .Values.portal.baseUrl }}/service/api
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
