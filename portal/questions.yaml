@@ -30,7 +30,7 @@ questions:
   show_subquestion_if: true
   subquestions:
     - variable: portal.ldap.host
-      default: 'ldap-muk.mmk.mmdom.net'
+      default: 'ldap-ha.mmk.mmdom.net'
       required: false
       label: "Ldap Hostname"
       description: "Ldap Hostname"

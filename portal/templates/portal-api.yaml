@@ -19,7 +19,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "portal.fullname" . }}-portal-api
-  namespace: portal
   labels:
     {{- include "portal.labels" . | nindent 4 }}
     portal/component: portal-api
