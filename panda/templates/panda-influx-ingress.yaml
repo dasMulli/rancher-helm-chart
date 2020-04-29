@@ -1,0 +1,17 @@
+{{- $fullName := include "panda.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}-panda-înfluxdb
+  labels:
+    {{- include "panda.labels" . | nindent 4 }}
+    panda/component: panda-influxdb
+spec:
+  rules:
+    - host: {{ .Values.panda.baseUrl }}
+      http:
+        paths:
+          - path: /influxdb
+            backend:
+              serviceName: {{ $fullName }}-influxdb
+              servicePort: 8086

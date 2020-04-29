@@ -55,7 +55,7 @@ spec:
           - name: Influx__Password
             value: {{ .Values.influxdb.adminUser.pwd }}
           - name: Influx__Url
-            value: http://panda-influx
+            value: http://{{ .Values.panda.baseUrl }}/influxdb
           - name: Influx__Username
             value: {{ .Values.influxdb.adminUser.name }}
           - name: MariaDbConnectionString
