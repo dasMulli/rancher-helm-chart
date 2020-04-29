@@ -12,7 +12,7 @@ questions:
   descriptioN: "Specify pull secret name for repository base"
   type: string
 
-# Portal
+# Panda
 - variable: panda.baseUrl
   default: 'panda.kubi.syngroup.loc'
   required: true
