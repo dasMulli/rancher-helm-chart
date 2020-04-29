@@ -53,7 +53,7 @@ spec:
           - name: Influx__Password
             value: {{ .Values.influxdb.adminUser.pwd }}
           - name: Influx__Url
-            value: http://{{ .Values.panda.baseUrl }}/influxdb
+            value: http://panda-influxdb:8086
           - name: Influx__Username
             value: {{ .Values.influxdb.adminUser.name }}
           ports:
