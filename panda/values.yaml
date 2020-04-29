@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repositoryBase: nexus.syn-group.com
+  repositoryBase: nexus.mmk.mmdom.net
   tag: develop
   pullPolicy: Always
-  pullSecretName: syngroup
+  pullSecretName: nexus-mm
 
 imagePullSecrets: []
 nameOverride: ""
