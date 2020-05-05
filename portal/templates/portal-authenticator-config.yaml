@@ -91,5 +91,8 @@ data:
           "MemberOfAttribute": "{{ .Values.portal.ldap.memberOf }}",
           "GroupFilter": "{{ .Values.portal.ldap.groupFilter }}"
         }
-      ]
+      ],
+      "SeedMode": {
+        "SeedConfig": "CreateIfNotExists" // None ---> Stay as is, CreateIfNotExists ----> create if not exists Reset ---> Clear and Re-Create
+      }
     }
