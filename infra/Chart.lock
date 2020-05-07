@@ -2,5 +2,8 @@ dependencies:
 - name: portal
   repository: https://vandenbergen.github.io/rancher-helm-chart
   version: 0.1.48
-digest: sha256:3a977cbd72b4e06690a37f53de7fbd32568cab9571fb14ef1139fb8d0bdb6f4e
-generated: "2020-05-07T14:59:29.542014+02:00"
+- name: rabbitmq-ha
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 1.44.3
+digest: sha256:6b95aeade4266eb39941bb7019b6ce37e31788bbc91221c65d0b7d63428f434c
+generated: "2020-05-07T18:41:13.031257+02:00"
