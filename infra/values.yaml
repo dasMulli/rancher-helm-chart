@@ -66,3 +66,29 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+portal:
+  baseUrl: 'portal.kubi.syngroup.loc'
+  ldap: 
+    enable: false
+    host: ''
+    username: ''
+    password: ''
+    baseDN: ''
+    userNameAttribute: ''
+    firstNameAttribute: ''
+    lastNameAttribute: ''
+    emailAttribute: ''
+    port: 636
+    secureSocketLayer: true
+    domain: 'mm'
+    memberOf: 'memberOf'
+    groupFilter: '(cn=G_$*)'
+  
+mariadb:
+  rootUser:
+    password: "Root#123"
+  db:
+    user: "portal_user"
+    password: "portal_password"
+    name: portal
