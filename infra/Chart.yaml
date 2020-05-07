@@ -14,7 +14,7 @@ type: application
 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
-version: 0.1.9
+version: 0.1.10
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application.
@@ -23,6 +23,13 @@ appVersion: 1.16.0
 icon: https://www.mm-packaging.com/typo3conf/ext/bb_boilerplate/Resources/Public/Images/logo-packaging.svg
 
 dependencies:
-- name: mariadb
-  version: 7.0.1
-  repository: https://kubernetes-charts.storage.googleapis.com
+- name: filebeat
+  version: 4.0.0
+  repository: https://kubernetes-charts.storage.googleapis.com/
+- name: logstash
+  version: 2.4.0
+  repository: https://kubernetes-charts.storage.googleapis.com/
+- name: rabbitmq-ha
+  version: 1.44.3
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  
