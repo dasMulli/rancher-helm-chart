@@ -5,5 +5,8 @@ dependencies:
 - name: logstash
   repository: https://kubernetes-charts.storage.googleapis.com/
   version: 2.4.0
-digest: sha256:a55fbafea4f8f0e01245bac235eb074048e44366f9f856ac6e51e84bc6b2f524
-generated: "2020-05-07T18:50:13.6056943+02:00"
+- name: rabbitmq-ha
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 1.44.3
+digest: sha256:2306df4fbabcbab74c6039c90d585be54374cdfd8bfc2b95143229bcbe120881
+generated: "2020-05-07T19:18:47.4319222+02:00"
