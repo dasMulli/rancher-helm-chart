@@ -2,8 +2,5 @@ dependencies:
 - name: portal
   repository: https://vandenbergen.github.io/rancher-helm-chart
   version: 0.1.48
-- name: filebeat
-  repository: https://kubernetes-charts.storage.googleapis.com/
-  version: 4.0.0
-digest: sha256:2a3d533aa6bd8ec7b45e1432b128197b0895fe407d7e142a14b349d0c73c0088
-generated: "2020-05-07T18:45:04.1150664+02:00"
+digest: sha256:3a977cbd72b4e06690a37f53de7fbd32568cab9571fb14ef1139fb8d0bdb6f4e
+generated: "2020-05-07T14:59:29.542014+02:00"
