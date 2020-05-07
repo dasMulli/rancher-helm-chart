@@ -2,8 +2,5 @@ dependencies:
 - name: portal
   repository: https://vandenbergen.github.io/rancher-helm-chart
   version: 0.1.48
-- name: mariadb
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 7.0.1
-digest: sha256:92388c0249d0da4395b690d06193f909f660ecf1ddce955c2fe2594bf308b1a4
-generated: "2020-05-07T14:44:17.2563346+02:00"
+digest: sha256:3a977cbd72b4e06690a37f53de7fbd32568cab9571fb14ef1139fb8d0bdb6f4e
+generated: "2020-05-07T14:59:29.542014+02:00"
