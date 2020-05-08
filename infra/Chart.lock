@@ -8,5 +8,8 @@ dependencies:
 - name: rabbitmq-ha
   repository: https://kubernetes-charts.storage.googleapis.com/
   version: 1.44.3
-digest: sha256:2306df4fbabcbab74c6039c90d585be54374cdfd8bfc2b95143229bcbe120881
-generated: "2020-05-07T19:18:47.4319222+02:00"
+- name: filebeat
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 4.0.0
+digest: sha256:d3befc9ea3be459bfd5c5bc1b86c2f2ed0ed1aa2e14aac50f69508fb6617d6d1
+generated: "2020-05-08T11:11:22.6707357+02:00"
