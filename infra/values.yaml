@@ -74,7 +74,7 @@ portal:
       pullPolicy: Always
       pullSecretName: syngroup
     portal:
-      baseUrl: 'portal.kubi.syngroup.loc'
+      baseUrl: 'portal.kubi.syngroup.loc2'
       ldap: 
         enable: false
         host: ''
