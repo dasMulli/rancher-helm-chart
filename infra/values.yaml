@@ -98,3 +98,40 @@ portal:
         user: "portal_user"
         password: "portal_password"
         name: portal
+        
+logstash:
+    image:
+      repository: docker.elastic.co/logstash/logstash-oss
+      tag: 7.6.2
+
+    service:
+      ports:
+        beats:
+          port: 5044
+          targetPort: beats
+          protocol: TCP
+        
+    ports:
+      - name: beats
+        containerPort: 5044
+        protocol: TCP
+
+    inputs:
+      main: |-
+        input {
+          beats {
+            port => 5044
+          }
+        }
+
+    outputs:
+      main: |-
+        output {
+          elasticsearch {
+            hosts => ["10.128.29.10:9200","10.128.29.11:9200","10.128.29.12:9200","10.128.29.13:9200","10.128.29.14:9200","10.128.29.15:9200"]
+            manage_template => false
+            index => "zoo_app-prod-%{+YYYY.MM}"
+            user => "zoo_indexer"
+            password => "Ishie1zi4e"
+          }
+        }
