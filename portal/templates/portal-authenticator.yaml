@@ -39,7 +39,7 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Chart.Name }}-portal-authenticator
+        - name: {{ template "portal.fullname" . }}-portal-authenticator
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repositoryBase }}/cit-dev/mes/portal/synit.portal.authenticator.application:test"
@@ -55,13 +55,13 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - mountPath: /app/appsettings.Production.json
-              name: {{ .Chart.Name }}-authenticator-conf
+              name: {{ template "portal.fullname" . }}-authenticator-conf
               subPath: appsettings.Production.json
       volumes:
       - configMap:
-          name: {{ .Chart.Name }}-authenticator-conf
+          name: {{ template "portal.fullname" . }}-authenticator-conf
           optional: false
-        name: {{ .Chart.Name }}-authenticator-conf
+        name: {{ template "portal.fullname" . }}-authenticator-conf
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

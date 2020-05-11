@@ -26,13 +26,13 @@ data:
       },
       "Database": {
         "Name": "portal",
-        "Host": "portal-mariadb",
+        "Host": "{{ .Chart.Name }}-mariadb",
         "Port": 3306,
         "User": "root",
         "Password": "{{ .Values.mariadb.rootUser.password }}"
       },
       "Authorization": {
-        "Host": "http://{{ .Chart.Name }}-portal-authenticator-service",
+        "Host": "http://{{ template "portal.fullname" . }}-portal-authenticator-service",
         "Issuer": "http://{{ .Values.portal.baseUrl }}/authenticator"
       },
       "Menu": {

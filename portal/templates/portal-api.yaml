@@ -39,7 +39,7 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Chart.Name }}-portal-api
+        - name: {{ template "portal.fullname" . }}-portal-api
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repositoryBase }}/cit-dev/mes/portal/synit.portal.api:latest"
@@ -55,13 +55,13 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - mountPath: /app/appsettings.Production.json
-              name: {{ .Chart.Name }}-api-conf
+              name: {{ template "portal.fullname" . }}-api-conf
               subPath: appsettings.Production.json
       volumes:
       - configMap:
-          name: {{ .Chart.Name }}-api-conf
+          name: {{ template "portal.fullname" . }}-api-conf
           optional: false
-        name: {{ .Chart.Name }}-api-conf
+        name: {{ template "portal.fullname" . }}-api-conf
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

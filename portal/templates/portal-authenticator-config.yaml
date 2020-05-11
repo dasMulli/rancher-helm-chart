@@ -26,7 +26,7 @@ data:
       },
       "Database": {
         "Name": "authenticator",
-        "Host": "portal-mariadb",
+        "Host": "{{ .Chart.Name }}-mariadb",
         "Port": 3306,
         "User": "root",
         "Password": "{{ .Values.mariadb.rootUser.password }}"
