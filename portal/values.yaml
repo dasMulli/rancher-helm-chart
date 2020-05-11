@@ -70,6 +70,7 @@ tolerations: []
 affinity: {}
 
 portal:
+  dbHost: 'portal-mariadb'
   baseUrl: 'portal.kubi.syngroup.loc'
   ldap: 
     enable: false
