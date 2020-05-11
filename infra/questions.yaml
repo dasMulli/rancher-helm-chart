@@ -1,19 +1,19 @@
 categories:
 - Repository
 questions:
-- variable: portal.image.repositoryBase
+- variable: image.repositoryBase
   default: nexus.mmk.mmdom.net
   label: Image Repository Base
   description: "Specify repository base for images (e.g. custom repository). Relative path will be appended."
   type: string
-- variable: portal.image.pullSecretName
+- variable: image.pullSecretName
   required: false
   label: Image Pull Secret Name
   descriptioN: "Specify pull secret name for repository base"
   type: string
 
 # Portal
-- variable: portal.portal.portal.baseUrl
+- variable: portal.baseUrl
   default: 'portal.kubi.syngroup.loc'
   required: true
   label: "Base Url"
@@ -21,7 +21,7 @@ questions:
   type: string
   
 #Ldap
-- variable: portal.portal.ldap.enable
+- variable: portal.ldap.enable
   default: false
   description: "Enable Ldap Authentication"
   type: boolean
@@ -29,79 +29,79 @@ questions:
   required: true
   show_subquestion_if: true
   subquestions:
-    - variable: portal.portal.ldap.host
+    - variable: portal.ldap.host
       default: 'ldap-ha.mmk.mmdom.net'
       required: false
       label: "Ldap Hostname"
       description: "Ldap Hostname"
       type: string
-    - variable: portal.portal.ldap.username
+    - variable: portal.ldap.username
       default: ''
       required: false
       label: "Ldap Username"
       description: "Ldap Username"
       type: string
-    - variable: portal.portal.ldap.password
+    - variable: portal.ldap.password
       default: ''
       required: false
       label: "Ldap Password"
       description: "Ldap Password"
       type: string
-    - variable: portal.portal.ldap.baseDN
+    - variable: portal.ldap.baseDN
       default: 'DC=mmk,DC=mmdom,DC=net'
       required: false
       label: "Ldap BaseDN"
       description: "Ldap BaseDN"
       type: string
-    - variable: portal.portal.ldap.userNameAttribute
+    - variable: portal.ldap.userNameAttribute
       default: 'sAMAccountName'
       required: false
       label: "Ldap UserNameAttribute"
       description: "Ldap UserNameAttribute"
       type: string
-    - variable: portal.portal.ldap.firstNameAttribute
+    - variable: portal.ldap.firstNameAttribute
       default: 'givenName'
       required: false
       label: "Ldap FirstNameAttribute"
       description: "Ldap FirstNameAttribute"
       type: string
-    - variable: portal.portal.ldap.lastNameAttribute
+    - variable: portal.ldap.lastNameAttribute
       default: 'sn'
       required: false
       label: "Ldap LastNameAttribute"
       description: "Ldap LastNameAttribute"
       type: string
-    - variable: portal.portal.ldap.emailAttribute
+    - variable: portal.ldap.emailAttribute
       default: 'mail'
       required: false
       label: "Ldap EmailAttribute"
       description: "Ldap EmailAttribute"
       type: string
-    - variable: portal.portal.ldap.port
+    - variable: portal.ldap.port
       default: '636'
       required: false
       label: "Ldap Port"
       description: "Ldap Port"
       type: int
-    - variable: portal.portal.ldap.secureSocketLayer
+    - variable: portal.ldap.secureSocketLayer
       default: true
       required: false
       label: "Ldap SecureSocketLayer"
       description: "Ldap SecureSocketLayer"
       type: boolean
-    - variable: portal.portal.ldap.domain
+    - variable: portal.ldap.domain
       default: 'mm'
       required: false
       label: "Ldap Domain"
       description: "Ldap Domain"
       type: string
-    - variable: portal.portal.ldap.memberOf
+    - variable: portal.ldap.memberOf
       default: 'memberOf'
       required: false
       label: "Ldap MemberOf"
       description: "Ldap MemberOf"
       type: string
-    - variable: portal.portal.ldap.groupFilter
+    - variable: portal.ldap.groupFilter
       default: '(cn=*_MES_*)'
       required: false
       label: "Ldap Group Filter"
@@ -109,25 +109,25 @@ questions:
       type: string
   
 #MariaDb
-- variable: portal.mariadb.rootUser.password
+- variable: mariadb.rootUser.password
   default: 'root'
   required: true
   label: "Db Root Password"
   description: "Db Root Password"
   type: string
-- variable: portal.mariadb.db.user
+- variable: mariadb.db.user
   default: 'user'
   required: true
   label: "Db Username"
   description: "Db Username"
   type: string
-- variable: portal.mariadb.db.password
+- variable: mariadb.db.password
   default: 'password'
   required: true
   label: "Db Password"
   description: "Db Password"
   type: string
-- variable: portal.mariadb.db.name
+- variable: mariadb.db.name
   default: 'portal'
   required: true
   label: "Db Name"
