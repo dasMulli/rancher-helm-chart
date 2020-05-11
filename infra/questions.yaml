@@ -13,8 +13,8 @@ questions:
   type: string
 
 # Portal
-- variable: portal.baseUrl
-  default: 'portal.kubi.syngroup.loc'
+- variable: portal.portal.baseUrl
+  default: 'portal.kubi.syngroup.loc5'
   required: true
   label: "Base Url"
   description: "Base Url"
