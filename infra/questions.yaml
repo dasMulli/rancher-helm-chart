@@ -21,7 +21,7 @@ questions:
   type: string
   
 #Ldap
-- variable: portal.ldap.enable
+- variable: portal.portal.ldap.enable
   default: false
   description: "Enable Ldap Authentication"
   type: boolean
@@ -29,79 +29,79 @@ questions:
   required: true
   show_subquestion_if: true
   subquestions:
-    - variable: portal.ldap.host
+    - variable: portal.portal.ldap.host
       default: 'ldap-ha.mmk.mmdom.net'
       required: false
       label: "Ldap Hostname"
       description: "Ldap Hostname"
       type: string
-    - variable: portal.ldap.username
+    - variable: portal.portal.ldap.username
       default: ''
       required: false
       label: "Ldap Username"
       description: "Ldap Username"
       type: string
-    - variable: portal.ldap.password
+    - variable: portal.portal.ldap.password
       default: ''
       required: false
       label: "Ldap Password"
       description: "Ldap Password"
       type: string
-    - variable: portal.ldap.baseDN
+    - variable: portal.portal.ldap.baseDN
       default: 'DC=mmk,DC=mmdom,DC=net'
       required: false
       label: "Ldap BaseDN"
       description: "Ldap BaseDN"
       type: string
-    - variable: portal.ldap.userNameAttribute
+    - variable: portal.portal.ldap.userNameAttribute
       default: 'sAMAccountName'
       required: false
       label: "Ldap UserNameAttribute"
       description: "Ldap UserNameAttribute"
       type: string
-    - variable: portal.ldap.firstNameAttribute
+    - variable: portal.portal.ldap.firstNameAttribute
       default: 'givenName'
       required: false
       label: "Ldap FirstNameAttribute"
       description: "Ldap FirstNameAttribute"
       type: string
-    - variable: portal.ldap.lastNameAttribute
+    - variable: portal.portal.ldap.lastNameAttribute
       default: 'sn'
       required: false
       label: "Ldap LastNameAttribute"
       description: "Ldap LastNameAttribute"
       type: string
-    - variable: portal.ldap.emailAttribute
+    - variable: portal.portal.ldap.emailAttribute
       default: 'mail'
       required: false
       label: "Ldap EmailAttribute"
       description: "Ldap EmailAttribute"
       type: string
-    - variable: portal.ldap.port
+    - variable: portal.portal.ldap.port
       default: '636'
       required: false
       label: "Ldap Port"
       description: "Ldap Port"
       type: int
-    - variable: portal.ldap.secureSocketLayer
+    - variable: portal.portal.ldap.secureSocketLayer
       default: true
       required: false
       label: "Ldap SecureSocketLayer"
       description: "Ldap SecureSocketLayer"
       type: boolean
-    - variable: portal.ldap.domain
+    - variable: portal.portal.ldap.domain
       default: 'mm'
       required: false
       label: "Ldap Domain"
       description: "Ldap Domain"
       type: string
-    - variable: portal.ldap.memberOf
+    - variable: portal.portal.ldap.memberOf
       default: 'memberOf'
       required: false
       label: "Ldap MemberOf"
       description: "Ldap MemberOf"
       type: string
-    - variable: portal.ldap.groupFilter
+    - variable: portal.portal.ldap.groupFilter
       default: '(cn=*_MES_*)'
       required: false
       label: "Ldap Group Filter"
@@ -109,25 +109,25 @@ questions:
       type: string
   
 #MariaDb
-- variable: mariadb.rootUser.password
+- variable: portal.mariadb.rootUser.password
   default: 'root'
   required: true
   label: "Db Root Password"
   description: "Db Root Password"
   type: string
-- variable: mariadb.db.user
+- variable: portal.mariadb.db.user
   default: 'user'
   required: true
   label: "Db Username"
   description: "Db Username"
   type: string
-- variable: mariadb.db.password
+- variable: portal.mariadb.db.password
   default: 'password'
   required: true
   label: "Db Password"
   description: "Db Password"
   type: string
-- variable: mariadb.db.name
+- variable: portal.mariadb.db.name
   default: 'portal'
   required: true
   label: "Db Name"
