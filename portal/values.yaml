@@ -71,6 +71,7 @@ affinity: {}
 
 portal:
   dbHost: 'portal-mariadb'
+  locationId: 'mm'
   baseUrl: 'portal.kubi.syngroup.loc'
   ldap: 
     enable: false

@@ -20,6 +20,13 @@ questions:
   description: "Base Url"
   type: string
   
+- variable: portal.locationId
+  default: 'mm'
+  required: true
+  label: "Location Id"
+  description: "Location Id"
+  type: string
+  
 #Ldap
 - variable: portal.ldap.enable
   default: false
