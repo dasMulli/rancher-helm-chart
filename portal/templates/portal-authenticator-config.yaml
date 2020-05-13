@@ -34,7 +34,7 @@ data:
       "Identity": {
         "DefaultUserName": "root",
         "DefaultPassword": "Root#123",
-        "JwtIssuer": "http://{{ .Values.portal.baseUrl }}/authenticator",
+        "JwtIssuer": "http://portal.zoo.{{ .Values.portal.locationId }}.mmk.mmdom.net/authenticator",
         "Roles": [
           "User",
           "Admin",
@@ -46,11 +46,11 @@ data:
             "ClientName": "portalMenu",
             "AllowedGrantTypes": [ "authorization_code" ],
             "RedirectUris": [
-              "http://{{ .Values.portal.baseUrl }}/assets/silent-refresh.html",
-              "http://{{ .Values.portal.baseUrl }}/main"
+              "http://portal.zoo.{{ .Values.portal.locationId }}.mmk.mmdom.net/assets/silent-refresh.html",
+              "http://portal.zoo.{{ .Values.portal.locationId }}.mmk.mmdom.net/main"
             ],
             "PostLogoutRedirectUris": [
-              "http://{{ .Values.portal.baseUrl }}/main"
+              "http://portal.zoo.{{ .Values.portal.locationId }}.mmk.mmdom.net/main"
             ],
             "AllowedScopes": [
               "openid",

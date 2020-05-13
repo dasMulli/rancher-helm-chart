@@ -13,13 +13,6 @@ questions:
   type: string
 
 # Portal
-- variable: portal.baseUrl
-  default: 'portal.kubi.syngroup.loc'
-  required: true
-  label: "Base Url"
-  description: "Base Url"
-  type: string
-  
 - variable: portal.locationId
   default: 'mm'
   required: true
