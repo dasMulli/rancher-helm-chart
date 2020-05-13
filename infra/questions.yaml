@@ -13,11 +13,11 @@ questions:
   type: string
 
 # Portal
-- variable: portal.portal.baseUrl
-  default: 'portal.kubi.syngroup.loc'
+- variable: portal.locationId
+  default: 'mm'
   required: true
-  label: "Base Url"
-  description: "Base Url"
+  label: "Location Id"
+  description: "Location Id"
   type: string
   
 #Ldap

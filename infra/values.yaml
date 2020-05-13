@@ -75,7 +75,7 @@ portal:
       pullSecretName: syngroup
     portal:
       dbHost: 'infra-mariadb'
-      baseUrl: 'portal.kubi.syngroup.loc2'
+      locationId: 'mm'
       ldap: 
         enable: false
         host: ''
