@@ -89,7 +89,7 @@ portal:
     memberOf: 'memberOf'
     groupFilter: '(cn=G_$*)'
   
-mariadb-galera:
+mariadbGalera:
   mysqlRootPassword: "Root#123"
   mysqlUser: "portal_user"
   mysqlPassword: "portal_password"
