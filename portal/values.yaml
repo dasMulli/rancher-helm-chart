@@ -70,7 +70,7 @@ tolerations: []
 affinity: {}
 
 portal:
-  dbHost: 'portal-mariadb-galera'
+  dbHost: 'mariadb-galera'
   locationId: 'mm'
   baseUrl: 'portal.kubi.syngroup.loc'
   ldap: 
@@ -90,7 +90,9 @@ portal:
     groupFilter: '(cn=G_$*)'
   
 mariadbGalera:
-  mysqlRootPassword: "Root#123"
-  mysqlUser: "portal_user"
-  mysqlPassword: "portal_password"
-  mysqlDatabase: portal
+  rootUser:
+    password: "Root#123"
+  db:
+    user: "portal_user"
+    password: "portal_password"
+    name: portal

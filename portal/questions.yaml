@@ -115,25 +115,25 @@ questions:
       type: string
   
 #MariaDb
-- variable: mariadbGalera.mysqlRootPassword
+- variable: mariadbGalera.rootUser.password
   default: 'root'
   required: true
   label: "Db Root Password"
   description: "Db Root Password"
   type: string
-- variable: mariadbGalera.mysqlUser
+- variable: mariadbGalera.db.user
   default: 'user'
   required: true
   label: "Db Username"
   description: "Db Username"
   type: string
-- variable: mariadbGalera.mysqlPassword
+- variable: mariadbGalera.db.password
   default: 'password'
   required: true
   label: "Db Password"
   description: "Db Password"
   type: string
-- variable: mariadbGalera.mysqlDatabase
+- variable: mariadbGalera.db.name
   default: 'portal'
   required: true
   label: "Db Name"
