@@ -91,7 +91,7 @@ portal:
   
 mariadb-galera:
   rootUser:
-    password: "Root#123"
+    password: "root"
   db:
     user: "portal_user"
     password: "portal_password"
