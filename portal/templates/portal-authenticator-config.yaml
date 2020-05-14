@@ -25,7 +25,7 @@ data:
         "Enrich": [ "FromLogContext" ]
       },
       "Database": {
-        "Name": "authenticator",
+        "Name": "{{ index .Values "mariadb-galera" "db" "name" }}",
         "Host": "{{ .Values.portal.dbHost }}",
         "Port": 3306,
         "User": "root",
