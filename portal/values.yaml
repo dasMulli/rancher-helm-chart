@@ -69,9 +69,11 @@ tolerations: []
 
 affinity: {}
 
+global:
+    locationId: 'mm'
+
 portal:
   dbHost: 'portal-mariadb-galera'
-  locationId: 'mm'
   baseUrl: 'portal.kubi.syngroup.loc'
   ldap: 
     enable: false
