@@ -8,7 +8,7 @@ metadata:
     portal/component: portal-api
 spec:
   rules:
-    - host: portal.zoo.{{ .Values.portal.locationId }}.mmk.mmdom.net
+    - host: {{ .Values.portal.baseUrl }}
       http:
         paths:
           - path: /api

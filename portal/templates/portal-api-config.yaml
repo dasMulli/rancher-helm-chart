@@ -33,7 +33,7 @@ data:
       },
       "Authorization": {
         "Host": "http://{{ template "portal.fullname" . }}-portal-authenticator-service",
-        "Issuer": "http://portal.zoo.{{ .Values.portal.locationId }}.mmk.mmdom.net/authenticator"
+        "Issuer": "http://{{ .Values.portal.baseUrl }}/authenticator"
       },
       "Menu": {
         "GroupMenuItems": [
