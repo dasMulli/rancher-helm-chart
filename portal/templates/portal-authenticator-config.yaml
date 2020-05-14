@@ -29,7 +29,7 @@ data:
         "Host": "{{ .Values.portal.dbHost }}",
         "Port": 3306,
         "User": "root",
-        "Password": "{{ .Values "mariadb-galera" "mysqlRootPassword" }}"
+        "Password": "{{ .Values.mariadbGalera.mysqlRootPassword }}"
       },
       "Identity": {
         "DefaultUserName": "root",
