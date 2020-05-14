@@ -76,6 +76,7 @@ portal:
     portal:
       dbHost: 'infra-mariadb'
       locationId: 'mm'
+      baseUrl: 'portal.kubi.syngroup.loc'
       ldap: 
         enable: false
         host: ''
