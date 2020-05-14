@@ -96,3 +96,4 @@ mariadbGalera:
     user: "portal_user"
     password: "portal_password"
     name: portal
+  persistence.size: 2Gi
