@@ -19,3 +19,29 @@ questions:
   label: "Base Url"
   description: "Base Url"
   type: string
+  
+#MariaDb
+- variable: mariadb-galera.rootUser.password
+  default: 'root'
+  required: true
+  label: "Db Root Password"
+  description: "Db Root Password"
+  type: string
+- variable: mariadb-galera.db.user
+  default: 'user'
+  required: true
+  label: "Db Username"
+  description: "Db Username"
+  type: string
+- variable: mariadb-galera.db.password
+  default: 'password'
+  required: true
+  label: "Db Password"
+  description: "Db Password"
+  type: string
+- variable: mariadb-galera.db.name
+  default: 'panda'
+  required: true
+  label: "Db Name"
+  description: "Db Name"
+  type: string

@@ -72,13 +72,15 @@ affinity: {}
 panda:
   baseUrl: 'panda.kubi.syngroup.loc'
 
-mariadb:
+mariadb-galera:
   rootUser:
-    password: "Root#123"
+    password: "root"
   db:
     user: "panda_user"
     password: "panda_password"
     name: panda
+  persistence:
+    size: 2Gi
 
 influxdb:
   authEnabled: true
