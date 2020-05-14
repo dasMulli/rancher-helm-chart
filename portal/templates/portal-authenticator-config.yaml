@@ -28,8 +28,8 @@ data:
         "Name": "authenticator",
         "Host": "{{ .Values.portal.dbHost }}",
         "Port": 3306,
-        "User": "root",
-        "Password": "{{ index .Values "mariadb-galera" "mysqlRootPassword" }}"
+        "User": "{{ index .Values "mariadb-galera" "db" "user" }}",
+        "Password": "{{ index .Values "mariadb-galera" "db" "password" }}"
       },
       "Identity": {
         "DefaultUserName": "root",
