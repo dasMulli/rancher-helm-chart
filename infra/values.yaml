@@ -67,6 +67,9 @@ tolerations: []
 
 affinity: {}
 
+global:
+    locationId: 'mm'
+
 portal:
     image:
       repositoryBase: nexus.syn-group.com
@@ -75,7 +78,6 @@ portal:
       pullSecretName: syngroup
     portal:
       dbHost: 'infra-mariadb-galera'
-      locationId: 'mm'
       baseUrl: 'portal.kubi.syngroup.loc'
       ldap: 
         enable: false
