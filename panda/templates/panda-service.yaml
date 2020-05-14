@@ -58,7 +58,7 @@ spec:
           - name: Influx__Username
             value: {{ .Values.influxdb.adminUser.name }}
           - name: MariaDbConnectionString
-            value: Server=panda-mariadb;Database=panda;Uid=root;Pwd={{ index .Values "mariadb-galera" "rootUser" "password" }};
+            value: Server=panda-mariadb-galera;Database={{ index .Values "mariadb-galera" "db" "name" }};Uid=root;Pwd={{ index .Values "mariadb-galera" "rootUser" "password" }};
           ports:
             - name: http
               containerPort: 80
