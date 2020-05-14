@@ -1,0 +1,17 @@
+{{- $fullName := include "infra.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}-rabbitmq-admin
+  labels:
+    {{- include "infra.labels" . | nindent 4 }}
+    infra/component: infra-rabbitmq
+spec:
+  rules:
+    - host: rabbitmq.zoo.{{ .Values.portal.locationId }}.mmk.mmdom.net
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: {{ $fullName }}-rabbitmq-ha
+              servicePort: 15672

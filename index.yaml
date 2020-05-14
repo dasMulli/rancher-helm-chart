@@ -3,7 +3,31 @@ entries:
   infra:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-14T17:02:50.0557102+02:00"
+    created: "2020-05-14T17:15:07.0820872+02:00"
+    dependencies:
+    - name: portal
+      repository: https://vandenbergen.github.io/rancher-helm-chart
+      version: 0.1.68
+    - name: logstash
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 2.4.0
+    - name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.44.3
+    - name: filebeat
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 4.0.0
+    description: A Helm chart for Kubernetes
+    digest: 2d2cc3c377737b684dce9035b32ebd91f1042e23582354fb6c0b3fdd33549a9a
+    icon: https://www.mm-packaging.com/typo3conf/ext/bb_boilerplate/Resources/Public/Images/logo-packaging.svg
+    name: infra
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/infra-0.1.39.tgz
+    version: 0.1.39
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-05-14T17:15:07.0700831+02:00"
     dependencies:
     - name: portal
       repository: https://vandenbergen.github.io/rancher-helm-chart
@@ -649,18 +673,7 @@ entries:
   mm-panda-api:
   - apiVersion: v2
     appVersion: develop
-    created: "2020-05-14T17:02:50.0677085+02:00"
-    description: A Helm chart for Kubernetes
-    digest: eba39a6cf9b98f89b57d5f308037bec78b482138391fe7fcdf12b3092a81f95b
-    icon: file://panda.png
-    name: mm-panda-api
-    type: application
-    urls:
-    - https://vandenbergen.github.io/rancher-helm-chart/mm-panda-api-0.1.0.tgz
-    version: 0.1.0
-  - apiVersion: v2
-    appVersion: develop
-    created: "2020-05-14T17:02:50.413708+02:00"
+    created: "2020-05-14T17:15:07.1000827+02:00"
     description: A Helm chart for Kubernetes
     digest: eba39a6cf9b98f89b57d5f308037bec78b482138391fe7fcdf12b3092a81f95b
     icon: file://panda.png
@@ -672,18 +685,7 @@ entries:
   mm-pandaconfigurator-webapp:
   - apiVersion: v2
     appVersion: AdamDemo
-    created: "2020-05-14T17:02:50.0737073+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 13c6c5773dfa25cc5c2a9fa9158814222968d7434b2c948ad600494e8bb2f736
-    icon: file://panda.png
-    name: mm-pandaconfigurator-webapp
-    type: application
-    urls:
-    - https://vandenbergen.github.io/rancher-helm-chart/mm-pandaconfigurator-webapp-0.1.0.tgz
-    version: 0.1.0
-  - apiVersion: v2
-    appVersion: AdamDemo
-    created: "2020-05-14T17:02:50.4207083+02:00"
+    created: "2020-05-14T17:15:07.1060822+02:00"
     description: A Helm chart for Kubernetes
     digest: 13c6c5773dfa25cc5c2a9fa9158814222968d7434b2c948ad600494e8bb2f736
     icon: file://panda.png
@@ -695,7 +697,7 @@ entries:
   panda:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-14T17:02:50.121707+02:00"
+    created: "2020-05-14T17:15:07.0890854+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -984,7 +986,7 @@ entries:
   portal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-14T17:02:50.3947081+02:00"
+    created: "2020-05-14T17:15:07.0950956+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -2037,4 +2039,4 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/testa-0.1.0.tgz
     version: 0.1.0
-generated: "2020-05-14T17:02:49.6927073+02:00"
+generated: "2020-05-14T17:15:06.9410796+02:00"
