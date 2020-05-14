@@ -8,7 +8,7 @@ metadata:
     infra/component: infra-rabbitmq
 spec:
   rules:
-    - host: rabbitmq.zoo.{{ .Values.portal.locationId }}.mmk.mmdom.net
+    - host: rabbitmq.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
       http:
         paths:
           - path: /

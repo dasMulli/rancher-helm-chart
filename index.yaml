@@ -3,7 +3,31 @@ entries:
   infra:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-14T17:33:14.7706683+02:00"
+    created: "2020-05-14T17:38:41.3903858+02:00"
+    dependencies:
+    - name: portal
+      repository: https://vandenbergen.github.io/rancher-helm-chart
+      version: 0.1.70
+    - name: logstash
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 2.4.0
+    - name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.44.3
+    - name: filebeat
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 4.0.0
+    description: A Helm chart for Kubernetes
+    digest: 43065a61bae45c937957ee5ad08a03634ccb639fb89023124c1bf4e27380a7f7
+    icon: https://www.mm-packaging.com/typo3conf/ext/bb_boilerplate/Resources/Public/Images/logo-packaging.svg
+    name: infra
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/infra-0.1.41.tgz
+    version: 0.1.41
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-05-14T17:38:41.380391+02:00"
     dependencies:
     - name: portal
       repository: https://vandenbergen.github.io/rancher-helm-chart
@@ -27,7 +51,7 @@ entries:
     version: 0.1.40
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-14T17:33:14.7596618+02:00"
+    created: "2020-05-14T17:38:41.3704239+02:00"
     dependencies:
     - name: portal
       repository: https://vandenbergen.github.io/rancher-helm-chart
@@ -51,7 +75,7 @@ entries:
     version: 0.1.39
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-14T17:33:14.7496619+02:00"
+    created: "2020-05-14T17:38:41.3573849+02:00"
     dependencies:
     - name: portal
       repository: https://vandenbergen.github.io/rancher-helm-chart
@@ -73,34 +97,10 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/infra-0.1.38.tgz
     version: 0.1.38
-  mm-panda-api:
-  - apiVersion: v2
-    appVersion: develop
-    created: "2020-05-14T17:33:14.7996684+02:00"
-    description: A Helm chart for Kubernetes
-    digest: eba39a6cf9b98f89b57d5f308037bec78b482138391fe7fcdf12b3092a81f95b
-    icon: file://panda.png
-    name: mm-panda-api
-    type: application
-    urls:
-    - https://vandenbergen.github.io/rancher-helm-chart/charts/mm-panda-api-0.1.0.tgz
-    version: 0.1.0
-  mm-pandaconfigurator-webapp:
-  - apiVersion: v2
-    appVersion: AdamDemo
-    created: "2020-05-14T17:33:14.8076683+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 13c6c5773dfa25cc5c2a9fa9158814222968d7434b2c948ad600494e8bb2f736
-    icon: file://panda.png
-    name: mm-pandaconfigurator-webapp
-    type: application
-    urls:
-    - https://vandenbergen.github.io/rancher-helm-chart/charts/mm-pandaconfigurator-webapp-0.1.0.tgz
-    version: 0.1.0
   panda:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-14T17:33:14.7806648+02:00"
+    created: "2020-05-14T17:38:41.3953901+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -119,7 +119,7 @@ entries:
   portal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-14T17:33:14.7936636+02:00"
+    created: "2020-05-14T17:38:41.4074214+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -134,7 +134,7 @@ entries:
     version: 0.1.70
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-14T17:33:14.7906663+02:00"
+    created: "2020-05-14T17:38:41.4043874+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -149,7 +149,7 @@ entries:
     version: 0.1.69
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-14T17:33:14.7856736+02:00"
+    created: "2020-05-14T17:38:41.3993858+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -162,4 +162,4 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/portal-0.1.68.tgz
     version: 0.1.68
-generated: "2020-05-14T17:33:14.6006778+02:00"
+generated: "2020-05-14T17:38:41.2193846+02:00"
