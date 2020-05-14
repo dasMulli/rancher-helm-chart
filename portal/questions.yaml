@@ -13,7 +13,7 @@ questions:
   type: string
 
 # Portal
-- variable: portal.locationId
+- variable: global.locationId
   default: 'mm'
   required: true
   label: "Location Id"
