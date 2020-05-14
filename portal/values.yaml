@@ -89,7 +89,7 @@ portal:
     memberOf: 'memberOf'
     groupFilter: '(cn=G_$*)'
   
-mariadbGalera:
+mariadb-galera:
   rootUser:
     password: "Root#123"
   db:
