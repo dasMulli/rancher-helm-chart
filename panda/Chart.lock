@@ -5,5 +5,8 @@ dependencies:
 - name: influxdb
   repository: https://charts.bitnami.com/bitnami
   version: 0.3.7
-digest: sha256:854addf845dac558acfa1de946d19f6b4b80a18ced5557e4071b635b85fb242c
-generated: "2020-05-14T16:37:12.4620746+02:00"
+- name: grafana
+  repository: https://charts.bitnami.com/bitnami
+  version: 1.5.2
+digest: sha256:0a0b163751a8fd2f5bac9b37900ca309abbd192f4dc1e80ae926c80b8bbea742
+generated: "2020-05-18T10:10:28.5690317+02:00"
