@@ -165,7 +165,7 @@ filebeat:
       processors:
         - add_kubernetes_metadata: ~
       output.logstash:
-        hosts: ["logstash.infra-logging:5044"]
+        hosts: ["infra-logstash:5044"]
 
     monitoring:
       enabled: false
