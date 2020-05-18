@@ -77,7 +77,7 @@ Add in /etc/hosts
 ```
 PS C:\Syngroup\Dev\rancher-catalog\panda> helm dependency update
 PS C:\Syngroup\Dev\rancher-catalog\panda> helm dependency build
-PS C:\Syngroup\Dev\rancher-catalog\panda> helm package panda
 PS C:\Syngroup\Dev\rancher-catalog\panda> cd ..
+PS C:\Syngroup\Dev\rancher-catalog\panda> helm package ./panda/
 PS C:\Syngroup\Dev\rancher-catalog> helm repo index --url https://vandenbergen.github.io/rancher-helm-chart/ --merge index.yaml .
 ```
