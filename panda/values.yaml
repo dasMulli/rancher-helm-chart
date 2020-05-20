@@ -113,45 +113,47 @@ grafana:
 #  - name: GF_AUTH_GENERIC_OAUTH_API_URL
 #    value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/userinfo
 
+#  extraEnvVars:
+#    - name: GF_DEFAULT_INSTANCE_NAME
+#      value: my-instance
+#  extraEnvVars:
+#    - name: GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP
+#      value: true
+#  extraEnvVars:
+#    - name: GF_AUTH_GENERIC_OAUTH_API_URL
+#      value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/userinfo
+#  extraEnvVars:
+#    - name: GF_AUTH_GENERIC_OAUTH_AUTH_URL
+#      value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/authorize
+#  extraEnvVars:
+#    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_ID
+#      value: grafana
+#  extraEnvVars:
+#    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
+#      value: Root#123
+#  extraEnvVars:
+#    - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_NAME
+#      value: email
+#  extraEnvVars:
+#    - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_PATH
+#      value: email
+#  extraEnvVars:
+#    - name: GF_AUTH_GENERIC_OAUTH_ENABLED
+#      value: true
+#  extraEnvVars:
+#    - name: GF_AUTH_GENERIC_OAUTH_NAME
+#      value: MM-Portal
+#  extraEnvVars:
+#    - name: GF_AUTH_GENERIC_OAUTH_SCOPES
+#      value: openid roles email profile api account
+#  extraEnvVars:
+#    - name: GF_AUTH_GENERIC_OAUTH_TOKEN_URL
+#      value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/token
   extraEnvVars:
-    - name: GF_DEFAULT_INSTANCE_NAME
-      value: my-instance
-  extraEnvVars:
-    - name: GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP
-      value: true
-  extraEnvVars:
-    - name: GF_AUTH_GENERIC_OAUTH_API_URL
-      value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/userinfo
-  extraEnvVars:
-    - name: GF_AUTH_GENERIC_OAUTH_AUTH_URL
-      value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/authorize
-  extraEnvVars:
-    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_ID
-      value: grafana
-  extraEnvVars:
-    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
-      value: Root#123
-  extraEnvVars:
-    - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_NAME
-      value: email
-  extraEnvVars:
-    - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_PATH
-      value: email
-  extraEnvVars:
-    - name: GF_AUTH_GENERIC_OAUTH_ENABLED
-      value: true
-  extraEnvVars:
-    - name: GF_AUTH_GENERIC_OAUTH_NAME
-      value: MM-Portal
-  extraEnvVars:
-    - name: GF_AUTH_GENERIC_OAUTH_SCOPES
-      value: openid roles email profile api account
-  extraEnvVars:
-    - name: GF_AUTH_GENERIC_OAUTH_TOKEN_URL
-      value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/token
-  extraEnvVars:
-    - GF_SECURITY_ALLOW_EMBEDDING: "true"
-    - GF_SERVER_ROOT_URL: "http://grafana.zoo.hw.mmk.mmdom.net/"
+    - name[0]: GF_SECURITY_ALLOW_EMBEDDING
+      value[0]: true
+    - name[1]: GF_SERVER_ROOT_URL
+      value[1]: http://grafana.zoo.hw.mmk.mmdom.net/
 
 #  updateStrategy:
 #    - type: "RollingUpdate"
