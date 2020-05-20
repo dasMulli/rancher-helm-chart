@@ -107,7 +107,7 @@ grafana:
 #   - name: GF_AUTH_GENERIC_OAUTH_API_URL
 #     value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/userinfo
 
-  env:
+  extraEnvVars:
   - name: GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP
     value: true
   - name: GF_AUTH_GENERIC_OAUTH_API_URL
