@@ -100,7 +100,6 @@ grafana:
     passwordKey: admin-password
   
   plugins:
-   - digrich-bubblechart-panel
    - grafana-clock-panel
    - briangann-gauge-panel
    - natel-plotly-panel
