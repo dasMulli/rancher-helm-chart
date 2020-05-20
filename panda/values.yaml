@@ -152,6 +152,7 @@ grafana:
   extraEnvVars:
     - name: GF_SECURITY_ALLOW_EMBEDDING
       value: true
+  extraEnvVars:
     - name: GF_SERVER_ROOT_URL
       value: http://grafana.zoo.hw.mmk.mmdom.net/
 
