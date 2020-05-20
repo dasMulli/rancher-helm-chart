@@ -123,7 +123,5 @@ grafana:
 #   - btplc-status-dot-panel
 #   - snuids-trafficlights-panel
 
-  extraEnvVars:
-   - "GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP": "true"
-   - "GF_AUTH_GENERIC_OAUTH_API_URL": "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/userinfo"
+  extraEnvVars: [{"GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP": "true"},{"GF_AUTH_GENERIC_OAUTH_API_URL": "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/userinfo"}]
 
