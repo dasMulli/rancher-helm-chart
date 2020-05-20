@@ -150,8 +150,8 @@ grafana:
     - name: GF_AUTH_GENERIC_OAUTH_TOKEN_URL
       value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/token
   extraEnvVars:
-    GF_SECURITY_ALLOW_EMBEDDING: "true"
-    GF_SERVER_ROOT_URL: "http://grafana.zoo.hw.mmk.mmdom.net/"
+    - GF_SECURITY_ALLOW_EMBEDDING: "true"
+    - GF_SERVER_ROOT_URL: "http://grafana.zoo.hw.mmk.mmdom.net/"
 
 #  updateStrategy:
 #    - type: "RollingUpdate"
