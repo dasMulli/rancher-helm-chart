@@ -99,29 +99,7 @@ grafana:
     userKey: admin-user
     passwordKey: admin-password
   
-#  plugins:
-#   - grafana-clock-panel
-#   - briangann-gauge-panel
-#   - natel-plotly-panel
-#   - grafana-simple-json-datasource
-#   - vonage-status-panel
-#   - michaeldmoore-multistat-panel
-#   - alexanderzobnin-zabbix-app
-#   - grafana-piechart-panel
-#   - ryantxu-ajax-panel
-#   - novalabs-annotations-panel
-#   - michaeldmoore-annunciator-panel
-#   - farski-blendstat-panel
-#   - yesoreyeram-boomtable-panel
-#   - yesoreyeram-boomtheme-panel
-#   - petrslavotinek-carpetplot-panel
-#   - briangann-datatable-panel
-#   - pierosavi-imageit-panel
-#   - bessler-pictureit-panel
-#   - snuids-radar-panel
-#   - blackmirror1-singlestat-math-panel
-#   - btplc-status-dot-panel
-#   - snuids-trafficlights-panel
+  plugins: "grafana-clock-panel,briangann-gauge-panel,natel-plotly-panel,grafana-simple-json-datasource,vonage-status-panel,michaeldmoore-multistat-panel,alexanderzobnin-zabbix-app,grafana-piechart-panel,ryantxu-ajax-panel,novalabs-annotations-panel,michaeldmoore-annunciator-panel,farski-blendstat-panel,yesoreyeram-boomtable-panel,yesoreyeram-boomtheme-panel,petrslavotinek-carpetplot-panel,briangann-datatable-panel,pierosavi-imageit-panel,bessler-pictureit-panel,snuids-radar-panel,blackmirror1-singlestat-math-panel,btplc-status-dot-panel,snuids-trafficlights-panel"
 
   env:
    - name: "GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP"
