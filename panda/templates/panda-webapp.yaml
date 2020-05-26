@@ -46,7 +46,7 @@ spec:
           imagePullPolicy: Always
           env:
           - name: API_URL
-            value: http://{{ .Values.panda.baseUrl }}/service/api/
+            value: http://portal.{{ .Values.panda.zooUrl }}/service/api/
           ports:
             - name: http
               containerPort: 80

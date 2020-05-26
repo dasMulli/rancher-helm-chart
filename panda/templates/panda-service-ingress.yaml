@@ -8,7 +8,7 @@ metadata:
     panda/component: panda-service
 spec:
   rules:
-    - host: {{ .Values.panda.baseUrl }}
+    - host: portal.{{ .Values.panda.zooUrl }}
       http:
         paths:
           - path: /service
