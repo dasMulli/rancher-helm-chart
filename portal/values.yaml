@@ -74,7 +74,7 @@ global:
 
 portal:
   dbHost: 'portal-mariadb-galera'
-  baseUrl: 'portal.kubi.syngroup.loc'
+  zooUrl: 'zoo.loc.mmk.mmdom.net'
   ldap: 
     enable: false
     host: ''
