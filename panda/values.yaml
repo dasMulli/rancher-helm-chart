@@ -101,17 +101,6 @@ grafana:
   
   plugins: "grafana-clock-panel,briangann-gauge-panel,natel-plotly-panel,grafana-simple-json-datasource,vonage-status-panel,michaeldmoore-multistat-panel,alexanderzobnin-zabbix-app,grafana-piechart-panel,ryantxu-ajax-panel,novalabs-annotations-panel,michaeldmoore-annunciator-panel,farski-blendstat-panel,yesoreyeram-boomtable-panel,yesoreyeram-boomtheme-panel,petrslavotinek-carpetplot-panel,briangann-datatable-panel,pierosavi-imageit-panel,bessler-pictureit-panel,snuids-radar-panel,blackmirror1-singlestat-math-panel,btplc-status-dot-panel,snuids-trafficlights-panel"
 
- # extraEnvVars:
- #  - name: GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP
- #    value: true
- #  - name: GF_AUTH_GENERIC_OAUTH_API_URL
- #    value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/userinfo
-
-#  extraEnvVars:
-#  - name: GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP
-#    value: true
-#  - name: GF_AUTH_GENERIC_OAUTH_API_URL
-#    value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/userinfo
 
 #  extraEnvVars:
 #    - name: GF_DEFAULT_INSTANCE_NAME
