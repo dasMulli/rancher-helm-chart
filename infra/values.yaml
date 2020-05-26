@@ -68,7 +68,7 @@ tolerations: []
 affinity: {}
 
 global:
-    locationId: 'mm'
+    locationId: 'loc'
 
 portal:
     image:

@@ -13,11 +13,11 @@ questions:
   type: string
 
 # Panda
-- variable: panda.baseUrl
-  default: 'panda.kubi.syngroup.loc'
+- variable: panda.zooUrl
+  default: 'zoo.loc.mmk.mmdom.net'
   required: true
-  label: "Base Url"
-  description: "Base Url"
+  label: "ZOO Url"
+  description: "ZOO Url"
   type: string
   
 #MariaDb
