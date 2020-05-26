@@ -19,11 +19,11 @@ questions:
   label: "Location Id"
   description: "Location Id"
   type: string
-- variable: portal.portal.baseUrl
-  default: 'portal.kubi.syngroup.loc'
+- variable: portal.portal.zooUrl
+  default: 'zoo.loc.mmk.mmdom.net'
   required: true
-  label: "Base Url"
-  description: "Base Url"
+  label: "ZOO Url"
+  description: "ZOO Url"
   type: string
   
 #Ldap

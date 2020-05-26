@@ -72,13 +72,13 @@ global:
 
 portal:
     image:
-      repositoryBase: nexus.syn-group.com
+      repositoryBase: nexus.mmk.mmdom.net
       tag: develop
       pullPolicy: Always
       pullSecretName: syngroup
     portal:
       dbHost: 'infra-mariadb-galera'
-      baseUrl: 'portal.kubi.syngroup.loc'
+      zooUrl: 'zoo.loc.mmk.mmdom.net'
       ldap: 
         enable: false
         host: ''
