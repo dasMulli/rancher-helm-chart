@@ -8,10 +8,10 @@ metadata:
     panda/component: panda-grafana
 spec:
   rules:
-    - host: grafana.{{ .Values.panda.baseUrl }}
+    - host: grafana-{{ .Values.panda.baseUrl }}
       http:
         paths:
-          - path: /
+          - path: 
             backend:
               serviceName: {{ $fullName }}-grafana
               servicePort: 3000
