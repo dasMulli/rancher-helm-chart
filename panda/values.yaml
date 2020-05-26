@@ -116,20 +116,20 @@ grafana:
       value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/authorize"
     - name: GF_AUTH_GENERIC_OAUTH_CLIENT_ID
       value: "grafana"
-   - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
-     value: "Root#123"
-   - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_NAME
-     value: "email"
-   - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_PATH
-     value: "email"
-   - name: GF_AUTH_GENERIC_OAUTH_ENABLED
-     value: "true"
-   - name: GF_AUTH_GENERIC_OAUTH_NAME
-     value: "MM-Portal"
-   - name: GF_AUTH_GENERIC_OAUTH_SCOPES
-     value: "openid roles email profile api account"
-   - name: GF_AUTH_GENERIC_OAUTH_TOKEN_URL
-     value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/token"
+    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
+      value: "Root#123"
+    - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_NAME
+      value: "email"
+    - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_PATH
+      value: "email"
+    - name: GF_AUTH_GENERIC_OAUTH_ENABLED
+      value: "true"
+    - name: GF_AUTH_GENERIC_OAUTH_NAME
+      value: "MM-Portal"
+    - name: GF_AUTH_GENERIC_OAUTH_SCOPES
+      value: "openid roles email profile api account"
+    - name: GF_AUTH_GENERIC_OAUTH_TOKEN_URL
+      value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/token"
 
 
 #  updateStrategy:
