@@ -101,48 +101,36 @@ grafana:
   
   plugins: "grafana-clock-panel,briangann-gauge-panel,natel-plotly-panel,grafana-simple-json-datasource,vonage-status-panel,michaeldmoore-multistat-panel,alexanderzobnin-zabbix-app,grafana-piechart-panel,ryantxu-ajax-panel,novalabs-annotations-panel,michaeldmoore-annunciator-panel,farski-blendstat-panel,yesoreyeram-boomtable-panel,yesoreyeram-boomtheme-panel,petrslavotinek-carpetplot-panel,briangann-datatable-panel,pierosavi-imageit-panel,bessler-pictureit-panel,snuids-radar-panel,blackmirror1-singlestat-math-panel,btplc-status-dot-panel,snuids-trafficlights-panel"
 
-
-#  extraEnvVars:
-#    - name: GF_DEFAULT_INSTANCE_NAME
-#      value: my-instance
-#  extraEnvVars:
-#    - name: GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP
-#      value: true
-#    - name: GF_AUTH_GENERIC_OAUTH_API_URL
-#      value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/userinfo
-#    - name: GF_AUTH_GENERIC_OAUTH_AUTH_URL
-#      value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/authorize
-#    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_ID
-#      value: grafana
-#    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
-#      value: Root#123
-#    - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_NAME
-#      value: email
-#    - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_PATH
-#      value: email
-#    - name: GF_AUTH_GENERIC_OAUTH_ENABLED
-#      value: true
-#    - name: GF_AUTH_GENERIC_OAUTH_NAME
-#      value: MM-Portal
-#    - name: GF_AUTH_GENERIC_OAUTH_SCOPES
-#      value: openid roles email profile api account
-#    - name: GF_AUTH_GENERIC_OAUTH_TOKEN_URL
-#      value: http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/token
-
   extraEnvVars:
     - name: GF_SECURITY_ALLOW_EMBEDDING
       value: "true"
     - name: GF_SERVER_ROOT_URL
       value: "http://grafana.zoo.hw.mmk.mmdom.net/"
+    - name: GF_DEFAULT_INSTANCE_NAME
+      value: "MM Grafana"
+    - name: GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP
+      value: "true"
+    - name: GF_AUTH_GENERIC_OAUTH_API_URL
+      value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/userinfo"
+    - name: GF_AUTH_GENERIC_OAUTH_AUTH_URL
+      value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/authorize"
+    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_ID
+      value: "grafana"
+   - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
+     value: "Root#123"
+   - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_NAME
+     value: "email"
+   - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_PATH
+     value: "email"
+   - name: GF_AUTH_GENERIC_OAUTH_ENABLED
+     value: "true"
+   - name: GF_AUTH_GENERIC_OAUTH_NAME
+     value: "MM-Portal"
+   - name: GF_AUTH_GENERIC_OAUTH_SCOPES
+     value: "openid roles email profile api account"
+   - name: GF_AUTH_GENERIC_OAUTH_TOKEN_URL
+     value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/token"
+
 
 #  updateStrategy:
 #    - type: "RollingUpdate"
-
-#  extraEnvVars: |-
-#    {
-#      "name": "GF_SECURITY_ALLOW_EMBEDDING",
-#      "value": "true"
-#    },{
-#      "name": "GF_SERVER_ROOT_URL",
-#      "value": "http://grafana.zoo.hw.mmk.mmdom.net/"
-#    }
