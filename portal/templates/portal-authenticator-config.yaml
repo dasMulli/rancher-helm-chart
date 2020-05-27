@@ -69,7 +69,6 @@ data:
           {
             "ClientId": "grafana",
             "ClientName": "GrafanaUI",
-            "ClientSecrets": [ { "Value": "ar7z6I86BytfuNyPpDlSLAt1z78O+YvJkcNW3PdpA24=", "Type": "X509CertificateBase64"} ] ,
             "AllowedGrantTypes": [ "authorization_code" ],
             "RedirectUris": [
               "http://grafana.{{ .Values.portal.zooUrl }}/login/generic_oauth",
@@ -88,7 +87,7 @@ data:
             ],
             "RequirePkce": true,
             "RequireConsent": false,
-            "RequireClientSecret": true,
+            "RequireClientSecret": false,
             "AccessTokenLifetime": 7200,
             "IdentityTokenLifetime": 7200
           }

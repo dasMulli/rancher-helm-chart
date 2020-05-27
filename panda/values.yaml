@@ -116,8 +116,8 @@ grafana:
       value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/authorize"
     - name: GF_AUTH_GENERIC_OAUTH_CLIENT_ID
       value: "grafana"
-    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
-      value: "Root#123"
+#    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
+#      value: "Root#123"
     - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_NAME
       value: "email"
     - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_PATH
