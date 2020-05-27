@@ -1,7 +1,7 @@
 dependencies:
 - name: portal
   repository: https://vandenbergen.github.io/rancher-helm-chart
-  version: 0.1.81
+  version: 0.1.82
 - name: logstash
   repository: https://kubernetes-charts.storage.googleapis.com/
   version: 2.4.0
@@ -11,5 +11,5 @@ dependencies:
 - name: filebeat
   repository: https://kubernetes-charts.storage.googleapis.com/
   version: 4.0.0
-digest: sha256:f65d20374618539085c30a6f119395c8ed24cf07ec93ac0592b9c0b6436c2303
-generated: "2020-05-27T13:05:34.1761321+02:00"
+digest: sha256:79f89affd4dac84c3e053a8a2e17c4b707c811b6e710ba2f1cadb817d315ae8f
+generated: "2020-05-27T13:11:06.7802218+02:00"
