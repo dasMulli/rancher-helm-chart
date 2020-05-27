@@ -1,6 +1,21 @@
-helm package panda .\panda\
-helm package infra .\infra\
+cd portal
+helm dependency update
+helm dependency build
+cd ..
 helm package portal .\portal\
+
+cd panda
+helm dependency update
+helm dependency build
+cd ..
+helm package panda .\panda\
+
+cd infra
+helm dependency update
+helm dependency build
+cd ..
+helm package infra .\infra\
+
 
 for /f "skip=5 eol=: delims=" %%F in ('dir /b /o-d panda*.tgz') do @del "%%F"
 for /f "skip=5 eol=: delims=" %%F in ('dir /b /o-d infra*.tgz') do @del "%%F"
