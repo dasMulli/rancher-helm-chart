@@ -57,7 +57,8 @@ data:
               "profile",
               "email",
               "api",
-              "roles"
+              "roles",
+              "account"
             ],
             "RequirePkce": true,
             "RequireConsent": false,
