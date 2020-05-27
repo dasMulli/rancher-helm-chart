@@ -1,16 +1,16 @@
-REM cd portal
+REM cd .\portal\
 REM helm dependency update
 REM helm dependency build
 REM cd ..
 helm package portal .\portal\
 
-REM cd panda
+REM cd .\panda\
 REM helm dependency update
 REM helm dependency build
 REM cd ..
 helm package panda .\panda\
 
-cd infra
+cd .\infra\
 helm dependency update
 helm dependency build
 cd ..
