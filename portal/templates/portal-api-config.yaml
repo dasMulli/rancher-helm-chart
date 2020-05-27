@@ -33,7 +33,7 @@ data:
       },
       "Authorization": {
         "Host": "http://{{ template "portal.fullname" . }}-portal-authenticator-service",
-        "Issuer": "http://portal.{{ .Values.portal.zooUrl }}/authenticator"
+        "Issuer": "http://portal.{{ .Values.global.zooUrl }}/authenticator"
       },
       "Menu": {
         "GroupMenuItems": [

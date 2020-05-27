@@ -70,11 +70,11 @@ tolerations: []
 affinity: {}
 
 global:
-    locationId: 'mm'
+  locationId: 'loc'
+  zooUrl: 'zoo.loc.mmk.mmdom.net'
 
 portal:
   dbHost: 'portal-mariadb-galera'
-  zooUrl: 'zoo.loc.mmk.mmdom.net'
   ldap: 
     enable: false
     host: ''

@@ -14,7 +14,7 @@ questions:
 
 # Portal
 - variable: global.locationId
-  default: 'mm'
+  default: 'loc'
   required: true
   label: "Location Id"
   description: "Location Id"

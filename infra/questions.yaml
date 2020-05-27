@@ -14,7 +14,7 @@ questions:
 
 # Portal
 - variable: global.locationId
-  default: 'mm'
+  default: 'loc'
   required: true
   label: "Location Id"
   description: "Location Id"
@@ -96,7 +96,7 @@ questions:
       description: "Ldap SecureSocketLayer"
       type: boolean
     - variable: portal.portal.ldap.domain
-      default: 'mm'
+      default: 'loc'
       required: false
       label: "Ldap Domain"
       description: "Ldap Domain"
