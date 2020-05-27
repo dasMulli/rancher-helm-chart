@@ -1,13 +1,13 @@
-cd portal
-helm dependency update
-helm dependency build
-cd ..
+REM cd portal
+REM helm dependency update
+REM helm dependency build
+REM cd ..
 helm package portal .\portal\
 
-cd panda
-helm dependency update
-helm dependency build
-cd ..
+REM cd panda
+REM helm dependency update
+REM helm dependency build
+REM cd ..
 helm package panda .\panda\
 
 cd infra
