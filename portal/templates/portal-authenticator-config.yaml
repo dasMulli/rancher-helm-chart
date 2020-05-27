@@ -69,7 +69,7 @@ data:
           {
             "ClientId": "grafana",
             "ClientName": "GrafanaUI",
-            "ClientSecrets": [ { "Value": "Root#123" } ] ,
+            "ClientSecrets": [ { "Value": "Root#123", "Type": "X509CertificateBase64"} ] ,
             "AllowedGrantTypes": [ "authorization_code" ],
             "RedirectUris": [
               "http://grafana.{{ .Values.portal.zooUrl }}/login/generic_oauth",
