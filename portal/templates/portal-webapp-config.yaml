@@ -5,11 +5,11 @@ metadata:
   labels:
     {{- include "portal.labels" . | nindent 4 }}
 data:
-  appConfig.json: "{\n    \"portalBackend\": \"http://portal.{{ .Values.global.zooUrl }}\",\n
-    \   \"authenticatorConfig\": {\n      \"issuer\": \"http://portal.{{ .Values.global.zooUrl }}/authenticator\",\n
+  appConfig.json: "{\n    \"portalBackend\": \"http://portal.{{ .Values.portal.zooUrl }}\",\n
+    \   \"authenticatorConfig\": {\n      \"issuer\": \"http://portal.{{ .Values.portal.zooUrl }}/authenticator\",\n
     \     \"clientId\": \"portal\", \n      \"responseType\": \"code\",\n      \"redirectUri\":
-    \"http://portal.{{ .Values.global.zooUrl }}/main\",\n      \"postLogoutRedirectUri\":\"http://portal.{{ .Values.global.zooUrl }}/main\",\n
-    \     \"silentRefreshRedirectUri\": \"http://portal.{{ .Values.global.zooUrl }}/assets/silent-refresh.hmtl\",\n
+    \"http://portal.{{ .Values.portal.zooUrl }}/main\",\n      \"postLogoutRedirectUri\":\"http://portal.{{ .Values.portal.zooUrl }}/main\",\n
+    \     \"silentRefreshRedirectUri\": \"http://portal.{{ .Values.portal.zooUrl }}/assets/silent-refresh.hmtl\",\n
     \     \"scope\": \"openid profile roles email api account\",\n      \"useSilentRefresh\": true,
     \n      \"silentRefreshTimeout\": 50000, \n      \"timeoutFactor\": 0.25, \n      \"sessionChecksEnabled\":
     true,\n      \"showDebugInformation\": true, \n      \"clearHashAfterLogin\":

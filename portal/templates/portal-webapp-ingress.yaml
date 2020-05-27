@@ -8,7 +8,7 @@ metadata:
     portal/component: portal-webapp
 spec:
   rules:
-    - host: portal.{{ .Values.global.zooUrl }}
+    - host: portal.{{ .Values.portal.zooUrl }}
       http:
         paths:
           - path: /
