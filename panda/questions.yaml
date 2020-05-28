@@ -39,7 +39,7 @@ questions:
   type: string
 - variable: panda.migrationOptions.oldDatabaseConnectionString
   default: ''
-  required: true
+  required: false
   label: "Old Database ConnectionString"
   description: "Old Database ConnectionString"
   type: string
