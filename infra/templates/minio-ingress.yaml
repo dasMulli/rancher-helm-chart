@@ -13,5 +13,5 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: {{ $fullName }}-rabbitmq-ha
+              serviceName: {{ $fullName }}-minio
               servicePort: 9000
