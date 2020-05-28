@@ -620,7 +620,7 @@ minio:
     accessKey: "admin"
     secretKey: "mmkarton"
 
-    buckets: [
+    buckets: 
       - name: rhino
         policy: none
         purge: false
@@ -633,4 +633,3 @@ minio:
       - name: lama
         policy: none
         purge: false
-    ]
