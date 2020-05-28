@@ -14,7 +14,7 @@ type: application
 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
-version: 0.1.54
+version: 0.1.55
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application.
@@ -39,3 +39,7 @@ dependencies:
   version: 4.0.0
   repository: https://kubernetes-charts.storage.googleapis.com/
   namespace: infra-filebeat
+- name: minio
+  version: 5.0.26
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  namespace: infra-minio

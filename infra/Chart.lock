@@ -11,5 +11,8 @@ dependencies:
 - name: filebeat
   repository: https://kubernetes-charts.storage.googleapis.com/
   version: 4.0.0
-digest: sha256:9503798cb0bda6a2a8b35030c1e6dcec4c05a9bb42203ea12cb87273f19e7fac
-generated: "2020-05-27T13:25:16.838561+02:00"
+- name: minio
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 5.0.26
+digest: sha256:ef3f477f21ea8d23cc740a3d40d555c70e428213751b2a18d083434e6249b912
+generated: "2020-05-28T18:40:44.4279866+02:00"
