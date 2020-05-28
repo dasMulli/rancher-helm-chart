@@ -221,7 +221,7 @@ data:
           {
             "Id": 17,
             "Title": "Min.IO",
-            "Url": "http://minio.zoo.bea.mmk.mmdom.net",
+            "Url": "http://minio.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
             "GroupMenuItemId": 5,
             "Tooltip": "Min.IO",
             "Order": 2,
