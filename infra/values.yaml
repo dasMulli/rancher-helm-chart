@@ -621,15 +621,16 @@ minio:
     secretKey: "mmkarton"
 
     buckets: 
-      - name: rhino
-        policy: none
-        purge: false
-      - name: panda
-        policy: none
-        purge: false
-      - name: octopus
-        policy: none
-        purge: false
-      - name: lama
-        policy: none
-        purge: false
+      - "name": rhino
+        "policy": none
+        "purge": false
+      - "name": panda
+        "policy": none
+        "purge": false
+      - "name": octopus
+        "policy": none
+        "purge": false
+      - "name": lama
+        "policy": none
+        "purge": false
+
