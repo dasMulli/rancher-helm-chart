@@ -59,6 +59,14 @@ spec:
             value: {{ .Values.influxdb.adminUser.name }}
           - name: MariaDbConnectionString
             value: Server=panda-mariadb-galera;Database={{ index .Values "mariadb-galera" "db" "name" }};Uid=root;Pwd={{ index .Values "mariadb-galera" "rootUser" "password" }};
+          - name: MigrationOptions__TableMigrationMode
+            value: {{ .Values.panda.migrationOptions.tableMigrationMode }}
+          - name: MigrationOptions__SeedType
+            value: {{ .Values.panda.migrationOptions.seedType }}
+          - name: MigrationOptions__SeedMode
+            value: {{ .Values.panda.migrationOptions.seedMode }}
+          - name: MigrationOptions__OldDatabaseConnectionString
+            value: {{ .Values.panda.migrationOptions.oldDatabaseConnectionString }}
           ports:
             - name: http
               containerPort: 80

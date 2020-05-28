@@ -19,6 +19,30 @@ questions:
   label: "ZOO Url"
   description: "ZOO Url"
   type: string
+- variable: panda.migrationOptions.tableMigrationMode
+  default: 'Migrate'
+  required: true
+  label: "Table Migration Mode"
+  description: "Table Migration Mode"
+  type: string
+- variable: panda.migrationOptions.seedType
+  default: 'None'
+  required: true
+  label: "Seed Type"
+  description: "Seed Type"
+  type: string
+- variable: panda.migrationOptions.seedMode
+  default: 'None'
+  required: true
+  label: "Seed Mode"
+  description: "Seed Mode"
+  type: string
+- variable: panda.migrationOptions.oldDatabaseConnectionString
+  default: ''
+  required: true
+  label: "Old Database ConnectionString"
+  description: "Old Database ConnectionString"
+  type: string
   
 #MariaDb
 - variable: mariadb-galera.rootUser.password

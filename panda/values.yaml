@@ -71,6 +71,11 @@ affinity: {}
 
 panda:
   zooUrl: 'zoo.loc.mmk.mmdom.net'
+  migrationOptions:
+    tableMigrationMode: "Migrate"
+    seedType: "None"
+    seedMode: "None"
+    oldDatabaseConnectionString: ""
 
 mariadb-galera:
   rootUser:
