@@ -637,8 +637,8 @@ minio:
     ## Update strategy for Deployments
     DeploymentUpdate:
       type: RollingUpdate 
-        maxUnavailable: 100%
-        maxSurge: 0
+      maxUnavailable: 100%
+      maxSurge: 0
 
 
     ## Update strategy for StatefulSets
