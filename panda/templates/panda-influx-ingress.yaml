@@ -8,10 +8,10 @@ metadata:
     panda/component: panda-influxdb
 spec:
   rules:
-    - host: portal.{{ .Values.panda.zooUrl }}
+    - host: influxdb.{{ .Values.panda.zooUrl }}
       http:
         paths:
-          - path: /influxdb
+          - path:
             backend:
               serviceName: {{ $fullName }}-influxdb
               servicePort: 8086
