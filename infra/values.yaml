@@ -619,9 +619,17 @@ rabbitmq-ha:
 minio:
     accessKey: "admin"
     secretKey: "mmkarton"
-    buckets:
-      - rhino
-      - panda
-      - octopus
-      - lama
 
+    buckets: []
+      - name: rhino
+        policy: none
+        purge: false
+      - name: panda
+        policy: none
+        purge: false
+      - name: octopus
+        policy: none
+        purge: false
+      - name: lama
+        policy: none
+        purge: false
