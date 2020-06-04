@@ -615,6 +615,22 @@ rabbitmq-ha:
         ssl_options.versions.1            = tlsv1.2
         ssl_options.versions.2            = tlsv1.1
 
+    ports:
+      - name: "amqp"
+        nodePort: "30102"
+        port: "5672"
+        protocol: "TCP"
+        targetPort: "5672"
+      - name: "amqps"
+        nodePort: "30101"
+        port: "5671"
+        protocol: "TCP"
+        targetPort: "5671"
+    selector:
+      app: "rabbitmq-ha"
+      release: "infra"
+    sessionAffinity: "None"
+    type: "NodePort"
 
 minio:
     accessKey: "admin"
