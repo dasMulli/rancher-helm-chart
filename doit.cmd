@@ -10,6 +10,12 @@ REM helm dependency build
 REM cd ..
 helm package panda .\panda\
 
+REM cd .\panda\
+REM helm dependency update
+REM helm dependency build
+REM cd ..
+helm package workflow-manager .\workflow-manager\
+
 cd .\infra\
 helm dependency update
 helm dependency build
