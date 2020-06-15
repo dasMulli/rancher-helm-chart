@@ -14,7 +14,7 @@ type: application
 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
-version: 0.1.70
+version: 0.1.71
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application.
@@ -43,3 +43,7 @@ dependencies:
   version: 5.0.26
   repository: https://kubernetes-charts.storage.googleapis.com/
   namespace: infra-minio
+- name: node-red
+  version: 1.4.3
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  namespace: node-red

@@ -14,5 +14,8 @@ dependencies:
 - name: minio
   repository: https://kubernetes-charts.storage.googleapis.com/
   version: 5.0.26
-digest: sha256:bcffa5ccaab7f77c8602727a9c03435568e4e1980c2fcab368873b7d64adabbb
-generated: "2020-05-28T22:25:53.1399835+02:00"
+- name: node-red
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 1.4.3
+digest: sha256:061ae6e45c55d098c3c92a4747076aae975af3a6be6c1782dd48a0f3e77b86b0
+generated: "2020-06-15T17:46:52.3224171+02:00"
