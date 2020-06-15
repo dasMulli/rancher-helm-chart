@@ -96,7 +96,7 @@ questions:
       description: "Ldap SecureSocketLayer"
       type: boolean
     - variable: portal.portal.ldap.domain
-      default: 'loc'
+      default: 'mm'
       required: false
       label: "Ldap Domain"
       description: "Ldap Domain"
