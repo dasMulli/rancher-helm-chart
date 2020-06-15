@@ -1,0 +1,17 @@
+{{- $fullName := include "infra.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}-node-red
+  labels:
+    {{- include "infra.labels" . | nindent 4 }}
+    infra/component: infra-node-red
+spec:
+  rules:
+    - host: nodered.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: {{ $fullName }}-node-red
+              servicePort: 1880
