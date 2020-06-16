@@ -643,3 +643,8 @@ minio:
     ## Update strategy for StatefulSets
     StatefulSetUpdate:
       updateStrategy: Recreate
+
+node-red:
+    persistence:
+      enabled: "true"
+      size: "1Gi"
