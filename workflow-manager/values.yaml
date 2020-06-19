@@ -79,5 +79,5 @@ tolerations: []
 affinity: {}
 
 workflow-manager-service-api:
-  workflow-manager-api.dbUserId: 'root'
-  workflow-manager-api.dbUserPassword: 'root'
+  dbUserId: 'root'
+  dbUserPassword: 'root'

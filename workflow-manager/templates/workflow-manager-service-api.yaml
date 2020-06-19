@@ -54,9 +54,9 @@ spec:
           - name: dbServerPort
             value: 3306
           - name: dbUserId
-            value: {{ .Values.workflow-manager-api.dbUserId }}
+            value: {{ .Values.workflow-manager-service-api.dbUserId }}
           - name: dbUserPassword
-            value: {{ .Values.workflow-manager-api.dbUserPassword }}
+            value: {{ .Values.workflow-manager-service-api.dbUserPassword }}
           ports:
             - name: http
               containerPort: 80
