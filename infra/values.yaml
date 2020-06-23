@@ -105,10 +105,17 @@ portal:
       persistence:
         size: 2Gi
       master:
-        livenessProbe: "enabled"
+        livenessProbe:
+          enabled: false
+        readinessProbe:
+          enabled: false  
       slave:
-        livenessProbe: "enabled"
-        
+        livenessProbe:
+          enabled: false
+        readinessProbe:
+          enabled: false  
+          
+                          
 logstash:
     image:
       repository: docker.elastic.co/logstash/logstash-oss
