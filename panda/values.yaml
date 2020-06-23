@@ -137,5 +137,7 @@ grafana:
       value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/token"
 
 
-#  updateStrategy:
-#    - type: "RollingUpdate"
+  DeploymentUpdate:
+    type: RollingUpdate 
+    maxUnavailable: 100%
+    maxSurge: 0
