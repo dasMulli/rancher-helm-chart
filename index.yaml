@@ -3,7 +3,7 @@ entries:
   infra:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4512728+02:00"
+    created: "2020-06-23T12:08:36.9957789+02:00"
     dependencies:
     - name: portal
       repository: https://vandenbergen.github.io/rancher-helm-chart
@@ -24,7 +24,7 @@ entries:
       repository: https://kubernetes-charts.storage.googleapis.com/
       version: 1.4.3
     description: A Helm chart for Kubernetes
-    digest: 1ac3e4d7ef6878924f61b47c9d0dc11bfa3a2490fef790f2815bd1a07887d8de
+    digest: b10033bb6df1f613c92264ab4bc50d4ae2565d81954720adc815502714673b3c
     icon: https://www.mm-packaging.com/typo3conf/ext/bb_boilerplate/Resources/Public/Images/logo-packaging.svg
     name: infra
     type: application
@@ -33,7 +33,7 @@ entries:
     version: 0.1.77
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4402641+02:00"
+    created: "2020-06-23T12:08:36.9837858+02:00"
     dependencies:
     - name: portal
       repository: https://vandenbergen.github.io/rancher-helm-chart
@@ -63,7 +63,7 @@ entries:
     version: 0.1.76
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4292418+02:00"
+    created: "2020-06-23T12:08:36.9727521+02:00"
     dependencies:
     - name: portal
       repository: https://vandenbergen.github.io/rancher-helm-chart
@@ -93,7 +93,7 @@ entries:
     version: 0.1.75
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4172388+02:00"
+    created: "2020-06-23T12:08:36.9607502+02:00"
     dependencies:
     - name: portal
       repository: https://vandenbergen.github.io/rancher-helm-chart
@@ -123,7 +123,7 @@ entries:
     version: 0.1.74
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.40524+02:00"
+    created: "2020-06-23T12:08:36.9487511+02:00"
     dependencies:
     - name: portal
       repository: https://vandenbergen.github.io/rancher-helm-chart
@@ -154,7 +154,28 @@ entries:
   panda:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4782403+02:00"
+    created: "2020-06-23T12:08:37.0237489+02:00"
+    dependencies:
+    - name: mariadb-galera
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.1.1
+    - name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 0.3.7
+    - name: grafana
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.5.2
+    description: A Helm chart for Kubernetes
+    digest: e411e81939f6c659f40e53a6e21f07182f0dabad11020569392d857852ad898e
+    icon: https://www.mm-packaging.com/typo3conf/ext/bb_boilerplate/Resources/Public/Images/logo-packaging.svg
+    name: panda
+    type: application
+    urls:
+    - https://vandenbergen.github.io/rancher-helm-chart/panda-0.1.68.tgz
+    version: 0.1.68
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-06-23T12:08:37.018776+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -175,7 +196,7 @@ entries:
     version: 0.1.67
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.473241+02:00"
+    created: "2020-06-23T12:08:37.0127791+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -196,7 +217,7 @@ entries:
     version: 0.1.66
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4672647+02:00"
+    created: "2020-06-23T12:08:37.0077785+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -217,7 +238,7 @@ entries:
     version: 0.1.65
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4622709+02:00"
+    created: "2020-06-23T12:08:37.0017833+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -236,37 +257,16 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/panda-0.1.64.tgz
     version: 0.1.64
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4562648+02:00"
-    dependencies:
-    - name: mariadb-galera
-      repository: https://charts.bitnami.com/bitnami
-      version: 2.1.1
-    - name: influxdb
-      repository: https://charts.bitnami.com/bitnami
-      version: 0.3.7
-    - name: grafana
-      repository: https://charts.bitnami.com/bitnami
-      version: 1.5.2
-    description: A Helm chart for Kubernetes
-    digest: ef1b7225dbb52a93cbf80adce9377bd360fa930755e6e2604d321403f0f31685
-    icon: https://www.mm-packaging.com/typo3conf/ext/bb_boilerplate/Resources/Public/Images/logo-packaging.svg
-    name: panda
-    type: application
-    urls:
-    - https://vandenbergen.github.io/rancher-helm-chart/panda-0.1.63.tgz
-    version: 0.1.63
   portal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4972738+02:00"
+    created: "2020-06-23T12:08:37.0457853+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
       version: 2.1.1
     description: A Helm chart for Kubernetes
-    digest: cd24a79ccd669480f3628b7918e857f9252cc3b15a730029d2d7e8f31047b006
+    digest: cf1ea5086668625eb328fa0449a06486bc9de2823e4601df5f85224de61e611c
     icon: https://www.mm-packaging.com/typo3conf/ext/bb_boilerplate/Resources/Public/Images/logo-packaging.svg
     name: portal
     type: application
@@ -275,7 +275,7 @@ entries:
     version: 0.1.87
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4932717+02:00"
+    created: "2020-06-23T12:08:37.0417577+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -290,7 +290,7 @@ entries:
     version: 0.1.86
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4892409+02:00"
+    created: "2020-06-23T12:08:37.0357507+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -305,7 +305,7 @@ entries:
     version: 0.1.85
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4852405+02:00"
+    created: "2020-06-23T12:08:37.0317524+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -320,7 +320,7 @@ entries:
     version: 0.1.84
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4812408+02:00"
+    created: "2020-06-23T12:08:37.0277497+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -336,27 +336,13 @@ entries:
   workflow-manager:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.5092635+02:00"
+    created: "2020-06-23T12:08:37.0557785+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
       version: 2.1.1
     description: A Helm chart for Kubernetes
-    digest: 7ff80f61c4b9348fa5085e85f04653bf129e0f8467279520dac72abba412834e
-    name: workflow-manager
-    type: application
-    urls:
-    - https://vandenbergen.github.io/rancher-helm-chart/workflow-manager-0.1.68.tgz
-    version: 0.1.68
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.506237+02:00"
-    dependencies:
-    - name: mariadb-galera
-      repository: https://charts.bitnami.com/bitnami
-      version: 2.1.1
-    description: A Helm chart for Kubernetes
-    digest: 4be5b09f048c5d8c117bf5fafe85545af3b09e31fcfbc69dd8eafe48d3273b05
+    digest: 44254c2f1c1b8673e4b2655436cd0cbe495f3fddc32e28912f6f66a7dd9c11cb
     name: workflow-manager
     type: application
     urls:
@@ -364,7 +350,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.5042374+02:00"
+    created: "2020-06-23T12:08:37.0527859+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -378,7 +364,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.502272+02:00"
+    created: "2020-06-23T12:08:37.0507823+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -392,7 +378,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-06-23T12:07:27.4992727+02:00"
+    created: "2020-06-23T12:08:37.0477846+02:00"
     dependencies:
     - name: mariadb-galera
       repository: https://charts.bitnami.com/bitnami
@@ -404,4 +390,4 @@ entries:
     urls:
     - https://vandenbergen.github.io/rancher-helm-chart/workflow-manager-0.1.3.tgz
     version: 0.1.3
-generated: "2020-06-23T12:07:27.3502402+02:00"
+generated: "2020-06-23T12:08:36.8867798+02:00"
