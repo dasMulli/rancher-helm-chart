@@ -104,12 +104,12 @@ portal:
         name: portal
       persistence:
         size: 2Gi
-      livenessProbe:
-        enabled: false
-      readinessProbe:
-        enabled: false
-      spec:
-        podManagementPolicy: "Parallel"
+#      livenessProbe:
+#        enabled: false
+#      readinessProbe:
+#        enabled: false
+#      spec:
+#        podManagementPolicy: "Parallel"
 
      
 
