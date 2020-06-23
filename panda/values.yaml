@@ -96,13 +96,11 @@ influxdb:
 
 grafana:
   authEnabled: true
-  adminUser: admin
-  adminPassword: jgbwload
 
   admin:
     existingSecret: ""
-    userKey: admin-user
-    passwordKey: admin-password
+    user: admin
+    password: admin
   
   plugins: "grafana-clock-panel,briangann-gauge-panel,natel-plotly-panel,grafana-simple-json-datasource,vonage-status-panel,michaeldmoore-multistat-panel,alexanderzobnin-zabbix-app,grafana-piechart-panel,ryantxu-ajax-panel,novalabs-annotations-panel,michaeldmoore-annunciator-panel,farski-blendstat-panel,yesoreyeram-boomtable-panel,yesoreyeram-boomtheme-panel,petrslavotinek-carpetplot-panel,briangann-datatable-panel,pierosavi-imageit-panel,bessler-pictureit-panel,snuids-radar-panel,blackmirror1-singlestat-math-panel,btplc-status-dot-panel,snuids-trafficlights-panel"
 
@@ -121,8 +119,6 @@ grafana:
       value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/authorize"
     - name: GF_AUTH_GENERIC_OAUTH_CLIENT_ID
       value: "grafana"
-#    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
-#      value: "Root#123"
     - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_NAME
       value: "email"
     - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_PATH
@@ -135,9 +131,16 @@ grafana:
       value: "openid roles email profile api account"
     - name: GF_AUTH_GENERIC_OAUTH_TOKEN_URL
       value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/token"
+#    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
+#      value: "Root#123"
 
 
-  DeploymentUpdate:
-    type: RollingUpdate 
+  updateStrategy:
+    type: "RollingUpdate"
     maxUnavailable: 100%
     maxSurge: 0
+
+  persistence:
+    size: "2Gi"
+    storageClass: "longhorn"
+    
