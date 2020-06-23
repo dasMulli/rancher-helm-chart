@@ -108,6 +108,10 @@ portal:
         enabled: false
       readinessProbe:
         enabled: false
+      spec:
+        podManagementPolicy: "Parallel"
+
+     
 
 logstash:
     image:
