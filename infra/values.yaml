@@ -104,6 +104,10 @@ portal:
         name: portal
       persistence:
         size: 2Gi
+      master:
+        livenessProbe: "enabled"
+      slave:
+        livenessProbe: "enabled"
         
 logstash:
     image:
