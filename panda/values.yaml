@@ -144,11 +144,9 @@ grafana:
       subPath: "datasources.yaml"
       readOnly: false
 
-  volumes:
-    - configMap:
-        name: panda-grafana-datasources
-      name: grafana-datasources-conf-map
-
+  extraVolumeMounts:
+    - name: panda-grafana-datasources
+      
 
   ## Update strategy for Deployments
   updateStrategy:
