@@ -6,7 +6,7 @@
   - "name": "PANDA"
     "type": "InfluxDB"
     "orgId": 1
-    "url": http://influxdb.{{ .Values.panda.zooUrl }}
+    "url": "http://influxdb."{{ .Values.panda.zooUrl }}
     "password": "admin"
     "user": "admin"
     "database": "panda"
