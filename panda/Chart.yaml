@@ -14,7 +14,7 @@ type: application
 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
-version: 0.1.70
+version: 0.1.71
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application.
@@ -30,5 +30,5 @@ dependencies:
   version: 0.3.7
   repository: https://charts.bitnami.com/bitnami
 - name: grafana
-  version: 1.5.2
+  version: 2.1.0
   repository: https://charts.bitnami.com/bitnami
