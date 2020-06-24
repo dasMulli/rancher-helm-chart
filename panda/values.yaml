@@ -138,7 +138,7 @@ grafana:
 #    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
 #      value: "Root#123"
 
-    volumeMounts:
+  volumeMounts:
     - mountPath: /opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml
       name: grafana-datasources-conf-map
       subPath: datasources.yaml
