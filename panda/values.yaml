@@ -138,8 +138,7 @@ grafana:
 #    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
 #      value: "Root#123"
 
-
-    datasources:
+    - datasources:
       - name: Graphite
         url: http://localhost
         user: panda
