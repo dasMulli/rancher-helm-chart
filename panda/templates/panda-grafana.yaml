@@ -4,6 +4,9 @@ metadata:
   name: panda-grafana
   namespace: panda-panda
 spec:
+  selector:
+    matchLabels:
+      panda/component: panda-grafana
   template:
     spec:
       containers:
