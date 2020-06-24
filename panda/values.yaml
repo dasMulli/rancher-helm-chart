@@ -144,6 +144,11 @@ grafana:
       subPath: "datasources.yaml"
       readOnly: false
 
+  volumes:
+    - configMap:
+        name: panda-grafana-datasources
+      name: grafana-datasources-conf-map
+
 
   ## Update strategy for Deployments
   updateStrategy:
