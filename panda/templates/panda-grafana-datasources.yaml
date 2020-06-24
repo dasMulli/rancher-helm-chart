@@ -1,8 +1,10 @@
 #{{-  $url := printf "%s%s" "http://influxdb." .Values.panda.zooUrl -}}
 
 {{- define "panda-grafana-datasources-content" }}
-  apiVersion: 1
-  datasources:
+{  
+  "apiVersion": 1
+  "datasources":
+    { 
     - "name": "PANDA"
       "type": "InfluxDB"
       "orgId": 1
@@ -16,8 +18,9 @@
       "withCredentials": "true"
       "isDefault": "true"
       "editable": "false"
+    }
+}
 {{- end }}
-
 
 #apiVersion: v1
 #kind: ConfigMap
@@ -49,4 +52,4 @@ metadata:
 data:
 apiVersion: v1
 data:
-  datasources.yaml: {{- template "panda-grafana-datasources-content" }}
+  datasources.yaml: {{ (include "panda-grafana-datasources-content" .) | trim | quote }}
