@@ -16,6 +16,7 @@ spec:
             - mountPath: /opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml
               name: grafana-datasources-conf-map
               subPath: datasources.yaml
+
       volumes:
       - configMap:
           name: panda-grafana-datasources
