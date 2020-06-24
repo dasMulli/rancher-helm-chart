@@ -98,6 +98,8 @@ grafana:
   image:
     tag: "7.0.3"
   authEnabled: true
+  datasources:
+    secretName: "panda-influx-secret"
 
   admin:
     existingSecret: ""
