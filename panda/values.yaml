@@ -143,6 +143,8 @@ grafana:
       mountPath: "/opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml"
       subPath: "datasources.yaml"
       readOnly: "false"
+      volumeMounts:
+        name: "panda-grafana-datasources-vol-mnt"
 
 
   ## Update strategy for Deployments
