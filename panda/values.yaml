@@ -139,6 +139,14 @@ grafana:
 #      value: "Root#123"
 
 
+    datasources:
+      - name: Graphite
+        url: http://localhost
+        user: panda
+        secureJsonData:
+          password: panda
+
+
   ## Update strategy for Deployments
   updateStrategy:
     type: Recreate 
