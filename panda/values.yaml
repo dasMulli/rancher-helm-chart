@@ -139,12 +139,10 @@ grafana:
 #      value: "Root#123"
 
   extraConfigmaps:
-    - name: "panda-grafana-datasources"
-      mountPath: "/opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml"
+    - name: panda-grafana-datasources
+      mountPath: /opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml
       subPath: "datasources.yaml"
-      readOnly: "false"
-      volumeMounts:
-        name: "panda-grafana-datasources-vol-mnt"
+      readOnly: false
 
 
   ## Update strategy for Deployments
