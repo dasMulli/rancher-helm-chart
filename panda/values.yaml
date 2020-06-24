@@ -140,21 +140,8 @@ grafana:
 
   extraConfigmaps:
     - name: panda-grafana-datasources
-      value: |-
-        apiVersion: v1
-        kind: Deployment
-        spec:
-          template:
-            spec:
-              containers:
-                  volumeMounts:
-                    - mountPath: /opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml
-                      name: grafana-datasources-conf-map
-                      subPath: datasources.yaml
-              volumes:
-              - configMap:
-                  name: panda-grafana-datasources
-                name: grafana-datasources-conf-map
+      mountPath: /opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml
+      subPath: datasources.yaml
 
 
   ## Update strategy for Deployments
