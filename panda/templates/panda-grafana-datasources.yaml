@@ -11,10 +11,12 @@ datasources:
     database: "panda"
     basicAuth: "true"
     basicAuthUser: "admin"
-    basicAuthPassword: "admin"
     withCredentials: "true"
     isDefault: "true"
     editable: "false"
+    secureJsonData: {
+      basicAuthPassword: "admin"
+    }
 {{- end }}
 
 #apiVersion: v1
