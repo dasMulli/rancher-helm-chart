@@ -98,8 +98,8 @@ grafana:
   image:
     tag: "7.0.3"
   authEnabled: true
-  datasources:
-    secretName: "panda-influx-secret"
+#  datasources:
+#    secretName: "panda-influx-secret"
 
   admin:
     existingSecret: ""
@@ -137,24 +137,6 @@ grafana:
       value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/token"
 #    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
 #      value: "Root#123"
-
-    - name: datasources
-      value: |-
-        {
-          "name": "PANDA"
-          "url": ""
-          "type": "InfluxDB"
-          "password": "admin"
-          "user": "admin"
-          "database": "panda"
-          "basicAuth": "true"
-          "basicAuthUser": "admin"
-          "basicAuthPassword": "admin"
-          "withCredentials": "true"
-          "isDefault": "true"
-          "editable": "false"
-        }
-
 
   ## Update strategy for Deployments
   updateStrategy:
