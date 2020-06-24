@@ -141,12 +141,9 @@ grafana:
   extraConfigmaps:
     - name: panda-grafana-datasources
       mountPath: /opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml
-      subPath: "datasources.yaml"
+      subPath: datasources.yaml
       readOnly: false
 
-  extraVolumeMounts:
-    - name: panda-grafana-datasources
-      
 
   ## Update strategy for Deployments
   updateStrategy:
