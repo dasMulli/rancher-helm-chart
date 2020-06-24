@@ -85,7 +85,7 @@ data:
               "roles",
               "account"
             ],
-            "RequirePkce": true,
+            "RequirePkce": false,
             "RequireConsent": false,
             "RequireClientSecret": false,
             "AccessTokenLifetime": 7200,
