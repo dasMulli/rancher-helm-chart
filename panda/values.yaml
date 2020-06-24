@@ -138,12 +138,22 @@ grafana:
 #    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
 #      value: "Root#123"
 
-    - datasources:
-      - name: Graphite
-        url: http://localhost
-        user: panda
-        secureJsonData:
-          password: panda
+    - name: datasources
+      value: |-
+        {
+          "name": "PANDA"
+          "url": ""
+          "type": "InfluxDB"
+          "password": "admin"
+          "user": "admin"
+          "database": "panda"
+          "basicAuth": "true"
+          "basicAuthUser": "admin"
+          "basicAuthPassword": "admin"
+          "withCredentials": "true"
+          "isDefault": "true"
+          "editable": "false"
+        }
 
 
   ## Update strategy for Deployments
