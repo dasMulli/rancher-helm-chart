@@ -142,6 +142,7 @@ grafana:
     - name: grafana-datasources-conf-map
       mountPath: /opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml
       subPath: datasources.yaml
+        name: panda-grafana-datasources
   
   ## Update strategy for Deployments
   updateStrategy:
