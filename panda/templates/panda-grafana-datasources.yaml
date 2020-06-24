@@ -1,4 +1,24 @@
-{{-  $url := printf "%s%s" "http://influxdb." .Values.panda.zooUrl -}}
+#{{-  $url := printf "%s%s" "http://influxdb." .Values.panda.zooUrl -}}
+
+{{- define "panda-grafana-datasources-content" }}
+  apiVersion: 1
+  datasources:
+    - name: "PANDA"
+      type: "InfluxDB"
+      orgId: 1
+      url: "http://influxdb." {{ .Values.panda.zooUrl }}
+      password: "admin"
+      user: "admin"
+      database: "panda"
+      basicAuth: true
+      basicAuthUser: "admin"
+      basicAuthPassword: "admin"
+      withCredentials: true
+      isDefault: true
+      editable: false
+{{- end }}
+
+
 #apiVersion: v1
 #kind: ConfigMap
 #metadata:
@@ -29,19 +49,4 @@ metadata:
 data:
 apiVersion: v1
 data:
-  datasources.yaml: |-
-    apiVersion: 1
-    datasources:
-      - name: PANDA
-        type: InfluxDB
-        orgId: 1
-        url: $url
-        password: admin
-        user: admin
-        database: panda
-        basicAuth: true
-        basicAuthUser: admin
-        basicAuthPassword: admin
-        withCredentials: true
-        isDefault:
-        editable: false
+  datasources.yaml: {{- template "panda-grafana-datasources-content" }}
