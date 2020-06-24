@@ -95,6 +95,8 @@ influxdb:
     usePasswordFile: false
 
 grafana:
+  image:
+    tag: "7.0.3"
   authEnabled: true
 
   admin:
