@@ -139,7 +139,7 @@ grafana:
 #      value: "Root#123"
 
   extraConfigmaps:
-    - name: grafana-datasources-conf-map
+    - name: panda-grafana-datasources
       value: |-
         apiVersion: v1
         kind: Deployment
