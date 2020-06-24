@@ -3,17 +3,18 @@
 {{- define "panda-grafana-datasources-content" }}
 apiVersion: 1
 datasources:
-  - name: "PANDA"
-    type: "InfluxDB"
+  - name: PANDA
+    type: InfluxDB
+    org_id: 1
     url: http://influxdb.{{ .Values.panda.zooUrl }}
-    password: "admin"
-    user: "admin"
-    database: "panda"
-    basicAuth: "true"
-    basicAuthUser: "admin"
-    withCredentials: "true"
-    isDefault: "true"
-    editable: "false"
+    password: admin
+    user: admin
+    database: panda
+    basicAuth: true
+    basicAuthUser: admin
+    withCredentials: true
+    isDefault: true
+    editable: false
     secureJsonData: {
       basicAuthPassword: "admin"
     }
