@@ -139,10 +139,9 @@ grafana:
 #      value: "Root#123"
 
   extraConfigmaps:
-    volumeMounts:
-      - mountPath: /opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml
-        name: grafana-datasources-conf-map
-        subPath: datasources.yaml
+    - name: grafana-datasources-conf-map
+      mountPath: /opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml
+      subPath: datasources.yaml
   
   ## Update strategy for Deployments
   updateStrategy:
