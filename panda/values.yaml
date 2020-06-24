@@ -137,12 +137,6 @@ grafana:
       value: "http://portal.zoo.hw.mmk.mmdom.net/authenticator/connect/token"
 #    - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
 #      value: "Root#123"
-
-  extraConfigmaps:
-    - name: grafana-datasources-conf-map
-      mountPath: /opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml
-      subPath: datasources.yaml
-        name: panda-grafana-datasources
   
   ## Update strategy for Deployments
   updateStrategy:
