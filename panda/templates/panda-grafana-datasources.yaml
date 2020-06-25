@@ -7,7 +7,6 @@ datasources:
     type: influxdb
     org_id: 1
     url: http://influxdb.{{ .Values.panda.zooUrl }}
-    password: admin
     user: admin
     database: panda
     basicAuth: true
@@ -16,7 +15,8 @@ datasources:
     isDefault: true
     editable: false
     secureJsonData: {
-      basicAuthPassword: "admin"
+      basicAuthPassword: "admin",
+      password: "admin"
     }
 {{- end }}
 
