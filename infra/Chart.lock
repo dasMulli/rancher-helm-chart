@@ -1,7 +1,7 @@
 dependencies:
 - name: portal
   repository: https://vandenbergen.github.io/rancher-helm-chart
-  version: 0.1.90
+  version: 0.1.91
 - name: logstash
   repository: https://kubernetes-charts.storage.googleapis.com/
   version: 2.4.0
@@ -17,5 +17,5 @@ dependencies:
 - name: node-red
   repository: https://kubernetes-charts.storage.googleapis.com/
   version: 1.4.3
-digest: sha256:26068618be46ebf23c2b497ef8cabece9f1fe97243eb0650dfa58643e0f87f71
-generated: "2020-06-25T08:17:48.3152033+02:00"
+digest: sha256:83b66bc655f5234cfc6243223906ac80414d300b8fc0ceb356c34fb46212de35
+generated: "2020-06-29T09:19:41.0957004+02:00"
