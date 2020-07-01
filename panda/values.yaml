@@ -103,8 +103,8 @@ grafana:
 
   admin:
     existingSecret: ""
-    user: admin
-    password: admin
+    user: root
+    password: Root#123
   
   plugins: "grafana-clock-panel,briangann-gauge-panel,natel-plotly-panel,grafana-simple-json-datasource,vonage-status-panel,michaeldmoore-multistat-panel,alexanderzobnin-zabbix-app,grafana-piechart-panel,ryantxu-ajax-panel,novalabs-annotations-panel,michaeldmoore-annunciator-panel,farski-blendstat-panel,yesoreyeram-boomtable-panel,yesoreyeram-boomtheme-panel,petrslavotinek-carpetplot-panel,briangann-datatable-panel,pierosavi-imageit-panel,bessler-pictureit-panel,snuids-radar-panel,blackmirror1-singlestat-math-panel,btplc-status-dot-panel,snuids-trafficlights-panel"
 
