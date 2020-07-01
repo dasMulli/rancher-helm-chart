@@ -131,7 +131,7 @@ data:
           {
             "Id": 9,
             "Title": "GRAFANA",
-            "Url": "http://grafana.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
+            "Url": "http://grafana.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net/login/generic_oauth",
             "GroupMenuItemId": 3,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Panda_.*)|(MM_MES_Panda_.*)",
             "Tooltip": "GRAFANA",
