@@ -143,6 +143,10 @@ grafana:
       mountPath: /opt/bitnami/grafana/conf/provisioning/datasources/datasources.yaml
       subPath: datasources.yaml
       readOnly: false
+    - name: panda-grafana-dashboards
+      mountPath: /opt/bitnami/grafana/conf/provisioning/dashboards/dashboards.yaml
+      subPath: dashboards.yaml
+      readOnly: false
 
 
   ## Update strategy for Deployments
