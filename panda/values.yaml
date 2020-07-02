@@ -148,6 +148,18 @@ grafana:
 #      subPath: dashboards.yaml
 #      readOnly: false
 
+  dashboardProviders:
+    dashboardproviders.yaml:
+      apiVersion: 1
+      providers:
+      - name: "ADAM"
+        orgId: 1
+        folder: "CHRONOS"
+        type: file
+        disableDeletion: false
+        editable: true
+        options:
+          path: /opt/bitnami/grafana/conf/provisioning/dashboards/ADAM
 
   ## Update strategy for Deployments
   updateStrategy:

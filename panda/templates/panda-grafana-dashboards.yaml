@@ -1,3 +1,16 @@
+{{- define "panda-grafana-dashboards-content" }}
+#apiVersion: 1
+#providers:
+# - name: 'default'
+#   orgId: 1
+#   folder: ''
+#   folderUid: ''
+#   type: file
+#   options:
+#     path: /var/lib/grafana/dashboards
+{{- end }}
+
+
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -7,7 +20,7 @@ metadata:
 data:
 apiVersion: v1
 data:
-  adam.json: |- 
+  dashboards.json: |- 
     {
       "annotations": {
         "list": [
