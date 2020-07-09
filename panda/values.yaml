@@ -93,6 +93,7 @@ influxdb:
     name: admin
     pwd: admin
     usePasswordFile: false
+    #MDI tbd: Influxdb Size
 
 grafana:
   image:
