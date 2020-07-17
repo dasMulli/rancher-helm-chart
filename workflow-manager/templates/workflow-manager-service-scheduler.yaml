@@ -62,7 +62,7 @@ spec:
           - name: dbDatabaseName
             value: "synit-workflows"
           - name: dbServerName
-            value: {{ include "workflow-manager.fullname" . }}-mariadb-galera"
+            value: {{ include "workflow-manager.fullname" . }}-mariadb-galera
           - name: dbServerPort
             value: "3306"
           - name: dbUserId
