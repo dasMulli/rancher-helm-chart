@@ -81,3 +81,4 @@ affinity: {}
 workflowmanager:
   dbUserId: 'root'
   dbUserPassword: 'root'
+  zooUrl: 'zoo.loc.mmk.mmdom.net'

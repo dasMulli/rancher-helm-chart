@@ -8,7 +8,7 @@ metadata:
     panda/component: workflow-manager-service-api
 spec:
   rules:
-    - host: workflow-{{ .Values.workflowmanager.zooUrl }}
+    - host: workflow.{{ .Values.workflowmanager.zooUrl }}
       http:
         paths:
           - path: /api
