@@ -1,4 +1,4 @@
-schedulerVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "workflow-manager.fullname" . }}-workflow-manager-service-scheduler
@@ -15,7 +15,7 @@ spec:
     {{- include "workflow-manager.selectorLabels" . | nindent 4 }}
     panda/component: workflow-manager-service-scheduler
 ---
-schedulerVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "workflow-manager.fullname" . }}-workflow-manager-service-scheduler
