@@ -1,0 +1,89 @@
+schedulerVersion: v1
+kind: Service
+metadata:
+  name: {{ include "workflow-manager.fullname" . }}-workflow-manager-service-scheduler
+  labels:
+    {{- include "workflow-manager.labels" . | nindent 4 }}
+    panda/component: workflow-manager-service-scheduler
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    {{- include "workflow-manager.selectorLabels" . | nindent 4 }}
+    panda/component: workflow-manager-service-scheduler
+---
+schedulerVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "workflow-manager.fullname" . }}-workflow-manager-service-scheduler
+  labels:
+    {{- include "workflow-manager.labels" . | nindent 4 }}
+    panda/component: workflow-manager-service-scheduler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "workflow-manager.selectorLabels" . | nindent 6 }}
+      panda/component: workflow-manager-service-scheduler
+  template:
+    metadata:
+      labels:
+        {{- include "workflow-manager.selectorLabels" . | nindent 8 }}
+        panda/component: workflow-manager-service-scheduler
+    spec:
+      imagePullSecrets:
+        - name: {{ .Values.image.pullSecretName }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}-workflow-manager-service--scheduler
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repositoryBase }}/cit-dev/services/workflow-manager/syn.workflow-manager.service.scheduler:latest"
+          imagePullPolicy: Always
+          env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: "Production"
+          - name: MqHostName
+            value: "forecasttracker-rabbitmq.forecasttracker-knime"
+          - name: MqPassword
+            value: "guest"
+          - name: MqPort
+            value: "5672"
+          - name: MqReceiveQueueName
+            value: "worfklowResponse"
+          - name: MqSendQueueName
+            value: "Knime"
+          - name: MqUserName
+            value: "guest"
+          - name: dbDatabaseName
+            value: "synit-workflows"
+          - name: dbServerName
+            value: "synit-workflows"
+          - name: dbServerPort
+            value: "3306"
+          - name: dbUserId
+            value: {{ .Values.workflowmanager.dbUserId }}
+          - name: dbUserPassword
+            value: {{ .Values.workflowmanager.dbUserPassword }}
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

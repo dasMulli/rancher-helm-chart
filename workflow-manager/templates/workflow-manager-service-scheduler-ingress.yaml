@@ -1,0 +1,17 @@
+{{- $fullName := include "workflow-manager.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}-workflow-manager-service-scheduler
+  labels:
+    {{- include "workflow-manager.labels" . | nindent 4 }}
+    panda/component: workflow-manager-service-scheduler
+spec:
+  rules:
+    - host: workflow.{{ .Values.workflowmanager.zooUrl }}
+      http:
+        paths:
+          - path: /scheduler
+            backend:
+              serviceName: {{ $fullName }}-workflow-manager-service-scheduler
+              servicePort: 80
