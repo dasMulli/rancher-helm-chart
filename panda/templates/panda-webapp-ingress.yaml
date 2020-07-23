@@ -1,5 +1,5 @@
 {{- $fullName := include "panda.fullname" . -}}
-apiVersion: extensions/v1beta1
+apiVersion: extensions/v2
 kind: Ingress
 metadata:
   name: {{ $fullName }}-panda-webapp

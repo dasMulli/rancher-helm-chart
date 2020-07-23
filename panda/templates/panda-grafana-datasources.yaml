@@ -20,7 +20,7 @@ datasources:
     }
 {{- end }}
 
-#apiVersion: v1
+#apiVersion: v2
 #kind: ConfigMap
 #metadata:
 #  namespace: {{.Release.Namespace}}
@@ -42,12 +42,12 @@ datasources:
 
 
 # Source: mychart/templates/configmap.yaml
-apiVersion: v1
+apiVersion: v2
 kind: ConfigMap
 metadata:
   namespace: {{.Release.Namespace}}
   name: panda-grafana-datasources
 data:
-apiVersion: v1
+apiVersion: v2
 data:
   datasources.yaml: {{ (include "panda-grafana-datasources-content" .) | trim | quote }}
