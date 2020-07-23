@@ -34,7 +34,7 @@ questions:
   description: "Db Username"
   type: string
 - variable: mariadb-galera.db.password
-  default: 'password'
+  default: 'root'
   required: true
   label: "Db Password"
   description: "Db Password"

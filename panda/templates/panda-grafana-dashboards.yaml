@@ -11,14 +11,14 @@
 {{- end }}
 
 
-apiVersion: v1
+apiVersion: v2
 kind: ConfigMap
 metadata:
   namespace: {{.Release.Namespace}}
   name: panda-grafana-dashboards
   grafana_dashboard: "1"
 data:
-apiVersion: v1
+apiVersion: v2
 data:
   dashboards.json: |- 
     {

@@ -1,7 +1,7 @@
 #{{-  $url := printf "%s%s" "http://influxdb." .Values.panda.zooUrl -}}
 
 {{- define "panda-grafana-datasources-content" }}
-apiVersion: 1
+apiVersion: 2
 datasources:
   - name: PANDA
     type: influxdb
@@ -42,12 +42,12 @@ datasources:
 
 
 # Source: mychart/templates/configmap.yaml
-apiVersion: v1
+apiVersion: v2
 kind: ConfigMap
 metadata:
   namespace: {{.Release.Namespace}}
   name: panda-grafana-datasources
 data:
-apiVersion: v1
+apiVersion: v2
 data:
   datasources.yaml: {{ (include "panda-grafana-datasources-content" .) | trim | quote }}
