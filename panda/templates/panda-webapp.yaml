@@ -15,7 +15,7 @@ spec:
     {{- include "panda.selectorLabels" . | nindent 4 }}
     panda/component: panda-webapp
 ---
-apiVersion: apps/v2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "panda.fullname" . }}-panda-webapp
