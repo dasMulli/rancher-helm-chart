@@ -141,4 +141,10 @@ questions:
   type: string
   
   
- #RabbitMQ
+ #Filebeat
+- variable: filebeat.overrideConfig.processors.add_fields.fields.environment
+  default: ''
+  required: true
+  label: "Filebeat Environment (Cluster Name)"
+  description: "Filebeat Environment (Cluster Name)"
+  type: string
