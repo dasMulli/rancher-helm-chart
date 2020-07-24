@@ -88,11 +88,11 @@ questions:
       description: "Rabbit VHost"
       type: string
     - variable: panda.rabbit.rabbitPort
-      default: "5672"
+      default: '5672'
       required: false
       label: "Rabbit Port"
       description: "Rabbit Port"
-      type: string
+      type: int
     - variable: panda.rabbit.exchangeName
       default: 'Tann'
       required: false
