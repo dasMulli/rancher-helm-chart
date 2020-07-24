@@ -75,8 +75,8 @@ spec:
             value: {{ .Values.panda.rabbit.rabbitHostName }}
           - name: Rabbit__VHost
             value: {{ .Values.panda.rabbit.vHost }}
-#          - name: Rabbit__RabbitPort
-#            value: {{ .Values.panda.rabbit.rabbitPort }}
+          - name: Rabbit__RabbitPort
+            value: {{ .Values.panda.rabbit.rabbitPort }}
           - name: Rabbit__ExchangeName
             value: {{ .Values.panda.rabbit.exchangeName }}
           - name: Rabbit__RouteKey
