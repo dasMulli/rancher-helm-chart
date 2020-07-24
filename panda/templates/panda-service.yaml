@@ -65,10 +65,8 @@ spec:
             value: {{ .Values.panda.migrationOptions.seedMode }}
           - name: MigrationOptions__OldDatabaseConnectionString
             value: {{ .Values.panda.migrationOptions.oldDatabaseConnectionString }}
-          - name: TEST_MDI
-            value: abcd
-#          - name: ExternalQueueType
-#            value: {{ .Values.panda.externalQueueType }}
+          - name: ExternalQueueType
+            value: {{ .Values.panda.externalQueueType }}
 #          - name: Rabbit__RabitUserName
 #            value: {{ .Values.panda.rabbit.rabbitUserName }}
 #          - name: Rabbit__RabbitPassword
