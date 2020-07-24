@@ -43,6 +43,74 @@ questions:
   label: "Old Database ConnectionString"
   description: "Old Database ConnectionString"
   type: string
+- variable: panda.migrationOptions.oldDatabaseConnectionString
+  default: ''
+  required: false
+  label: "Old Database ConnectionString"
+  description: "Old Database ConnectionString"
+  type: string
+- variable: panda.externalQueueType.enable
+  default: false
+  description: "Enable External Queue (Rabbit or InMemory or None)"
+  type: boolean
+  label: "EEnable External Queue"
+  required: true
+  show_subquestion_if: true
+  subquestions:
+    - variable: panda.externalQueueType
+      default: 'none'
+      required: true
+      label: "Panda ExternalQueueType (Rabbit or InMemory or None)"
+      description: "Panda ExternalQueueType (Rabbit or InMemory or None)"
+      type: string
+    - variable: panda.rabbit.rabbitUserName
+      default: 'guest'
+      required: true
+      label: "Rabbit UserName"
+      description: "Rabbit UserName"
+      type: string
+    - variable: panda.rabbit.rabbitPassword
+      default: 'guest'
+      required: true
+      label: "Rabbit RabbitPassword"
+      description: "Rabbit RabbitPassword"
+      type: string
+    - variable: panda.rabbit.rabbitHostName
+      default: 'infra-rabbitmq-ha.infra.srv.cluster.local'
+      required: true
+      label: "Rabbit RabbitHostName"
+      description: "Rabbit RabbitHostName"
+      type: string
+    - variable: panda.rabbit.vHost
+      default: '/'
+      required: true
+      label: "Rabbit VHost"
+      description: "Rabbit VHost"
+      type: string
+    - variable: panda.rabbit.rabbitPort
+      default: '5672'
+      required: true
+      label: "Rabbit Port"
+      description: "Rabbit Port"
+      type: integer
+    - variable: panda.rabbit.exchangeName
+      default: 'Tann'
+      required: true
+      label: "Rabbit ExchangeName"
+      description: "Rabbit ExchangeName"
+      type: string
+    - variable: panda.rabbit.routeKey
+      default: 'Kukuck'
+      required: true
+      label: "Rabbit RouteKey"
+      description: "Rabbit RouteKey"
+      type: string
+    - variable: panda.rabbit.queueName
+      default: 'IFC'
+      required: true
+      label: "Rabbit QueueName"
+      description: "Rabbit QueueName"
+      type: string
   
 #MariaDb
 - variable: mariadb-galera.rootUser.password
