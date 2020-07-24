@@ -58,7 +58,7 @@ questions:
   show_subquestion_if: true
   subquestions:
     - variable: panda.externalQueueType
-      default: 'none'
+      default: 'None'
       required: true
       label: "Panda ExternalQueueType (Rabbit or InMemory or None)"
       description: "Panda ExternalQueueType (Rabbit or InMemory or None)"
@@ -92,7 +92,7 @@ questions:
       required: true
       label: "Rabbit Port"
       description: "Rabbit Port"
-      type: Integer
+      type: int
     - variable: panda.rabbit.exchangeName
       default: 'Tann'
       required: true
