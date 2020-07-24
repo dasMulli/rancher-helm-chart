@@ -82,9 +82,9 @@ panda:
     rabbitPassword: "guest"
     rabbitHostName: "localhost"
     vHost: "/"
-    rabbitPort: "5672"
+    rabbitPort: 5672
     exchangeName: "Tann"
-    routeKey: "Kuckuck"
+    routeKey: "Kukuck"
     queueName: "IFC"
 
 mariadb-galera:
