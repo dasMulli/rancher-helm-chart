@@ -49,7 +49,7 @@ questions:
   label: "Old Database ConnectionString"
   description: "Old Database ConnectionString"
   type: string
-- variable: panda.externalQueueType.enable
+- variable: panda.externalQueueTypeEnable
   default: false
   description: "Enable External Queue (Rabbit or InMemory or None)"
   type: boolean

@@ -76,6 +76,7 @@ panda:
     seedType: "None"
     seedMode: "None"
     oldDatabaseConnectionString: ""
+  externalQueueTypeEnable: false
   externalQueueType: "none"
   rabbit:
     rabbitUserName: "guest"
