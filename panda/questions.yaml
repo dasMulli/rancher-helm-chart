@@ -92,7 +92,7 @@ questions:
       required: true
       label: "Rabbit Port"
       description: "Rabbit Port"
-      type: integer
+      type: string
     - variable: panda.rabbit.exchangeName
       default: 'Tann'
       required: true
