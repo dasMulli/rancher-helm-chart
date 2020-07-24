@@ -69,10 +69,10 @@ spec:
             value: {{ .Values.panda.externalQueueType }}
           - name: Rabbit__RabitUserName
             value: {{ .Values.panda.rabbit.rabbitUserName }}
-#          - name: Rabbit__RabbitPassword
-#            value: {{ .Values.panda.rabbit.rabbitPassword }}
-#          - name: Rabbit__RabbitHostName
-#            value: {{ .Values.panda.rabbit.rabbitHostName }}
+          - name: Rabbit__RabbitPassword
+            value: {{ .Values.panda.rabbit.rabbitPassword }}
+          - name: Rabbit__RabbitHostName
+            value: {{ .Values.panda.rabbit.rabbitHostName }}
 #          - name: Rabbit__VHost
 #            value: {{ .Values.panda.rabbit.vHost }}
 #          - name: Rabbit__RabbitPort
