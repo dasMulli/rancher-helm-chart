@@ -47,8 +47,6 @@ spec:
           env:
           - name: ASPNETCORE_ENVIRONMENT
             value: Production
-          - name: ExternalQueueType
-            value: InMemory
           - name: Influx__Database
             value: panda
           - name: Influx__Password
