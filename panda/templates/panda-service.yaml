@@ -67,8 +67,8 @@ spec:
             value: {{ .Values.panda.migrationOptions.oldDatabaseConnectionString }}
           - name: ExternalQueueType
             value: {{ .Values.panda.externalQueueType }}
-#          - name: Rabbit__RabitUserName
-#            value: {{ .Values.panda.rabbit.rabbitUserName }}
+          - name: Rabbit__RabitUserName
+            value: {{ .Values.panda.rabbit.rabbitUserName }}
 #          - name: Rabbit__RabbitPassword
 #            value: {{ .Values.panda.rabbit.rabbitPassword }}
 #          - name: Rabbit__RabbitHostName
