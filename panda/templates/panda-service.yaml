@@ -73,16 +73,16 @@ spec:
             value: {{ .Values.panda.rabbit.rabbitPassword }}
           - name: Rabbit__RabbitHostName
             value: {{ .Values.panda.rabbit.rabbitHostName }}
-#          - name: Rabbit__VHost
-#            value: {{ .Values.panda.rabbit.vHost }}
-#          - name: Rabbit__RabbitPort
-#            value: {{ .Values.panda.rabbit.rabbitPort }}
-#          - name: Rabbit__ExchangeName
-#            value: {{ .Values.panda.rabbit.exchangeName }}
-#          - name: Rabbit__RouteKey
-#            value: {{ .Values.panda.rabbit.routeKey }}
-#          - name: Rabbit__QueueName
-#            value: {{ .Values.panda.rabbit.queueName }}
+          - name: Rabbit__VHost
+            value: {{ .Values.panda.rabbit.vHost }}
+          - name: Rabbit__RabbitPort
+            value: {{ .Values.panda.rabbit.rabbitPort }}
+          - name: Rabbit__ExchangeName
+            value: {{ .Values.panda.rabbit.exchangeName }}
+          - name: Rabbit__RouteKey
+            value: {{ .Values.panda.rabbit.routeKey }}
+          - name: Rabbit__QueueName
+            value: {{ .Values.panda.rabbit.queueName }}
           ports:
             - name: http
               containerPort: 80
