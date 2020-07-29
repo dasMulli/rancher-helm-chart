@@ -13,3 +13,54 @@ spec:
       name: http
   selector:
     {{- include "forecast-tracker.selectorLabels" . | nindent 4 }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "forecast-tracker.fullname" . }}-forecast-tracker-service
+  labels:
+    {{- include "forecast-tracker.labels" . | nindent 4 }}
+    panda/component: forecast-tracker-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "forecast-tracker.selectorLabels" . | nindent 6 }}
+      panda/component: forecast-tracker-service
+  template:
+    metadata:
+      labels:
+        {{- include "forecast-tracker.selectorLabels" . | nindent 8 }}
+        panda/component: forecast-tracker-service
+    spec:
+      imagePullSecrets:
+        - name: {{ .Values.image.pullSecretName }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}-forecast-tracker-service
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repositoryBase }}/cit-dev/services/forecast-tracker/mm.synforecast.backend:latest"
+          imagePullPolicy: Always
+          env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: "Production"
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
