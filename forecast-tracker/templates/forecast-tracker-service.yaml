@@ -49,21 +49,21 @@ spec:
           - name: LOGGING_LEVEL_WEB
             value: "INFO"
           - name: SPRING_DATASOURCE_PASSWORD
-            value: "forecast_pass"
+            value: "{{ .Values.mariadb.db.password }}"
           - name: SPRING_DATASOURCE_URL
-            value: "jdbc:mysql://{{ include "forecast-tracker.fullname" . }}-forecast-tracker-db:3306/jfc_mgmt?useUnicode=true&characterEncoding=utf8&useSSL=false"
+            value: "jdbc:mysql://{{ .Release.Name }}-database:3306/{{ .Values.mariadb.db.name }}?useUnicode=true&characterEncoding=utf8&useSSL=false"
           - name: SPRING_DATASOURCE_USERNAME
-            value: "forecast_user"
+            value: "{{ .Values.mariadb.db.user }}"
           - name: SPRING_RABBITMQ_ADDRESSES
-            value: "forecasttracker"
+            value: rabbitmq-ha.infra.{{ .Values.forecasttracker.zooUrl }} 
           - name: VALIDATION_ERRORS_QUEUE
-            value: "validation_errors_fct_regjoz"
+            value: "{{ .Release.Name }}.validation_error"
           - name: VALIDATION_START_QUEUE
-            value: "ValidationInput"
+            value: "{{ .Release.Name }}.validation_start"
           - name: WORKFLOW_RETURN_QUEUE
-            value: "knime_output_fct_regjoz"
+            value: "{{ .Release.Name }}.knime_output"
           - name: WORKFLOW_START_QUEUE
-            value: "Knime"
+            value: "{{ .Release.Name }}.knime_start"
           ports:
             - name: http
               containerPort: 80

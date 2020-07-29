@@ -88,9 +88,9 @@ mariadb:
   rootUser:
     password: root
   db:
-    name: fct
-    user: fct
-    password: fct
+    name: fct_db
+    user: fct_user
+    password: fct_pass
   replication:
     enabled: false
   nameOverride: mariadb
