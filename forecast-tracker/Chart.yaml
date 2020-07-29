@@ -28,4 +28,4 @@ dependencies:
 - name: mariadb
   version: 7.3.14
   repository: https://charts.bitnami.com/bitnami
-  namespace: {{ .Release.Name }}
+  namespace: workflow-manager-{{ .Values.forecasttracker.loc }}
