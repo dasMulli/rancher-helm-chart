@@ -46,6 +46,24 @@ spec:
           env:
           - name: ASPNETCORE_ENVIRONMENT
             value: "Production"
+          - name: LOGGING_LEVEL_WEB
+            value: "INFO"
+          - name: SPRING_DATASOURCE_PASSWORD
+            value: "forecast_pass"
+          - name: SPRING_DATASOURCE_URL
+            value: "jdbc:mysql://{{ include "forecast-tracker.fullname" . }}-forecast-tracker-db:3306/jfc_mgmt?useUnicode=true&characterEncoding=utf8&useSSL=false"
+          - name: SPRING_DATASOURCE_USERNAME
+            value: "forecast_user"
+          - name: SPRING_RABBITMQ_ADDRESSES
+            value: "forecasttracker"
+          - name: VALIDATION_ERRORS_QUEUE
+            value: "validation_errors_fct_regjoz"
+          - name: VALIDATION_START_QUEUE
+            value: "ValidationInput"
+          - name: WORKFLOW_RETURN_QUEUE
+            value: "knime_output_fct_regjoz"
+          - name: WORKFLOW_START_QUEUE
+            value: "Knime"
           ports:
             - name: http
               containerPort: 80
