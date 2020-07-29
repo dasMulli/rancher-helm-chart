@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-webapp
+  labels:
+    {{- include "forecast-tracker.labels" . | nindent 4 }}
+    forecast-tracker/component: {{ .Release.Name }}-webapp
+spec:
+  rules:
+    - host: {{ .Release.Name }}.{{ .Values.forecasttracker.zooUrl }}
+      http:
+        paths:
+          - path: 
+            backend:
+              serviceName: {{ .Release.Name }}-webapp
+              servicePort: 80
