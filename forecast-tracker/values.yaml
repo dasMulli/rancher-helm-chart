@@ -92,4 +92,4 @@ mariadb:
     password: fct
   replication:
     enabled: false
-  nameOverride: hansi
+  nameOverride: mariadb

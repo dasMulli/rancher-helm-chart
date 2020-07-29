@@ -17,7 +17,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "forecast-tracker.fullname" . }}-forecast-tracker-service
+  name: forecast-tracker-service
   labels:
     {{- include "forecast-tracker.labels" . | nindent 4 }}
     panda/component: forecast-tracker-service
