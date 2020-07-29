@@ -1,0 +1,47 @@
+categories:
+- Repository
+questions:
+- variable: image.repositoryBase
+  default: nexus.mmk.mmdom.net
+  label: Image Repository Base
+  description: "Specify repository base for images (e.g. custom repository). Relative path will be appended."
+  type: string
+- variable: image.pullSecretName
+  required: false
+  label: Image Pull Secret Name
+  descriptioN: "Specify pull secret name for repository base"
+  type: string
+
+# forecast-tracker-service
+- variable: forecasttracker.zooUrl
+  default: 'zoo.loc.mmk.mmdom.net'
+  required: true
+  label: "ZOO Url"
+  description: "ZOO Url"
+  type: string
+  
+#MariaDb
+- variable: mariadb-galera.rootUser.password
+  default: 'root'
+  required: true
+  label: "Db Root Password"
+  description: "Db Root Password"
+  type: string
+- variable: mariadb-galera.db.user
+  default: 'user'
+  required: true
+  label: "Db Username"
+  description: "Db Username"
+  type: string
+- variable: mariadb-galera.db.password
+  default: 'root'
+  required: true
+  label: "Db Password"
+  description: "Db Password"
+  type: string
+- variable: mariadb-galera.db.name
+  default: 'synit-forecasttracker'
+  required: true
+  label: "Db Name"
+  description: "Db Name"
+  type: string
