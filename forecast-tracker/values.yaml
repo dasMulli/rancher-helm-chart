@@ -82,6 +82,7 @@ forecasttracker:
   dbUserId: 'root'
   dbUserPassword: 'root'
   zooUrl: 'zoo.loc.mmk.mmdom.net'
+  loc: 'abc'
 
 mariadb:
   rootUser:

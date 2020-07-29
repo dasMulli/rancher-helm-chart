@@ -17,28 +17,28 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: forecast-tracker-service
+  name: forecast-tracker-service-{{ .Values.forecasttracker.loc }}
   labels:
     {{- include "forecast-tracker.labels" . | nindent 4 }}
-    panda/component: forecast-tracker-service
+    forecast-tracker/component: forecast-tracker-service-{{ .Values.forecasttracker.loc }}
 spec:
   replicas: 1
   selector:
     matchLabels:
       {{- include "forecast-tracker.selectorLabels" . | nindent 6 }}
-      panda/component: forecast-tracker-service
+      forecast-tracker/component: forecast-tracker-service-{{ .Values.forecasttracker.loc }}
   template:
     metadata:
       labels:
         {{- include "forecast-tracker.selectorLabels" . | nindent 8 }}
-        panda/component: forecast-tracker-service
+        forecast-tracker/component: forecast-tracker-service-{{ .Values.forecasttracker.loc }}
     spec:
       imagePullSecrets:
         - name: {{ .Values.image.pullSecretName }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Chart.Name }}-forecast-tracker-service
+        - name: {{ .Chart.Name }}-forecast-tracker-service-{{ .Values.forecasttracker.loc }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repositoryBase }}/cit-dev/services/forecast-tracker/mm.synforecast.backend:latest"

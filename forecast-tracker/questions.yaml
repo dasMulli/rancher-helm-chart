@@ -19,7 +19,13 @@ questions:
   label: "ZOO Url"
   description: "ZOO Url"
   type: string
-  
+- variable: forecasttracker.loc
+  default: 'abc'
+  required: true
+  label: "Location (Instance Name)"
+  description: "Location (Instance Name)"
+  type: string
+
 #MariaDb
 - variable: mariadb-galera.rootUser.password
   default: 'root'
