@@ -1,11 +1,10 @@
-{{- $fullName := include "forecast-tracker.fullname" . -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}-forecast-tracker-service-{{ .Values.forecasttracker.loc }}
+  name: {{ .Release.Name }}-service
   labels:
     {{- include "forecast-tracker.labels" . | nindent 4 }}
-    forecast-tracker/component: forecast-tracker-service-{{ .Values.forecasttracker.loc }}
+    forecast-tracker/component: {{ .Release.Name }}-service
 spec:
   rules:
     - host: forecast-tracker-{{ .Values.forecasttracker.loc }}.{{ .Values.forecasttracker.zooUrl }}
@@ -13,5 +12,5 @@ spec:
         paths:
           - path: /api
             backend:
-              serviceName: {{ $fullName }}-forecast-tracker-service-{{ .Values.forecasttracker.loc }}
+              serviceName: {{ .Release.Name }}-service
               servicePort: 80

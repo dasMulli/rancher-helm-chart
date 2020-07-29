@@ -48,7 +48,7 @@ Selector labels
 */}}
 {{- define "forecast-tracker.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "forecast-tracker.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
+app.kubernetes.io/instance: {{ .Release.Name }}-service
 {{- end }}
 
 {{/*
