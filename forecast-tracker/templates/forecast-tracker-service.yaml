@@ -51,7 +51,7 @@ spec:
           - name: SPRING_DATASOURCE_PASSWORD
             value: "{{ .Values.mariadb.db.password }}"
           - name: SPRING_DATASOURCE_URL
-            value: "jdbc:mysql://{{ .Release.Name }}-database:3306/{{ .Values.mariadb.db.name }}?useUnicode=true&characterEncoding=utf8&useSSL=false"
+            value: "jdbc:mysql://{{ .Release.Name }}-mariadb:3306/{{ .Values.mariadb.db.name }}?useUnicode=true&characterEncoding=utf8&useSSL=false"
           - name: SPRING_DATASOURCE_USERNAME
             value: "{{ .Values.mariadb.db.user }}"
           - name: SPRING_RABBITMQ_ADDRESSES
