@@ -90,3 +90,5 @@ mariadb:
     name: fct
     user: fct
     password: fct
+  replication:
+    enabled: false
