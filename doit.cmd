@@ -16,6 +16,12 @@ REM helm dependency build
 REM cd ..
 helm package workflow-manager .\workflow-manager\
 
+cd .\forecast-tracker\
+helm dependency update
+helm dependency build
+cd ..
+helm package workflow-manager .\forecast-tracker\
+
 cd .\infra\
 helm dependency update
 helm dependency build
@@ -27,6 +33,7 @@ for /f "skip=5 eol=: delims=" %%F in ('dir /b /o-d panda*.tgz') do @del "%%F"
 for /f "skip=5 eol=: delims=" %%F in ('dir /b /o-d infra*.tgz') do @del "%%F"
 for /f "skip=5 eol=: delims=" %%F in ('dir /b /o-d portal*.tgz') do @del "%%F"
 for /f "skip=5 eol=: delims=" %%F in ('dir /b /o-d workflow-manager*.tgz') do @del "%%F"
+for /f "skip=5 eol=: delims=" %%F in ('dir /b /o-d forecast-tracker*.tgz') do @del "%%F"
 del index.yaml
 
 helm repo index --url https://vandenbergen.github.io/rancher-helm-chart/ --merge index.yaml .
