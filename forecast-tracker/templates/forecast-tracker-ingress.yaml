@@ -7,7 +7,7 @@ metadata:
     forecast-tracker/component: {{ .Release.Name }}-service
 spec:
   rules:
-    - host: forecast-tracker-{{ .Values.forecasttracker.loc }}.{{ .Values.forecasttracker.zooUrl }}
+    - host: {{ .Release.Name }}.{{ .Values.forecasttracker.zooUrl }}
       http:
         paths:
           - path: /api
