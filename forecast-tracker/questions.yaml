@@ -51,3 +51,27 @@ questions:
   label: "Db Name"
   description: "Db Name"
   type: string
+- variable: rabbitmq.port
+  default: '5672'
+  required: true
+  label: "RabbitMQ Port"
+  description: "RabbitMQ Port"
+  type: string
+- variable: rabbitmq.username
+  default: 'guest'
+  required: true
+  label: "RabbitMQ Username"
+  description: "RabbitMQ Username"
+  type: string
+- variable: rabbitmq.password
+  default: 'guest'
+  required: true
+  label: "RabbitMQ Password"
+  description: "RabbitMQ Password"
+  type: string
+- variable: rabbitmq.host
+  default: 'rabbit-ha.zoo.loc.mmk.mmdom.net'
+  required: true
+  label: "RabbitMQ Host"
+  description: "RabbitMQ Host"
+  type: string
