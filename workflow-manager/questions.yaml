@@ -12,7 +12,7 @@ questions:
   descriptioN: "Specify pull secret name for repository base"
   type: string
 
-# workflow-manager-service-api
+# workflow-manager-api
 - variable: workflowmanager.zooUrl
   default: 'zoo.loc.mmk.mmdom.net'
   required: true
