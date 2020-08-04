@@ -55,11 +55,12 @@ spec:
           - name: RABBITMQ_VHOST
             value: "/"
           ports:
-            - name: http
-              containerPort: 15672
+            - containerPort: 15672
+              name: http
               protocol: TCP
-            - name: aqmp
-              containerPort: 5672
+            - containerPort: 5672
+              name: aqmp
+              hostPort: 5672
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}

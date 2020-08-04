@@ -13,4 +13,4 @@ spec:
           - path: /api
             backend:
               serviceName: {{ .Release.Name }}-service
-              servicePort: 80
+              servicePort: 8888
