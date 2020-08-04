@@ -14,4 +14,4 @@ spec:
           - path:
             backend:
               serviceName: {{ $fullName }}-rabbitmq
-              servicePort: 8080
+              servicePort: 15672
