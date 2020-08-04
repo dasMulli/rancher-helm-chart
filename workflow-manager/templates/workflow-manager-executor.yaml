@@ -50,9 +50,9 @@ spec:
           - name: RabbitMqHostName
             value: {{ include "workflow-manager.fullname" . }}-rabbitmq
           - name: RabbitMqUserName
-            value: "guest"
+            value: {{ .Values.rabbitmq.username }}
           - name: RabbitMqPassword
-            value: "guest"
+            value: {{ .Values.rabbitmq.password }}
           - name: RabbitMqPort
             value: "5672"
           - name: RabbitMqQueueName
