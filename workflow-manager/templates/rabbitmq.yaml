@@ -11,9 +11,11 @@ spec:
   - port: 15672
     protocol: TCP
     targetPort: 15672
+    name: http
   - port: 5672
     protocol: TCP
     targetPort: 5672
+    name: aqmp
   selector:
     {{- include "workflow-manager.selectorLabels" . | nindent 4 }}
     workflow-manager/component: rabbitmq
