@@ -54,9 +54,9 @@ spec:
           - name: dbServerPort
             value: "3306"
           - name: dbUserId
-            value: {{ .Values.mariadb-galera.db.user }}
+            value: root
           - name: dbUserPassword
-            value: {{ .Values.mariadb-galera.db.password }}
+            value: root
           ports:
             - name: http
               containerPort: 80
