@@ -1,0 +1,17 @@
+{{- $fullName := include "workflow-manager.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}-rabbitmq
+  labels:
+    {{- include "workflow-manager.labels" . | nindent 4 }}
+    workflow-manager/component: rabbitmq
+spec:
+  rules:
+    - host: {{ $fullName }}-rabbitmq.{{ .Values.workflowmanager.zooUrl }}
+      http:
+        paths:
+          - path:
+            backend:
+              serviceName: {{ $fullName }}-rabbitmq
+              servicePort: 8080
