@@ -1,0 +1,17 @@
+{{- $fullName := include "workflow-manager.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}-workflow-manager-api
+  labels:
+    {{- include "workflow-manager.labels" . | nindent 4 }}
+    workflow-manager/component: workflow-manager-api
+spec:
+  rules:
+    - host: workflow.{{ .Values.workflowmanager.zooUrl }}
+      http:
+        paths:
+          - path: /api
+            backend:
+              serviceName: {{ $fullName }}-workflow-manager-api
+              servicePort: 80
