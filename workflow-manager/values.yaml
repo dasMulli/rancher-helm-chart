@@ -93,6 +93,7 @@ mariadb-galera:
     name: "synit-workflows"
   persistence:
     size: 2Gi
+  replicaCount: 1
 
 phpmyadmin:
   ingress:
@@ -101,4 +102,3 @@ phpmyadmin:
       - name: "phpmyadmin.zoo.loc.mmk.mmdom.net"
   db:
     host: "mariadb-galera"
-    
