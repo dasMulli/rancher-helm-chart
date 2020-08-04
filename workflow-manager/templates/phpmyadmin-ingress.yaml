@@ -2,16 +2,16 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}-workflow-manager-api
+  name: {{ $fullName }}-phpmyadmin
   labels:
     {{- include "workflow-manager.labels" . | nindent 4 }}
-    workflow-manager/component: workflow-manager-api
+    workflow-manager/component: phpmyadmin
 spec:
   rules:
-    - host: workflow.{{ .Values.workflowmanager.zooUrl }}
+    - host: {{ $fullName }}-phpmyadmin.{{ .Values.workflowmanager.zooUrl }}
       http:
         paths:
-          - path: /api
+          - path:
             backend:
-              serviceName: {{ $fullName }}-workflow-manager-api
+              serviceName: {{ $fullName }}-phpmyadmin
               servicePort: 80
