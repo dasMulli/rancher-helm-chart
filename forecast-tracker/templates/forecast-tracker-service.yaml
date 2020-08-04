@@ -56,6 +56,10 @@ spec:
             value: "{{ .Values.mariadb.db.user }}"
           - name: SPRING_RABBITMQ_ADDRESSES
             value: rabbitmq-ha.infra.{{ .Values.forecasttracker.zooUrl }} 
+          - name: SPRING_RABBITMQ_PASSWORD
+            value: {{ .Values.rabbitmq.password }} 
+          - name: SPRING_RABBITMQ_USERNAME
+            value: {{ .Values.rabbitmq.username }} 
           - name: VALIDATION_ERRORS_QUEUE
             value: "{{ .Release.Name }}.validation_error"
           - name: VALIDATION_START_QUEUE
