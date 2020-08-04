@@ -65,16 +65,6 @@ spec:
             value: ""
           - name: ApplicationMode
             value: ""
-#          - name: dbDatabaseName
-#            value: "synit-workflows"
-#          - name: dbServerName
-#            value: {{ include "workflow-manager.fullname" . }}-mariadb-galera
-#          - name: dbServerPort
-#            value: "3306"
-#          - name: dbUserId
-#            value: {{ .Values.mariadb-galera.db.user }}
-#          - name: dbUserPassword
-#            value: {{ .Values.mariadb-galera.db.password }}
           ports:
             - name: http
               containerPort: 80
