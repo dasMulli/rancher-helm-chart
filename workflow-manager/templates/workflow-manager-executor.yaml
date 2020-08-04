@@ -47,18 +47,24 @@ spec:
           env:
           - name: ASPNETCORE_ENVIRONMENT
             value: "Production"
-          - name: MqHostName
+          - name: RabbitMqHostName
             value: {{ include "workflow-manager.fullname" . }}-rabbitmq
-          - name: MqPassword
+          - name: RabbitMqUserName
             value: "guest"
-          - name: MqPort
+          - name: RabbitMqPassword
+            value: "guest"
+          - name: RabbitMqPort
             value: "5672"
-          - name: MqReceiveQueueName
-            value: "worfklowResponse"
-          - name: MqSendQueueName
-            value: "Knime"
-          - name: MqUserName
-            value: "guest"
+          - name: RabbitMqQueueName
+            value: "workflow-manager-knime"
+          - name: WorkFlowRootDirectory
+            value: ""
+          - name: WorkflowTimeOut
+            value: "60000"
+          - name: ApplicationPath
+            value: ""
+          - name: ApplicationMode
+            value: ""
           - name: dbDatabaseName
             value: "synit-workflows"
           - name: dbServerName
