@@ -2,10 +2,10 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}-workflow-manager-service-api
+  name: {{ $fullName }}-workflow-manager-api
   labels:
     {{- include "workflow-manager.labels" . | nindent 4 }}
-    panda/component: workflow-manager-service-api
+    workflow-manager/component: workflow-manager-api
 spec:
   rules:
     - host: workflow.{{ .Values.workflowmanager.zooUrl }}
@@ -13,5 +13,5 @@ spec:
         paths:
           - path: /api
             backend:
-              serviceName: {{ $fullName }}-workflow-manager-service-api
+              serviceName: {{ $fullName }}-workflow-manager-api
               servicePort: 80

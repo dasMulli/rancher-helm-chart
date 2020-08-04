@@ -4,7 +4,7 @@ metadata:
   name: {{ include "workflow-manager.fullname" . }}-workflow-manager-api
   labels:
     {{- include "workflow-manager.labels" . | nindent 4 }}
-    panda/component: workflow-manager-api
+    workflow-manager/component: workflow-manager-api
 spec:
   type: ClusterIP
   ports:
@@ -13,7 +13,7 @@ spec:
     targetPort: 80
   selector:
     {{- include "workflow-manager.selectorLabels" . | nindent 4 }}
-    panda/component: workflow-manager-api
+    workflow-manager/component: workflow-manager-api
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -21,18 +21,18 @@ metadata:
   name: {{ include "workflow-manager.fullname" . }}-workflow-manager-api
   labels:
     {{- include "workflow-manager.labels" . | nindent 4 }}
-    panda/component: workflow-manager-api
+    workflow-manager/component: workflow-manager-api
 spec:
   replicas: 1
   selector:
     matchLabels:
       {{- include "workflow-manager.selectorLabels" . | nindent 6 }}
-      panda/component: workflow-manager-api
+      workflow-manager/component: workflow-manager-api
   template:
     metadata:
       labels:
         {{- include "workflow-manager.selectorLabels" . | nindent 8 }}
-        panda/component: workflow-manager-api
+        workflow-manager/component: workflow-manager-api
     spec:
       imagePullSecrets:
         - name: {{ .Values.image.pullSecretName }}

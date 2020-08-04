@@ -45,4 +45,15 @@ questions:
   label: "Db Name"
   description: "Db Name"
   type: string
-
+- variable: mariadb-galera.persistence.size
+  default: '2Gi'
+  required: true
+  label: "Persistence Size"
+  description: "Persistence Size"
+  type: string
+- variable: mariadb-galera.replicaCount
+  default: '1'
+  required: true
+  label: "Replica Count"
+  description: "Replica Count"
+  type: string

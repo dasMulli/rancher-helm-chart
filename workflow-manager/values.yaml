@@ -83,22 +83,8 @@ workflowmanager:
   dbUserPassword: 'root'
   zooUrl: 'zoo.loc.mmk.mmdom.net'
 
-
-mariadb-galera:
-  rootUser:
-    password: "root"
-  db:
-    user: "user"
-    password: "root"
-    name: "synit-workflows"
-  persistence:
-    size: 2Gi
-  replicaCount: 1
-
 phpmyadmin:
   ingress:
     enabled: true
     hosts:
       - name: "phpmyadmin.zoo.loc.mmk.mmdom.net"
-  db:
-    host: "mariadb-galera"

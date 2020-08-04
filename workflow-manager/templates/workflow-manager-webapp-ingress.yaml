@@ -5,7 +5,7 @@ metadata:
   name: {{ $fullName }}-workflow-manager-webapp
   labels:
     {{- include "workflow-manager.labels" . | nindent 4 }}
-    panda/component: workflow-manager-webapp
+    workflow-manager/component: workflow-manager-webapp
 spec:
   rules:
     - host: workflow.{{ .Values.workflowmanager.zooUrl }}
