@@ -44,6 +44,9 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "docker.io/bitnami/phpmyadmin:5.0.2-debian-10-r126"
           imagePullPolicy: Always
+          env:
+          - name: DATABASE_HOST
+            value: "{{ include "workflow-manager.fullname" . }}-mariadb-galera"
           ports:
             - name: http
               containerPort: 80

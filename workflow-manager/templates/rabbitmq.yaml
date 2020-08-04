@@ -45,10 +45,12 @@ spec:
           image: "docker.io/bitnami/rabbitmq:3.8.5-debian-10-r38"
           imagePullPolicy: Always
           env:
-          - name: RABBITMQ_DEFAULT_USER
+          - name: RABBITMQ_USERNAME
             value: "guest"
-          - name: RABBITMQ_DEFAULT_PASS
+          - name: RABBITMQ_PASSWORD
             value: "guest"
+          - name: RABBITMQ_VHOST
+            value: "/"
           ports:
             - name: http
               containerPort: 15672
