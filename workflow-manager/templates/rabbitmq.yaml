@@ -46,9 +46,9 @@ spec:
           imagePullPolicy: Always
           env:
           - name: RABBITMQ_USERNAME
-            value: "guest"
+            value: {{ .Values.rabbitmq.username }}
           - name: RABBITMQ_PASSWORD
-            value: "guest"
+            value: {{ .Values.rabbitmq.password }}
           - name: RABBITMQ_VHOST
             value: "/"
           ports:

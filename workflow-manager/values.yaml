@@ -79,9 +79,15 @@ tolerations: []
 affinity: {}
 
 workflowmanager:
-  dbUserId: 'root'
-  dbUserPassword: 'root'
   zooUrl: 'zoo.loc.mmk.mmdom.net'
+
+mariadb-galera:
+  db:
+    user: root
+    password: root
+    name: synit-workflows
+  rootUser:
+    password: root
 
 phpmyadmin:
   ingress:
@@ -90,10 +96,5 @@ phpmyadmin:
       - name: "phpmyadmin.zoo.loc.mmk.mmdom.net"
 
 rabbitmq:
-  auth:
-    username: admin
-    password: admin
-  ingress:
-    enabled: true
-    hosts:
-      - name: "rabbitmq.zoo.loc.mmk.mmdom.net"
+  username: user
+  password: pass
