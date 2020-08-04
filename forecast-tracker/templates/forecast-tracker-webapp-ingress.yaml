@@ -5,6 +5,8 @@ metadata:
   labels:
     {{- include "forecast-tracker.labels" . | nindent 4 }}
     forecast-tracker/component: {{ .Release.Name }}-webapp
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
 spec:
   rules:
     - host: {{ .Release.Name }}.{{ .Values.forecasttracker.zooUrl }}
