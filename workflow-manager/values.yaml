@@ -88,3 +88,8 @@ phpmyadmin:
     enabled: true
     hosts:
       - name: "phpmyadmin.zoo.loc.mmk.mmdom.net"
+
+rabbitmq:
+  auth:
+    username: admin
+    password: admin

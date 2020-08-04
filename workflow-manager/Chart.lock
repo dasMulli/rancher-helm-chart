@@ -2,5 +2,8 @@ dependencies:
 - name: mariadb-galera
   repository: https://charts.bitnami.com/bitnami
   version: 2.1.1
-digest: sha256:c6d70c040cbf715006e7316dfa3053c5c09d9d244330df42d2453399e0b351bd
-generated: "2020-08-04T19:36:41.384816+02:00"
+- name: rabbitmq
+  repository: https://charts.bitnami.com/bitnami
+  version: 7.5.7
+digest: sha256:935ff13385e915d3ffae78535d48911b1f654d96fbc94f3a3542a7dc8168a129
+generated: "2020-08-04T19:54:24.7721634+02:00"
