@@ -48,7 +48,7 @@ spec:
           - name: ASPNETCORE_ENVIRONMENT
             value: "Production"
           - name: RabbitMqHostName
-            value: {{ include "workflow-manager.fullname" . }}-rabbitmq
+            value: {{ include "workflow-manager.fullname" . }}-rabbitmq.{{ .Values.workflowmanager.zooUrl }}
           - name: RabbitMqUserName
             value: {{ .Values.rabbitmq.username }}
           - name: RabbitMqPassword

@@ -58,19 +58,19 @@ questions:
   description: "RabbitMQ Port"
   type: string
 - variable: rabbitmq.username
-  default: 'guest'
+  default: 'user'
   required: true
   label: "RabbitMQ Username"
   description: "RabbitMQ Username"
   type: string
 - variable: rabbitmq.password
-  default: 'guest'
+  default: 'pass'
   required: true
   label: "RabbitMQ Password"
   description: "RabbitMQ Password"
   type: string
 - variable: rabbitmq.host
-  default: 'rabbit-ha.zoo.loc.mmk.mmdom.net'
+  default: 'workflow-manager-rabbitmq'
   required: true
   label: "RabbitMQ Host"
   description: "RabbitMQ Host"
