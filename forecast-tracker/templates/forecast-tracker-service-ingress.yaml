@@ -14,7 +14,7 @@ spec:
             backend:
               serviceName: {{ .Release.Name }}-service
               servicePort: 8888
---
+---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
