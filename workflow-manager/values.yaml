@@ -95,5 +95,5 @@ rabbitmq:
     password: admin
   ingress:
     enabled: true
-      hosts:
-        - name: "rabbitmq.zoo.loc.mmk.mmdom.net"
+    hosts:
+      - name: "rabbitmq.zoo.loc.mmk.mmdom.net"
