@@ -39,7 +39,7 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Chart.Name }}-workflow-manager-api
+        - name: {{ .Chart.Name }}-phpmyadmin
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "docker.io/bitnami/phpmyadmin:5.0.2-debian-10-r126"
