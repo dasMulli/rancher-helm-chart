@@ -48,7 +48,7 @@ spec:
           - name: ASPNETCORE_ENVIRONMENT
             value: "Production"
           - name: MqHostName
-            value: "forecasttracker-rabbitmq.forecasttracker-knime"
+            value: {{ include "workflow-manager.fullname" . }}-rabbitmq
           - name: MqPassword
             value: "guest"
           - name: MqPort
