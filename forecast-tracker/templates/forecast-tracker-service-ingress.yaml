@@ -14,3 +14,20 @@ spec:
             backend:
               serviceName: {{ .Release.Name }}-service
               servicePort: 8888
+--
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-service
+  labels:
+    {{- include "forecast-tracker.labels" . | nindent 4 }}
+    forecast-tracker/component: {{ .Release.Name }}-service
+spec:
+  rules:
+    - host: {{ .Release.Name }}.{{ .Values.forecasttracker.zooUrl }}
+      http:
+        paths:
+          - path: /actuator
+            backend:
+              serviceName: {{ .Release.Name }}-service
+              servicePort: 8888
