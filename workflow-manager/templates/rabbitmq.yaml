@@ -6,7 +6,6 @@ metadata:
     {{- include "workflow-manager.labels" . | nindent 4 }}
     workflow-manager/component: rabbitmq
 spec:
-#  type: ClusterIP
   ports:
   - port: 15672
     protocol: TCP
