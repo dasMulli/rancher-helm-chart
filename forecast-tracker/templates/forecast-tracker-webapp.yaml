@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ .Release.Name }}-webapp
   labels:
-    {{- include "forecast-tracker.labels" . | nindent 4 }}
+    {{- include "forecast-tracker.labels" . | nindent 4 }}-webapp
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -13,6 +13,7 @@ spec:
       name: http
   selector:
     {{- include "forecast-tracker.selectorLabels" . | nindent 4 }}
+    forecast-tracker/component: {{ .Release.Name }}-webapp
 ---
 apiVersion: apps/v1
 kind: Deployment
