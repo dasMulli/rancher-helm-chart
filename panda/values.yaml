@@ -76,6 +76,17 @@ panda:
     seedType: "None"
     seedMode: "None"
     oldDatabaseConnectionString: ""
+  externalQueueTypeEnable: false
+  externalQueueType: "none"
+  rabbit:
+    rabbitUserName: "guest"
+    rabbitPassword: "guest"
+    rabbitHostName: "localhost"
+    vHost: "/"
+    rabbitPort: "5672"
+    exchangeName: "Tann"
+    routeKey: "Kukuck"
+    queueName: "IFC"
 
 mariadb-galera:
   rootUser:

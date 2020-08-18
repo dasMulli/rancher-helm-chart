@@ -1,0 +1,19 @@
+{{- $fullName := include "forecast-tracker.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}-phpmyadmin
+  labels:
+    {{- include "forecast-tracker.labels" . | nindent 4 }}
+    forecast-tracker/component: phpmyadmin
+annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
+spec:
+  rules:
+    - host: {{ $fullName }}-phpmyadmin.{{ .Values.forecasttracker.zooUrl }}
+      http:
+        paths:
+          - path:
+            backend:
+              serviceName: {{ $fullName }}-phpmyadmin
+              servicePort: 8080

@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-webapp
+  labels:
+    {{- include "forecast-tracker.labels" . | nindent 4 }}
+    forecast-tracker/component: {{ .Release.Name }}-webapp
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
+    cert-manager.io/cluster-issuer: mm-acme
+
+spec:
+  rules:
+    - host: {{ .Release.Name }}.{{ .Values.forecasttracker.zooUrl }}
+      http:
+        paths:
+          - path: 
+            backend:
+              serviceName: {{ .Release.Name }}-webapp
+              servicePort: 80
+  tls:
+    - hosts:
+      - {{ .Release.Name }}.{{ .Values.forecasttracker.zooUrl }}
+      secretName: {{ .Release.Name }}.{{ .Values.forecasttracker.zooUrl }}
+

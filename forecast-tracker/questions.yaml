@@ -12,14 +12,20 @@ questions:
   descriptioN: "Specify pull secret name for repository base"
   type: string
 
-# workflow-manager-api
-- variable: workflowmanager.zooUrl
+# forecast-tracker-service
+- variable: forecasttracker.zooUrl
   default: 'zoo.loc.mmk.mmdom.net'
   required: true
   label: "ZOO Url"
   description: "ZOO Url"
   type: string
-  
+- variable: forecasttracker.loc
+  default: 'abc'
+  required: true
+  label: "Location (Instance Name)"
+  description: "Location (Instance Name)"
+  type: string
+
 #MariaDb
 - variable: mariadb-galera.rootUser.password
   default: 'root'
@@ -40,22 +46,16 @@ questions:
   description: "Db Password"
   type: string
 - variable: mariadb-galera.db.name
-  default: 'synit-workflows'
+  default: 'synit-forecasttracker'
   required: true
   label: "Db Name"
   description: "Db Name"
   type: string
-- variable: mariadb-galera.persistence.size
-  default: '2Gi'
+- variable: rabbitmq.port
+  default: '5672'
   required: true
-  label: "Persistence Size"
-  description: "Persistence Size"
-  type: string
-- variable: mariadb-galera.replicaCount
-  default: '1'
-  required: true
-  label: "Replica Count"
-  description: "Replica Count"
+  label: "RabbitMQ Port"
+  description: "RabbitMQ Port"
   type: string
 - variable: rabbitmq.username
   default: 'user'
@@ -68,4 +68,10 @@ questions:
   required: true
   label: "RabbitMQ Password"
   description: "RabbitMQ Password"
+  type: string
+- variable: rabbitmq.host
+  default: 'workflow-manager-rabbitmq'
+  required: true
+  label: "RabbitMQ Host"
+  description: "RabbitMQ Host"
   type: string

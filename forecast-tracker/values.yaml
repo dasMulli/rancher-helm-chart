@@ -1,4 +1,4 @@
-# Default values for workflow-manager.
+# Default values for forecast-tracker.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -78,23 +78,25 @@ tolerations: []
 
 affinity: {}
 
-workflowmanager:
+forecasttracker:
+  dbUserId: 'root'
+  dbUserPassword: 'root'
   zooUrl: 'zoo.loc.mmk.mmdom.net'
+  loc: 'abc'
 
-mariadb-galera:
-  db:
-    user: root
-    password: root
-    name: synit-workflows
+mariadb:
   rootUser:
     password: root
+  db:
+    name: fct_db
+    user: fct_user
+    password: fct_pass
+  replication:
+    enabled: false
+  nameOverride: mariadb
 
 phpmyadmin:
   ingress:
     enabled: true
     hosts:
       - name: "phpmyadmin.zoo.loc.mmk.mmdom.net"
-
-rabbitmq:
-  username: user
-  password: pass

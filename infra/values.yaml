@@ -639,7 +639,7 @@ minio:
     secretKey: "mmkarton"
 
     buckets: 
-      - "name": rhino
+      - "name": chronos
         "policy": none
         "purge": false
       - "name": panda
