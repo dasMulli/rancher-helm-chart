@@ -179,6 +179,13 @@ filebeat:
       output.logstash:
         hosts: ["infra-logstash:5044"]
 
+    rbac:
+      create: false
+
+    serviceAccount:
+      create: false
+      name: filebeat
+      
     monitoring:
       enabled: false
       
