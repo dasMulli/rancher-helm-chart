@@ -200,6 +200,16 @@ rabbitmq-ha:
     ## RabbitMQ Management user used for health checks
     managementUsername: health
     managementPassword: pkY7I7nyAKv2gZPWDVvZ
+    
+    rbac:
+      create: false
+
+    ## Service Account
+    ## Ref: https://kubernetes.io/docs/admin/service-accounts-admin/
+    ##
+    serviceAccount:
+      create: false
+      name: rabbitmq
 
     definitions:
       users: |-
