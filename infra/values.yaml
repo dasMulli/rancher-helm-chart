@@ -231,6 +231,11 @@ rabbitmq-ha:
           "password_hash": "u5qmRq/A2puDejLjmA4HYTqumU81u2Hi5DJmOTRIipsIld3v",
           "hashing_algorithm": "rabbit_password_hashing_sha256",
           "tags": "management"
+        },{
+          "name": "chronos",
+          "password_hash": "fDOt8OMzWui14pKaP1DI/vCqAzQxWVJ+GwFJ1cszKqVBmsuy",
+          "hashing_algorithm": "rabbit_password_hashing_sha256",
+          "tags": "management"
         }
       vhosts: |-
         {
@@ -241,6 +246,9 @@ rabbitmq-ha:
         },
         {
           "name": "panda"
+        },
+        {
+          "name": "chronos"
         }
       policies: |-
         {
@@ -279,6 +287,17 @@ rabbitmq-ha:
             "queue-master-locator": "min-masters"
           },
           "priority": 0
+        },{
+          "name": "chronos",
+          "name": "chronos-policy",
+          "pattern": "^chronos:.+$",
+          "definition": {
+            "ha-mode": "all",
+            "ha-promote-on-failure": "always",
+            "ha-promote-on-shutdown": "when-synced",
+            "queue-master-locator": "min-masters"
+          },
+          "priority": 0
         }
       permissions: |-
         {
@@ -303,6 +322,13 @@ rabbitmq-ha:
           "read": ".*"
         },
         {
+          "user": "chronos",
+          "vhost": "chronos",
+          "configure": ".*",
+          "write": ".*",
+          "read": ".*"
+        },
+        {
           "user": "admin",
           "vhost": "panda",
           "configure": ".*",
@@ -319,6 +345,13 @@ rabbitmq-ha:
         {
           "user": "admin",
           "vhost": "rhino",
+          "configure": ".*",
+          "write": ".*",
+          "read": ".*"
+        },
+        {
+          "user": "admin",
+          "vhost": "chronos",
           "configure": ".*",
           "write": ".*",
           "read": ".*"
