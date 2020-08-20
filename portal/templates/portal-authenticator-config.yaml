@@ -90,7 +90,61 @@ data:
             "RequireClientSecret": false,
             "AccessTokenLifetime": 7200,
             "IdentityTokenLifetime": 7200
-          }
+          },
+          {
+            "ClientId": "chronos",
+            "ClientName": "chronos",
+            "AllowedGrantTypes": [ "authorization_code" ],
+            "RedirectUris": [
+              "https://chronos.{{ .Values.portal.zooUrl }}/authentication/login-callback",
+              "https://chronos.{{ .Values.portal.zooUrl }}/assets/auth/silent-callback.html",
+              "https://chronos.{{ .Values.portal.zooUrl }}/swagger/oauth2-redirect.html"
+              "https://pile-turner.chronos.{{ .Values.portal.zooUrl }}/authentication/login-callback",
+              "https://pile-turner.chronos.{{ .Values.portal.zooUrl }}/assets/auth/silent-callback.html",
+            ],
+            "PostLogoutRedirectUris": [
+              "https://chronos.{{ .Values.portal.zooUrl }}/authentication/logout-callback",
+              "https://pile-turner.chronos.{{ .Values.portal.zooUrl }}/authentication/logout-callback",
+            ],
+            "AllowedScopes": [
+              "openid",
+              "profile",
+              "email",
+              "api",
+              "roles",
+              "account"
+            ],
+            "RequirePkce": true,
+            "RequireConsent": false,
+            "RequireClientSecret": false,
+            "AccessTokenLifetime": 7200,
+            "IdentityTokenLifetime": 7200
+          },
+          {
+            "ClientId": "chronos-live",
+            "ClientName": "chronos-live",
+            "AllowedGrantTypes": [ "authorization_code" ],
+            "RedirectUris": [
+              "https://live.chronos.{{ .Values.portal.zooUrl }}/authentication/login-callback",
+              "https://live.chronos.{{ .Values.portal.zooUrl }}/assets/auth/silent-callback.html",
+            ],
+            "PostLogoutRedirectUris": [
+              "https://live.chronos.{{ .Values.portal.zooUrl }}/authentication/logout-callback",
+            ],
+            "AllowedScopes": [
+              "openid",
+              "profile",
+              "email",
+              "api",
+              "roles",
+              "account"
+            ],
+            "RequirePkce": true,
+            "RequireConsent": false,
+            "RequireClientSecret": false,
+            "AccessTokenLifetime": 7200,
+            "IdentityTokenLifetime": 7200
+          },
         ]
       },
       "AuthenticatorConfiguration": [
