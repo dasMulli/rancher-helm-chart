@@ -7,7 +7,7 @@ metadata:
     {{- include "panda.labels" . | nindent 4 }}
     panda/component: panda-webapp
   annotations:
-    cert-manager.io/cluster-issuer: "mm-acme"
+    cert-manager.io/cluster-issuer: mm-acme
     kubernetes.io/tls-acme: "true"
 spec:
   rules:
