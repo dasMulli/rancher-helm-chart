@@ -204,6 +204,10 @@ rabbitmq-ha:
     rbac:
       create: false
 
+    prometheus:
+      operator:
+        enabled: false
+
     ## Service Account
     ## Ref: https://kubernetes.io/docs/admin/service-accounts-admin/
     ##
