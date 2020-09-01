@@ -6,6 +6,9 @@ metadata:
   labels:
     {{- include "panda.labels" . | nindent 4 }}
     panda/component: panda-service
+  annotations:
+    cert-manager.io/cluster-issuer: mm-acme
+    kubernetes.io/tls-acme: true
 spec:
   rules:
     - host: panda.{{ .Values.panda.zooUrl }}

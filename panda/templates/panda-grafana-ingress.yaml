@@ -6,6 +6,9 @@ metadata:
   labels:
     {{- include "panda.labels" . | nindent 4 }}
     panda/component: panda-grafana
+  annotations:
+    cert-manager.io/cluster-issuer: mm-acme
+    kubernetes.io/tls-acme: true
 spec:
   rules:
     - host: grafana.{{ .Values.panda.zooUrl }}
