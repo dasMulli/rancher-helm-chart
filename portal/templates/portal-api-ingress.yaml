@@ -8,7 +8,6 @@ metadata:
     portal/component: portal-api
   annotations:
     cert-manager.io/cluster-issuer: mm-acme
-    kubernetes.io/tls-acme: "true"
 spec:
   rules:
     - host: portal.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net

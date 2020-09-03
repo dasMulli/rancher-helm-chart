@@ -8,7 +8,6 @@ metadata:
     panda/component: panda-webapp
   annotations:
     cert-manager.io/cluster-issuer: mm-acme
-    kubernetes.io/tls-acme: "true"
 spec:
   rules:
     - host: panda.{{ .Values.panda.zooUrl }}
