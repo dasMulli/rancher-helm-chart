@@ -6,6 +6,9 @@ metadata:
   labels:
     {{- include "infra.labels" . | nindent 4 }}
     infra/component: infra-minio
+  annotations:
+    cert-manager.io/cluster-issuer: mm-acme
+    kubernetes.io/tls-acme: true
 spec:
   rules:
     - host: minio.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
@@ -15,3 +18,7 @@ spec:
             backend:
               serviceName: {{ $fullName }}-minio
               servicePort: 9000
+  tls:
+  - hosts:
+    - minio.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
+    secretName: minio.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
