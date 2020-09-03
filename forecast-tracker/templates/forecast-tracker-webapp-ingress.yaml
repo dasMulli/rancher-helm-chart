@@ -8,7 +8,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: 100m
     cert-manager.io/cluster-issuer: mm-acme
-    kubernetes.io/tls-acme: true
+    kubernetes.io/tls-acme: "true"
 
 spec:
   rules:

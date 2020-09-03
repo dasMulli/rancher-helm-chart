@@ -8,7 +8,7 @@ metadata:
     portal/component: portal-webapp
   annotations:
     cert-manager.io/cluster-issuer: mm-acme
-    kubernetes.io/tls-acme: true
+    kubernetes.io/tls-acme: "true"
 spec:
   rules:
     - host: portal.{{ .Values.portal.zooUrl }}
