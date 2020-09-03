@@ -15,3 +15,7 @@ spec:
             backend:
               serviceName: {{ $fullName }}-rabbitmq-ha
               servicePort: 15672
+  tls:
+  - hosts:
+    - rabbitmq.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
+    secretName: rabbitmq.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
