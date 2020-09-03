@@ -15,3 +15,7 @@ spec:
             backend:
               serviceName: {{ $fullName }}-node-red
               servicePort: 1880
+  tls:
+  - hosts:
+    - nodered.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
+    secretName: nodered.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
