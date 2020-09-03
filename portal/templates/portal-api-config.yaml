@@ -32,8 +32,8 @@ data:
         "Password": "{{ index .Values "mariadb-galera" "rootUser" "password" }}"
       },
       "Authorization": {
-        "Host": "http://{{ template "portal.fullname" . }}-portal-authenticator-service",
-        "Issuer": "http://portal.{{ .Values.portal.zooUrl }}/authenticator"
+        "Host": "https://{{ template "portal.fullname" . }}-portal-authenticator-service",
+        "Issuer": "https://portal.{{ .Values.portal.zooUrl }}/authenticator"
       },
       "Menu": {
         "GroupMenuItems": [
@@ -96,7 +96,7 @@ data:
           {
             "Id": 6,
             "Title": "CHRONOS BDE",
-            "Url": "http://chronos.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
+            "Url": "https://chronos.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
             "GroupMenuItemId": 2,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Chronos_.*)|(MM_MES_Chronos_.*)",
             "Tooltip": "CHRONOS BDE",
@@ -106,7 +106,7 @@ data:
           {
             "Id": 7,
             "Title": "CHRONOS LIVE",
-            "Url": "http://chronos-live.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
+            "Url": "https://chronos.live.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
             "GroupMenuItemId": 2,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Chronos_.*)|(MM_MES_Chronos_.*)",
             "Tooltip": "CHRONOS LIVE",
@@ -116,7 +116,7 @@ data:
           {
             "Id": 8,
             "Title": "PANDA Konfigurator",
-            "Url": "http://panda.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
+            "Url": "https://panda.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
             "GroupMenuItemId": 3,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Panda_.*)|(MM_MES_Panda_.*)",
             "Tooltip": "PANDA Konfigurator",
@@ -131,7 +131,7 @@ data:
           {
             "Id": 9,
             "Title": "GRAFANA",
-            "Url": "http://grafana.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net/login/generic_oauth",
+            "Url": "https://grafana.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net/login/generic_oauth",
             "GroupMenuItemId": 3,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Panda_.*)|(MM_MES_Panda_.*)",
             "Tooltip": "GRAFANA",
@@ -146,7 +146,7 @@ data:
           {
             "Id": 10,
             "Title": "OCTOPUS Manual Infeed",
-            "Url": "http://octopus.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net/#/manual-infeed",
+            "Url": "https://octopus.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net/#/manual-infeed",
             "GroupMenuItemId": 4,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Octopus_.*)|(MM_MES_Octopus_.*)",
             "Tooltip": "Manual Infeed",
@@ -161,7 +161,7 @@ data:
           {
             "Id": 11,
             "Title": "OCTOPUS Components",
-            "Url": "http://octopus.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net/#/components",
+            "Url": "https://octopus.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net/#/components",
             "GroupMenuItemId": 4,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Octopus_.*)|(MM_MES_Octopus_.*)",
             "Tooltip": "Components",
@@ -176,7 +176,7 @@ data:
           {
             "Id": 12,
             "Title": "OCTOPUS Overview Logging",
-            "Url": "http://octopus.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net/#/overview",
+            "Url": "https://octopus.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net/#/overview",
             "GroupMenuItemId": 4,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Octopus_.*)|(MM_MES_Octopus_.*)",
             "Tooltip": "Overview Logging",
@@ -191,7 +191,7 @@ data:
           {
             "Id": 13,
             "Title": "OCTOPUS Admin",
-            "Url": "http://octopus.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net/#/admin",
+            "Url": "https://octopus.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net/#/admin",
             "GroupMenuItemId": 4,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Octopus_.*)|(MM_MES_Octopus_.*)",
             "Tooltip": "Admin",
@@ -206,7 +206,7 @@ data:
           {
             "Id": 14,
             "Title": "RabbitMQ",
-            "Url": "http://rabbitmq.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
+            "Url": "https://rabbitmq.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
             "GroupMenuItemId": 5,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Entry_.*)|(MM_MES_Entry_.*)",
             "Tooltip": "RabbitMQ",
@@ -221,7 +221,7 @@ data:
           {
             "Id": 16,
             "Title": "LAMA Admin",
-            "Url": "http://lama.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
+            "Url": "https://lama.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
             "GroupMenuItemId": 15,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Lama_.*)|(MM_MES_Lama_.*)",
             "Tooltip": "LAMA Admin",
@@ -236,7 +236,7 @@ data:
           {
             "Id": 17,
             "Title": "Min.IO",
-            "Url": "http://minio.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
+            "Url": "https://minio.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
             "GroupMenuItemId": 5,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Entry_.*)|(MM_MES_Entry_.*)",
             "Tooltip": "Min.IO",
@@ -251,7 +251,7 @@ data:
           {
             "Id": 18,
             "Title": "Node-Red",
-            "Url": "http://nodered.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
+            "Url": "https://nodered.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net",
             "GroupMenuItemId": 5,
             "GroupRegex": "({{ .Values.global.locationId }}_MES_Entry_.*)|(MM_MES_Entry_.*)",
             "Tooltip": "Node-Red",

@@ -34,7 +34,7 @@ data:
       "Identity": {
         "DefaultUserName": "root",
         "DefaultPassword": "Root#123",
-        "JwtIssuer": "http://portal.{{ .Values.portal.zooUrl }}/authenticator",
+        "JwtIssuer": "https://portal.{{ .Values.portal.zooUrl }}/authenticator",
         "Roles": [
           "User",
           "Admin",
@@ -46,11 +46,11 @@ data:
             "ClientName": "portalMenu",
             "AllowedGrantTypes": [ "authorization_code" ],
             "RedirectUris": [
-              "http://portal.{{ .Values.portal.zooUrl }}/assets/silent-refresh.html",
-              "http://portal.{{ .Values.portal.zooUrl }}/main"
+              "https://portal.{{ .Values.portal.zooUrl }}/assets/silent-refresh.html",
+              "https://portal.{{ .Values.portal.zooUrl }}/main"
             ],
             "PostLogoutRedirectUris": [
-              "http://portal.{{ .Values.portal.zooUrl }}/main"
+              "https://portal.{{ .Values.portal.zooUrl }}/main"
             ],
             "AllowedScopes": [
               "openid",
@@ -71,11 +71,11 @@ data:
             "ClientName": "GrafanaUI",
             "AllowedGrantTypes": [ "authorization_code" ],
             "RedirectUris": [
-              "http://grafana.{{ .Values.portal.zooUrl }}/login/generic_oauth",
-              "http://grafana.{{ .Values.portal.zooUrl }}/login"
+              "https://grafana.{{ .Values.portal.zooUrl }}/login/generic_oauth",
+              "https://grafana.{{ .Values.portal.zooUrl }}/login"
             ],
             "PostLogoutRedirectUris": [
-              "http://grafana.{{ .Values.portal.zooUrl }}/login"
+              "https://grafana.{{ .Values.portal.zooUrl }}/login"
             ],
             "AllowedScopes": [
               "openid",
