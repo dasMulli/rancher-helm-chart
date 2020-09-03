@@ -6,9 +6,9 @@ metadata:
   labels:
     {{- include "portal.labels" . | nindent 4 }}
     portal/component: portal-webapp
-#  annotations:
-#    cert-manager.io/cluster-issuer: mm-acme
-#    kubernetes.io/tls-acme: true
+  annotations:
+    cert-manager.io/cluster-issuer: mm-acme
+    kubernetes.io/tls-acme: true
 spec:
   rules:
     - host: portal.{{ .Values.portal.zooUrl }}
@@ -18,3 +18,7 @@ spec:
             backend:
               serviceName: {{ $fullName }}-portal-webapp-service
               servicePort: 8080
+  tls:
+  - hosts:
+    - portal.{{ .Values.portal.zooUrl }}
+    secretName: portal.{{ .Values.portal.zooUrl }}

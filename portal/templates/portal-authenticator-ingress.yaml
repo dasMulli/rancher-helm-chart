@@ -6,6 +6,9 @@ metadata:
   labels:
     {{- include "portal.labels" . | nindent 4 }}
     portal/component: portal-authenticator
+  annotations:
+    cert-manager.io/cluster-issuer: mm-acme
+    kubernetes.io/tls-acme: true
 spec:
   rules:
     - host: portal.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
@@ -15,3 +18,7 @@ spec:
             backend:
               serviceName: {{ $fullName }}-portal-authenticator-service
               servicePort: 80
+  tls:
+  - hosts:
+    - portal.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
+    secretName: portal.zoo.{{ .Values.global.locationId }}.mmk.mmdom.net
