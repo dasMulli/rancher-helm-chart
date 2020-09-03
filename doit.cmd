@@ -29,7 +29,7 @@ cd ..
 helm package infra .\infra\
 
 
-for /f "skip=5 eol=: delims=" %%F in ('dir /b /o-d panda*.tgz') do @del "%%F"
+for /f "skip=20 eol=: delims=" %%F in ('dir /b /o-d panda*.tgz') do @del "%%F"
 for /f "skip=5 eol=: delims=" %%F in ('dir /b /o-d infra*.tgz') do @del "%%F"
 for /f "skip=5 eol=: delims=" %%F in ('dir /b /o-d portal*.tgz') do @del "%%F"
 for /f "skip=5 eol=: delims=" %%F in ('dir /b /o-d workflow-manager*.tgz') do @del "%%F"
