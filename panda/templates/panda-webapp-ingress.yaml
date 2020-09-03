@@ -21,4 +21,4 @@ spec:
   tls:
   - hosts:
     - panda.{{ .Values.panda.zooUrl }}
-  secretName: panda.{{ .Values.panda.zooUrl }}
+    secretName: panda.{{ .Values.panda.zooUrl }}
