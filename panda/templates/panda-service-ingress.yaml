@@ -18,3 +18,7 @@ spec:
             backend:
               serviceName: {{ $fullName }}-panda-service-service
               servicePort: 80
+  tls:
+  - hosts:
+    - panda.{{ .Values.panda.zooUrl }}
+    secretName: panda.{{ .Values.panda.zooUrl }}

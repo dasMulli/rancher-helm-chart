@@ -18,3 +18,7 @@ spec:
             backend:
               serviceName: {{ $fullName }}-grafana
               servicePort: 3000
+  tls:
+  - hosts:
+    - grafana.{{ .Values.panda.zooUrl }}
+    secretName: grafana.{{ .Values.panda.zooUrl }}
